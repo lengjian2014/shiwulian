@@ -13,6 +13,15 @@ return [
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
+		'urlManager' => [
+		    'enablePrettyUrl' => true,
+		    'showScriptName' => false,
+		    //'suffix' => '.html',
+		    'rules' => [
+			    '<controller:\w+>/<action:\w+>/<id:\w+>'=>'<controller>/<action>',
+			    '<module>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<module>/<controller>/<action>',
+		    ],
+	    ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,

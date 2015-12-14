@@ -25,7 +25,8 @@
 	"hoa/string": "*",
 	"dektrium/yii2-rbac": "dev-master",
         "yiisoft/yii2-jui": "^2.0",
-        "yiisoft/yii2-redis": "^2.0"
+        "yiisoft/yii2-redis": "^2.0",
+        "yiisoft/yii2-apidoc": "^2.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

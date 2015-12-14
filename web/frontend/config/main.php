@@ -10,13 +10,21 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => 'zh-CN',
     'controllerNamespace' => 'frontend\controllers',
+    'defaultRoute' => 'index/index',
+    'modules' => [
+	    'ucenter' => [
+	    	'class' => 'frontend\modules\ucenter\Module',
+	    ],
+    ],
     'components' => [
 		'urlManager' => [
 		    'enablePrettyUrl' => true,
 		    'showScriptName' => false,
 		    //'suffix' => '.html',
 		    'rules' => [
+		    	'/' => 'index/index',
 			    '<controller:\w+>/<action:\w+>/<id:\w+>'=>'<controller>/<action>',
 			    '<module>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<module>/<controller>/<action>',
 		    ],

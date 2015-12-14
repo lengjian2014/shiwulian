@@ -3,7 +3,7 @@ namespace common\models;
 
 use Yii;
 use yii\base\NotSupportedException;
-use yii\behaviors\TimestampBehavior;
+use common\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 
@@ -25,6 +25,12 @@ class User extends ActiveRecord implements IdentityInterface
 {
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
+    public $nickname;
+    public $gender;
+    public $birthday;
+    public $hometown;
+    public $qq;
+    public $address;
 
     /**
      * @inheritdoc
@@ -58,9 +64,38 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * @inheritdoc
      */
+    public function attributeLabels()
+    {
+    	return [
+	    	'uid' => Yii::t('app', 'Uid'),
+	    	'username' => Yii::t('app', '用户名'),
+	    	'email' => Yii::t('app', '邮箱'),
+	    	'mobile' => Yii::t('app', '手机号'),
+	    	'password' => Yii::t('app', 'Password'),
+	    	'password_reset_token' => Yii::t('app', '改密码'),
+	    	'password_hash' => Yii::t('app', '密码加密'),
+	    	'auth_key' => Yii::t('app', 'Auth Key'),
+	    	'resettoken' => Yii::t('app', 'Resettoken'),
+	    	'hash' => Yii::t('app', 'Hash'),
+	    	'status' => Yii::t('app', '1开启0关闭'),
+	    	'access_token' => Yii::t('app', '用户认证'),
+	    	'role' => Yii::t('app', '0普通用户，1管理员'),
+	    	'addtime' => Yii::t('app', '注册时间'),
+	    	'nickname' => Yii::t('app', '昵称'),
+	    	'gender' => Yii::t('app', '性别'),
+	    	'birthday' => Yii::t('app', '出生年月'),
+	    	'hometown' => Yii::t('app', '籍贯'),
+	    	'qq' => Yii::t('app', 'QQ'),
+	    	'address' => Yii::t('app', '联系地址')
+    	];
+    }
+    
+    /**
+     * @inheritdoc
+     */
     public static function findIdentity($id)
     {
-        return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['uid' => $id, 'status' => self::STATUS_ACTIVE]);
     }
 
     /**

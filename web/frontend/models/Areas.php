@@ -113,4 +113,26 @@ class Areas extends \yii\db\ActiveRecord
 	
 		return [$models, $pages];
 	}
+	
+	/**
+	 * 根据父id返回所有子类
+	 * @param unknown $pid
+	 * @return Ambigous <multitype:\yii\db\static , multitype:, multitype:\yii\db\ActiveRecord >
+	 */
+	public static function getAreasByParentId($pid)
+	{
+		$info = self::findAll(['pid' => $pid]);
+		return $info;
+	}
+	
+	/**
+	 * 根据id返回名称
+	 * @param unknown $id
+	 * @return string
+	 */
+	public static function getNameById($id)
+	{
+		$model = self::findById($id);
+		return $model ? $model->name : '';
+	}
 }

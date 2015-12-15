@@ -7,7 +7,7 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="list-group">
-		  <a href="#" class="list-group-item active"><span class="glyphicon glyphicon-cog" style="margin-right: 5px;"></span> 账户设置</a>
+		  <a href="/ucenter" class="list-group-item active"><span class="glyphicon glyphicon-cog" style="margin-right: 5px;"></span> 账户设置</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-user" style="margin-right: 5px;"></span> 修改头像</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-asterisk" style="margin-right: 5px;"></span> 修改密码</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope" style="margin-right: 5px;"></span> 邮箱验证</a>

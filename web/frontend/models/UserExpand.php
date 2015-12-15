@@ -38,9 +38,9 @@ class UserExpand extends \yii\db\ActiveRecord
     {
         return [
             [['uid'], 'required'],
-            [['uid', 'gender', 'hometown', 'validemail', 'validmobile', 'addtime', 'updatetime'], 'integer'],
+            [['uid', 'gender', 'hometown', 'validemail', 'validmobile', 'birthday', 'addtime', 'updatetime', 'province', 'city', 'county'], 'integer'],
             [['nickname', 'photo', 'address'], 'string', 'max' => 250],
-            [['birthday', 'qq'], 'string', 'max' => 20],
+            [['qq'], 'string', 'max' => 20],
             [['telephone'], 'string', 'max' => 30]
         ];
     }
@@ -54,16 +54,19 @@ class UserExpand extends \yii\db\ActiveRecord
             'uid' => Yii::t('app', 'Uid'),
             'nickname' => Yii::t('app', '昵称'),
             'photo' => Yii::t('app', '头像'),
-            'gender' => Yii::t('app', '性别0男1女'),
+            'gender' => Yii::t('app', '性别'),
             'birthday' => Yii::t('app', '出生年月'),
             'hometown' => Yii::t('app', '籍贯'),
             'telephone' => Yii::t('app', '电话'),
-            'qq' => Yii::t('app', 'Qq'),
-            'address' => Yii::t('app', '住址'),
+            'qq' => Yii::t('app', 'QQ'),
+            'address' => Yii::t('app', '详细地址'),
             'validemail' => Yii::t('app', '邮箱是否有效，0没有1有效'),
             'validmobile' => Yii::t('app', '手机是否有效'),
             'addtime' => Yii::t('app', '添加时间'),
             'updatetime' => Yii::t('app', '更新时间'),
+            'province' => Yii::t('app', '省、直辖市'),
+            'city' => Yii::t('app', '市'),
+            'county' => Yii::t('app', '县、区'),
         ];
     }
 
@@ -72,9 +75,9 @@ class UserExpand extends \yii\db\ActiveRecord
 	 * @param unknown $id
 	 * @return Ambigous <\yii\db\static, NULL, multitype:, boolean, \yii\db\ActiveRecord>
 	 */
-	public static function findById($id)
+	public static function findById($uid)
 	{
-		return self::findOne(['id' => $id]);
+		return self::findOne(['uid' => $uid]);
 	}
 
 	/**

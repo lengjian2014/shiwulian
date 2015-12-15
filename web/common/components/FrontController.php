@@ -18,6 +18,10 @@ class FrontController extends \yii\web\Controller
 	public function init()
 	{
 		parent::init();
+		if(\Yii::$app->user->isGuest)
+		{
+			$this->redirect("/site/login");
+		}
 	}
     /**
      * 显示flash信息

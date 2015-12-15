@@ -25,8 +25,10 @@ return [
 		    //'suffix' => '.html',
 		    'rules' => [
 		    	'/' => 'index/index',
-			    '<controller:\w+>/<action:\w+>/<id:\w+>'=>'<controller>/<action>',
-			    '<module>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<module>/<controller>/<action>',
+			    'ucenter' => 'ucenter/default/index',
+			    'ucenter/<controller:\w+>/<action:\w+>/<id:\w+>' => 'ucenter/<controller>/<action>',
+			    '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+        		'<controller:\w+>/<action:\w+>'=>'<controller>/<action>'
 		    ],
 	    ],
         'user' => [

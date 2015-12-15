@@ -50,7 +50,7 @@ AppAsset::register($this);
         	'linkOptions' => ['data-toggle' => 'dropdown', 'style' => 'padding:5px 0 0 0;'],
 			'options' => ['class' => 'navbar-right'],
 			'items' => [
-				['label' => '个人中心', 'url' => ['/site/index']],
+				['label' => '个人中心', 'url' => ['/ucenter']],
 				['label' => '动态', 'url' => ['/site/about']],
 				['label' => '产品列表', 'url' => ['/site/contact']],
 				['label' => '消息', 'url' => ['/site/contact']],

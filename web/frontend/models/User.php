@@ -4,6 +4,7 @@ namespace frontend\models;
 
 use Yii;
 use yii\data\Pagination;
+use yii\web\NotFoundHttpException;
 /**
  * This is the model class for table "user".
  *
@@ -25,6 +26,16 @@ use yii\data\Pagination;
  */
 class User extends \yii\db\ActiveRecord
 {
+	public $nickname;
+	public $gender;
+	public $birthday;
+	public $hometown;
+	public $qq;
+	public $address;
+	public $telephone;
+	public $province;
+	public $city;
+	public $county;
     /**
      * @inheritdoc
      */
@@ -57,9 +68,9 @@ class User extends \yii\db\ActiveRecord
         return [
             'uid' => Yii::t('app', 'Uid'),
             'username' => Yii::t('app', '用户名'),
-            'email' => Yii::t('app', '邮箱'),
-            'mobile' => Yii::t('app', '手机号'),
-            'password' => Yii::t('app', 'Password'),
+            'email' => Yii::t('app', '电子邮箱'),
+            'mobile' => Yii::t('app', '手机号码'),
+            'password' => Yii::t('app', '密码'),
             'password_reset_token' => Yii::t('app', '改密码'),
             'password_hash' => Yii::t('app', '密码加密'),
             'auth_key' => Yii::t('app', 'Auth Key'),
@@ -68,8 +79,15 @@ class User extends \yii\db\ActiveRecord
             'status' => Yii::t('app', '1开启0关闭'),
             'access_token' => Yii::t('app', '用户认证'),
             'role' => Yii::t('app', '0普通用户，1管理员'),
-            'addtime' => Yii::t('app', 'Addtime'),
+            'addtime' => Yii::t('app', '注册时间'),
             'updatetime' => Yii::t('app', 'Updatetime'),
+            'nickname' => Yii::t('app', '昵称'),
+            'gender' => Yii::t('app', '性别'),
+            'birthday' => Yii::t('app', '出生年月'),
+            'hometown' => Yii::t('app', '籍贯'),
+            'qq' => Yii::t('app', 'QQ'),
+            'address' => Yii::t('app', '联系地址'),
+            'telephone' => Yii::t('app', '座机号码')
         ];
     }
 
@@ -78,9 +96,23 @@ class User extends \yii\db\ActiveRecord
 	 * @param unknown $id
 	 * @return Ambigous <\yii\db\static, NULL, multitype:, boolean, \yii\db\ActiveRecord>
 	 */
-	public static function findById($id)
+	public static function findById($uid)
 	{
-		return self::findOne(['id' => $id]);
+		if (($model = User::findOne(['uid' => $uid])) !== null) 
+		{
+			$userexpand = UserExpand::findById($uid);
+			if($userexpand)
+			{
+				foreach ($userexpand as $k => $v)
+				{
+					if(property_exists($model, $k))
+						$model->$k = $v;
+				}
+			}
+			return $model;
+		} else {
+			throw new NotFoundHttpException('The requested page does not exist.');
+		}
 	}
 
 	/**

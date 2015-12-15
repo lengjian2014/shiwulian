@@ -33,10 +33,12 @@ class DefaultController extends FrontController
     	$userexpand->uid = \Yii::$app->user->id;
     	if ($userexpand->load(Yii::$app->request->post())) 
     	{
+    		$userexpand->birthday = (string)strtotime($userexpand->birthday);
     		if($userexpand->save())
     			return $this->redirect(['index']);
     	}
 
+    	$userexpand->birthday = date("Y-m-d", $userexpand->birthday);
     	return $this->render('update', [
     					//'user' => $user,
     					'userexpand' => $userexpand,

@@ -5,7 +5,7 @@
           用户中心
       </h4>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div id="collapseOne" class="panel-collapse collapse <?=$this->context->id == 'default' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingOne">
       <div class="list-group">
 		  <a href="/ucenter" class="list-group-item active"><span class="glyphicon glyphicon-cog" style="margin-right: 5px;"></span> 账户设置</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-user" style="margin-right: 5px;"></span> 修改头像</a>
@@ -22,9 +22,9 @@
           商品管理
       </h4>
     </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+    <div id="collapseThree" class="panel-collapse collapse <?=$this->context->id == 'goods' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingThree">
 		<div class="list-group">
-		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-hamburger" style="margin-right: 5px;"></span> 我的产品</a>
+		  <a href="/ucenter/goods" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/goods/index' ? 'active' : ''?>"><span class="glyphicon glyphicon-menu-hamburger" style="margin-right: 5px;"></span> 我的产品</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-plus" style="margin-right: 5px;"></span> 新增产品</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-ok" style="margin-right: 5px;"></span> 资质认证</a>
 		</div>

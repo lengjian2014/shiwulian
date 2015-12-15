@@ -36,7 +36,9 @@
         "yiisoft/yii2-jui": "^2.0",
         "yiisoft/yii2-redis": "^2.0",
         "yiisoft/yii2-apidoc": "^2.0",
-	"2amigos/yii2-date-time-picker-widget": "~1.0"
+	"2amigos/yii2-date-time-picker-widget": "~1.0",
+	"xj/yii2-ueditor-widget": "~1.0.0",
+	"nex/yii2-chosen" : "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

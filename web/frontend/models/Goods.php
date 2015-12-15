@@ -28,7 +28,8 @@ use yii\data\Pagination;
  * @property integer $scan
  * @property integer $dynamic
  * @property integer $trace
- * @property string $place
+ * @property integer $place
+ * @property string $address
  * @property string $gps
  * @property string $keyword
  * @property string $description
@@ -54,10 +55,11 @@ class Goods extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['uid', 'soldarea', 'weight', 'classify', 'inventory', 'sales', 'comments', 'score', 'scan', 'dynamic', 'trace', 'status', 'admin_id', 'addtime', 'updatetime'], 'integer'],
-            [['detail'], 'string'],
+        	[['barcode', 'title', 'summary', 'picture', 'classify', 'picture', 'place', 'detail'], 'required'],
+            [['uid', 'weight', 'classify', 'inventory', 'sales', 'comments', 'score', 'scan', 'dynamic', 'trace', 'status', 'admin_id', 'addtime', 'updatetime'], 'integer'],
+            [['detail', 'place', 'soldarea'], 'string'],
             [['price', 'market_price'], 'number'],
-            [['barcode', 'title', 'summary', 'picture', 'brand', 'place', 'keyword', 'description', 'reason'], 'string', 'max' => 250],
+            [['barcode', 'title', 'summary', 'picture', 'brand', 'address', 'keyword', 'description', 'reason'], 'string', 'max' => 250],
             [['unit', 'gps'], 'string', 'max' => 100]
         ];
     }
@@ -75,14 +77,14 @@ class Goods extends \yii\db\ActiveRecord
             'summary' => Yii::t('app', '简介'),
             'soldarea' => Yii::t('app', '销售区域'),
             'detail' => Yii::t('app', '产品详细'),
-            'picture' => Yii::t('app', '图片，json保存多个值'),
+            'picture' => Yii::t('app', '图片'),
             'price' => Yii::t('app', '销售价格'),
             'market_price' => Yii::t('app', '市场价格'),
             'unit' => Yii::t('app', '计量单位'),
-            'weight' => Yii::t('app', '重量，对应分类表id'),
+            'weight' => Yii::t('app', '重量'),
             'brand' => Yii::t('app', '品牌'),
             'classify' => Yii::t('app', '产品分类'),
-            'inventory' => Yii::t('app', '产品数量，库存'),
+            'inventory' => Yii::t('app', '库存数量'),
             'sales' => Yii::t('app', '销售数量'),
             'comments' => Yii::t('app', '评论次数'),
             'score' => Yii::t('app', '评分'),
@@ -90,6 +92,7 @@ class Goods extends \yii\db\ActiveRecord
             'dynamic' => Yii::t('app', '产品动态数'),
             'trace' => Yii::t('app', '追溯次数'),
             'place' => Yii::t('app', '产品产地'),
+            'address' => Yii::t('app', '详细地址'),
             'gps' => Yii::t('app', '产地gps'),
             'keyword' => Yii::t('app', 'seo关键词'),
             'description' => Yii::t('app', 'seo描述'),

@@ -38,8 +38,8 @@ class UserExpand extends \yii\db\ActiveRecord
     {
         return [
             [['uid'], 'required'],
-            [['uid', 'gender', 'hometown', 'validemail', 'validmobile', 'birthday', 'addtime', 'updatetime', 'province', 'city', 'county'], 'integer'],
-            [['nickname', 'photo', 'address'], 'string', 'max' => 250],
+            [['uid', 'gender', 'hometown', 'validemail', 'validmobile', 'addtime', 'updatetime', 'province', 'city', 'county'], 'integer'],
+            [['nickname', 'photo', 'address', 'birthday'], 'string', 'max' => 250],
             [['qq'], 'string', 'max' => 20],
             [['telephone'], 'string', 'max' => 30]
         ];

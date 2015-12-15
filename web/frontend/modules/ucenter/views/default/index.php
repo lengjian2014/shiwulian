@@ -24,7 +24,7 @@ use yii\helpers\Html;
 								['attribute'=>'mobile', 'format'=>'html','value'=> empty($model->mobile) ? Html::a("绑定手机号", '', ['style'=>"font-size:12px;"]) : Html::encode($model->mobile) ." ". Html::a("更改手机号", '', ['style'=>"font-size:12px;"])],
 					            //'mobile',
 								['attribute'=>'gender','value'=> empty($model->gender) ? '男' : '女'],
-								['attribute'=>'birthday','value'=>date("Y",$model->birthday).'年'.date("m",$model->birthday).'月'],
+								['attribute'=>'birthday','value'=>date("Y",$model->birthday).'年'.date("m",$model->birthday).'月'.date("d",$model->birthday).'日'],
 								'qq',
 								['label'=>'联系地址','value'=> Areas::getNameById($model->province) ." ". Areas::getNameById($model->city) ." ". Areas::getNameById($model->county)],
 								'address',

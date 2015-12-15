@@ -1,8 +1,10 @@
 <?php 
+use yii\widgets\DetailView;
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 use frontend\models\Areas;
 use yii\helpers\ArrayHelper;
+use dosamigos\datetimepicker\DateTimePicker;
 use kartik\date\DatePicker;
 ?>
       <div class="row">
@@ -32,7 +34,7 @@ use kartik\date\DatePicker;
 					    <?//= $form->field($model, 'mobile')->textInput(['maxlength' => true]) ?>
 					    					    
 					    <?= $form->field($userexpand, 'gender')->dropDownList(['0' => '男', '1' => '女'],['prompt'=>'选择性别...'])?>
-
+					    
 						<?= $form->field($userexpand, 'birthday')->widget(DatePicker::className(), [
 										'name' => 'gender',
 										'value' => date('d-M-Y', strtotime('+2 days')),

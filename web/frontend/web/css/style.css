@@ -350,3 +350,8 @@ th {
     margin-left: 0px;
     margin-right: 0px;
 }
+
+.ucenter-content .thumbnail-img{
+	width: 30%;
+	padding:5px;
+}

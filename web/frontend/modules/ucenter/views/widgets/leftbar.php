@@ -7,12 +7,26 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse <?=$this->context->id == 'default' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingOne">
       <div class="list-group">
-		  <a href="/ucenter" class="list-group-item active"><span class="glyphicon glyphicon-cog" style="margin-right: 5px;"></span> 账户设置</a>
+		  <a href="/ucenter" class="list-group-item"><span class="glyphicon glyphicon-cog" style="margin-right: 5px;"></span> 账户设置</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-user" style="margin-right: 5px;"></span> 修改头像</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-asterisk" style="margin-right: 5px;"></span> 修改密码</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope" style="margin-right: 5px;"></span> 邮箱验证</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-phone" style="margin-right: 5px;"></span> 手机验证</a>
-		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-ok" style="margin-right: 5px;"></span> 角色认证</a>
+		  
+		</div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingSix">
+      <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          认证管理
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse <?=$this->context->id == 'authenticate' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingSix">
+		<div class="list-group">
+			  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-user" style="margin-right: 5px;"></span> 角色认证</a>
+			  <a href="/ucenter/authenticate/realname" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/authenticate/realname' ? 'active' : ''?>"><span class="glyphicon glyphicon-credit-card" style="margin-right: 5px;"></span> 实名认证</a>
+			  <a href="/ucenter/authenticate/enterprise" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/authenticate/enterprise' ? 'active' : ''?>"><span class="glyphicon glyphicon-ok" style="margin-right: 5px;"></span> 企业认证</a>
 		</div>
     </div>
   </div>
@@ -25,8 +39,7 @@
     <div id="collapseThree" class="panel-collapse collapse <?=$this->context->id == 'goods' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingThree">
 		<div class="list-group">
 		  <a href="/ucenter/goods" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/goods/index' ? 'active' : ''?>"><span class="glyphicon glyphicon-menu-hamburger" style="margin-right: 5px;"></span> 我的产品</a>
-		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-plus" style="margin-right: 5px;"></span> 新增产品</a>
-		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-ok" style="margin-right: 5px;"></span> 资质认证</a>
+		  <a href="/ucenter/goods/create" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/goods/create' ? 'active' : ''?>"><span class="glyphicon glyphicon-plus" style="margin-right: 5px;"></span> 新增产品</a>
 		</div>
     </div>
   </div>

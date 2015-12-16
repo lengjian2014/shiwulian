@@ -58,4 +58,15 @@ class ClassifyController extends Controller
     	}
     }
     
+    public function actionAreastags()
+    {
+    	//获取省
+    	$areas = Areas::getAreasByParentId(0);
+    	$data = [];
+    	foreach ($areas as $k => $v)
+    	{
+    		var_dump($v->childareas);exit;
+    	}
+    }
+    
 }

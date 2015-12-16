@@ -135,4 +135,14 @@ class Areas extends \yii\db\ActiveRecord
 		$model = self::findById($id);
 		return $model ? $model->name : '';
 	}
+
+	/**
+	 * 返回子分类
+	 * @return Ambigous <\yii\db\ActiveQueryInterface, \yii\db\ActiveQuery>
+	 */
+	public function getChildareas()
+	{
+		return $this->hasMany(Areas::className(), ['pid' => 'id']);
+	}
+
 }

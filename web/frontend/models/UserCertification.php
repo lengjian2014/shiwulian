@@ -12,7 +12,7 @@ use yii\data\Pagination;
  * @property integer $type
  * @property integer $category
  * @property string $number
- * @property string $pictrue
+ * @property string $picture
  * @property integer $status
  * @property integer $admin_id
  * @property string $reason
@@ -35,11 +35,13 @@ class UserCertification extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['uid'], 'required'],
+            [['category', 'number'], 'required'],
             [['uid', 'type', 'category', 'status', 'admin_id', 'addtime', 'updatetime'], 'integer'],
             [['number'], 'string', 'max' => 50],
-            [['pictrue'], 'string', 'max' => 500],
-            [['reason'], 'string', 'max' => 250]
+            
+            [['picture'], 'file', 'extensions' => 'gif, jpg, png', 'maxFiles' => 4],
+            ['uid', 'default', 'value' => \Yii::$app->user->id],
+            [['reason', 'name'], 'string', 'max' => 250]
         ];
     }
 
@@ -51,15 +53,16 @@ class UserCertification extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'uid' => Yii::t('app', 'Uid'),
-            'type' => Yii::t('app', '认证方式0个人认证1企业认证2监管认证'),
+            'type' => Yii::t('app', '认证方式'),
+            'name' => Yii::t('app', '名称'),
             'category' => Yii::t('app', '证件类别'),
             'number' => Yii::t('app', '证件号'),
-            'pictrue' => Yii::t('app', '证件图'),
-            'status' => Yii::t('app', '状态0未审核1通过2未通过'),
+            'picture' => Yii::t('app', '证件图'),
+            'status' => Yii::t('app', '状态'),
             'admin_id' => Yii::t('app', '管理员id'),
             'reason' => Yii::t('app', '未通过原因'),
-            'addtime' => Yii::t('app', 'Addtime'),
-            'updatetime' => Yii::t('app', 'Updatetime'),
+            'addtime' => Yii::t('app', '添加时间'),
+            'updatetime' => Yii::t('app', '更新时间'),
         ];
     }
 
@@ -129,4 +132,16 @@ class UserCertification extends \yii\db\ActiveRecord
 	
 		return [$models, $pages];
 	}
+	
+	/**
+	 * 获取用的认证
+	 * @param unknown $uid
+	 * @param unknown $type
+	 * @return Ambigous <\yii\db\ActiveRecord, multitype:, NULL>
+	 */
+	public static function getInfoByUidAndType($uid, $type)
+	{
+		return self::find()->where(['uid' => $uid, 'type' => $type])->one();
+	}
+	
 }

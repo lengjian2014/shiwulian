@@ -12,7 +12,7 @@ use yii\data\Pagination;
  * @property string $barcode
  * @property string $title
  * @property string $summary
- * @property integer $soldarea
+ * @property string $soldarea
  * @property string $detail
  * @property string $picture
  * @property string $price
@@ -55,12 +55,16 @@ class Goods extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-        	[['barcode', 'title', 'summary', 'picture', 'classify', 'picture', 'place', 'detail'], 'required'],
+        	[['barcode', 'title', 'summary', 'picture', 'classify', 'picture', 'place', 'detail', 'soldarea'], 'required'],
             [['uid', 'weight', 'classify', 'inventory', 'sales', 'comments', 'score', 'scan', 'dynamic', 'trace', 'status', 'admin_id', 'addtime', 'updatetime'], 'integer'],
-            [['detail', 'place', 'soldarea'], 'string'],
+            [['detail', 'place'], 'string'],
             [['price', 'market_price'], 'number'],
             [['barcode', 'title', 'summary', 'picture', 'brand', 'address', 'keyword', 'description', 'reason'], 'string', 'max' => 250],
-            [['unit', 'gps'], 'string', 'max' => 100]
+            [['unit', 'gps'], 'string', 'max' => 100],
+            
+            [['picture'], 'file', 'extensions' => 'gif, jpg, png'],
+            
+            ['barcode', 'unique', 'targetClass' => '\frontend\models\Goods', 'message' => '编号必须唯一.'],
         ];
     }
 
@@ -72,7 +76,7 @@ class Goods extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'uid' => Yii::t('app', '会员'),
-            'barcode' => Yii::t('app', '条形码'),
+            'barcode' => Yii::t('app', '条形码编号'),
             'title' => Yii::t('app', '产品标题'),
             'summary' => Yii::t('app', '简介'),
             'soldarea' => Yii::t('app', '销售区域'),

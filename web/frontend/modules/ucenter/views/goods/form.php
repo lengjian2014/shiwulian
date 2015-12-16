@@ -5,6 +5,8 @@ use yii\helpers\Url;
 use kartik\widgets\FileInput;
 use frontend\models\Areas;
 use yii\helpers\ArrayHelper;
+use kartik\widgets\Select2;
+use kartik\money\MaskMoney;
 ?>
       <div class="row">
 		<div class="col-xs-12 col-sm-9">
@@ -38,22 +40,25 @@ use yii\helpers\ArrayHelper;
 						    <?= $form->field($model, 'picture[]')->widget(FileInput::className(), [
 											'language' => 'zh-CN',
 										    'options' => ['multiple' => true],
-										    'pluginOptions' => ['previewFileType' => 'any', 'uploadUrl' => Url::to(['/site/file-upload'])]
+										    'pluginOptions' => ['previewFileType' => 'any', 'uploadUrl' => Url::to(['/site/file-upload']), 'showUpload'=>true]
 								]); ?>
 
-						    <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
-						
-						    <?= $form->field($model, 'market_price')->textInput(['maxlength' => true]) ?>
-<!-- 							<div class="form-group field-goods-market_price"> -->
-<!-- 								<label class="col-lg-2 control-label" for="goods-market_price">市场价格</label>
-								<div class="col-lg-3" style="margin-left:15px;">
-									<?//= $form->field($model, 'market_price', ['template' => "<div class=\"control-group\">{input}</div>{error}\n"])->textInput(['maxlength' => true]) ?>
-<!-- 								</div>
-								<div class="col-lg-1" style="margin-left:15px;font-size:25px;text-align:center;">/</div>
-								<div class="col-lg-3" style="margin-left:15px;">
-									<?//= $form->field($model, 'unit', ['template' => "<div class=\"control-group\">{input}</div>{error}\n"])->textInput(['maxlength' => true]) ?>
-<!-- 								</div> -->
-<!-- 							</div> -->
+							<?= $form->field($model, 'price')->widget(MaskMoney::className(), [
+							    		'pluginOptions' => [
+								    		'prefix' => '￥ ',
+								    		'suffix' => ' 元',
+								    		'allowNegative' => false
+							    		]
+						    		]) ?>
+							
+						    <?= $form->field($model, 'market_price')->widget(MaskMoney::className(), [
+							    		'pluginOptions' => [
+								    		'prefix' => '￥ ',
+								    		'suffix' => ' 元',
+								    		'allowNegative' => false
+							    		]
+						    		]) ?>
+						    		
 						    <?= $form->field($model, 'unit')->textInput(['maxlength' => true]) ?>
 						
 						    <?//= $form->field($model, 'weight')->textInput() ?>
@@ -62,8 +67,16 @@ use yii\helpers\ArrayHelper;
 						
 						    <?//= $form->field($model, 'sales')->textInput() ?>
 						    
-							<?= $form->field($model, 'soldarea')->textInput() ?>						    
-							
+						    <?= $form->field($model, 'soldarea')->widget(Select2::className(), [
+										'value' => $model->soldarea, // initial value
+										'data' => ArrayHelper::map(Areas::getAreasByParentId(0), 'id', 'name'),
+										'options' => ['placeholder' => '选择销售区域...', 'multiple' => true],
+										'pluginOptions' => [
+												'allowClear' => true,
+												'tags' => true,
+												'maximumInputLength' => 10
+										],
+									])?>
 							<div class="form-group field-userexpand-province">
 								<label class="col-lg-2 control-label" for="userexpand-province">产品产地</label>
 								<div class="col-lg-3">
@@ -112,7 +125,7 @@ use yii\helpers\ArrayHelper;
 						
 						    <div class="form-group">
 					        	<div class="col-lg-offset-2 col-lg-10">
-						        	<?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+						        	<?= Html::submitButton($model->isNewRecord ? Yii::t('app', '新增') : Yii::t('app', '修改'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
 						    	</div>
 						    </div>	
 						

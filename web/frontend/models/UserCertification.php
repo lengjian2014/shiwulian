@@ -4,6 +4,7 @@ namespace frontend\models;
 
 use Yii;
 use yii\data\Pagination;
+use common\behaviors\TimeBehavior;
 /**
  * This is the model class for table "user_certification".
  *
@@ -45,6 +46,13 @@ class UserCertification extends \yii\db\ActiveRecord
         ];
     }
 
+    public function behaviors()
+    {
+    	return [
+    		TimeBehavior::className()
+    	];
+    }
+    
     /**
      * @inheritdoc
      */

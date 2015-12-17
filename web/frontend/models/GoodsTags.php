@@ -109,4 +109,30 @@ class GoodsTags extends \yii\db\ActiveRecord
 	
 		return [$models, $pages];
 	}
+	
+	/**
+	 * 创建产品的标签关联
+	 * @param unknown $goods_id
+	 * @param unknown $tags
+	 * @return NULL
+	 */
+	public static function createGoodsTags($goods_id, $tags)
+	{
+		if($tags == '' || $goods_id == '') 
+			return null;
+		$data = [];
+		if(!is_array($tags))
+			$data = [$goods_id, $tags];
+		else 
+		{
+			foreach ($tags as $k => $v)
+			{
+				$data[] = [$goods_id, $v];
+			}
+		}
+		self::deleteAll(['goods_id' => $goods_id]);
+		$result = \Yii::$app->db->createCommand()->batchInsert(self::tableName(), ['goods_id','tags_id'], $data)->execute();
+		 
+	}
+	
 }

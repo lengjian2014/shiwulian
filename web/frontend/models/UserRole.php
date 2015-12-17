@@ -11,6 +11,7 @@ use yii\data\Pagination;
  * @property integer $uid
  * @property integer $role
  * @property integer $type
+ * @property string $number
  * @property string $content
  * @property string $picture
  * @property integer $status
@@ -33,10 +34,16 @@ class UserRole extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['uid'], 'required'],
+            [['type', 'number'], 'required'],
             [['uid', 'role', 'type', 'status', 'addtime', 'updatetime'], 'integer'],
-            [['content'], 'string', 'max' => 250],
-            [['picture'], 'string', 'max' => 500]
+            [['number'], 'string', 'max' => 150],
+            [['content', 'number'], 'string', 'max' => 250],
+            
+            [['picture'], 'string', 'max' => 500],
+            [['picture'], 'file', 'extensions' => 'gif, jpg, png', 'maxFiles' => 4],
+            
+            ['uid', 'default', 'value' => \Yii::$app->user->id],
+            
         ];
     }
 
@@ -49,12 +56,13 @@ class UserRole extends \yii\db\ActiveRecord
             'id' => Yii::t('app', 'ID'),
             'uid' => Yii::t('app', 'Uid'),
             'role' => Yii::t('app', '角色类别'),
-            'type' => Yii::t('app', '认证证件类型'),
+            'type' => Yii::t('app', '证件类型'),
+            'number' => Yii::t('app', '证件编号'),
             'content' => Yii::t('app', '认证内容'),
             'picture' => Yii::t('app', '证件照片'),
-            'status' => Yii::t('app', '审核，0未审核1通过2未通过'),
-            'addtime' => Yii::t('app', 'Addtime'),
-            'updatetime' => Yii::t('app', 'Updatetime'),
+            'status' => Yii::t('app', '审核状态'),
+            'addtime' => Yii::t('app', '添加时间'),
+            'updatetime' => Yii::t('app', '更改时间'),
         ];
     }
 
@@ -123,5 +131,25 @@ class UserRole extends \yii\db\ActiveRecord
 										->all();
 	
 		return [$models, $pages];
+	}
+	
+	/**
+	 * 根据uid返回用户角色认证信息
+	 * @param unknown $uid
+	 * @return Ambigous <\yii\db\ActiveQueryInterface, \yii\db\$this, \yii\db\ActiveQuery>
+	 */
+	public static function getUserRoleByUid($uid)
+	{
+		return self::find()->where(['uid' => $uid])->indexBy("role")->all();
+	}
+	
+	/**
+	 * 根据uid及角色返回认证信息
+	 * @param unknown $uid
+	 * @return Ambigous <\yii\db\ActiveQueryInterface, \yii\db\$this, \yii\db\ActiveQuery>
+	 */
+	public static function getRoleByUidAndRole($uid, $role)
+	{
+		return self::find()->where(['uid' => $uid, 'role' => $role])->indexBy("type")->one();
 	}
 }

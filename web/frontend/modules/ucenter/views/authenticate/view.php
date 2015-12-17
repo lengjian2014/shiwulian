@@ -13,7 +13,7 @@ use common\components\FileUploaded;
 				  <li><a href="#">账号设置</a></li>
 				  <li class="active">详细</li>
 				</ol>
-				<div class="ucenter-content panel-content" style="padding:0px 20px 60px 20px;min-height:550px;">
+				<div class="ucenter-content panel-content" style="min-height:550px;padding-top:0px;">
 					<ul id="myTabs" class="nav nav-tabs" role="tablist">
 							<li class="<?=$model->type == 0 ? 'active' : ''?>" role="presentation">
 								<a id="home-tab" aria-expanded="true" aria-controls="home" href="/ucenter/authenticate/realname">实名认证</a>
@@ -40,13 +40,13 @@ use common\components\FileUploaded;
 							    ]) ?>
 							</div>
 							<div id="profile" class="tab-pane fade <?=$model->type == 1 ? 'active in' : ''?>" aria-labelledby="profile-tab" role="tabpanel" style="padding-left:20px;">
-								<p style="padding-top:8px;margin-bottom:40px;"><a class="btn btn-default" type="buttom" style="float:right;" href="/ucenter/authenticate/realname?edit=1">编辑</a></p>
+								<p style="padding-top:8px;margin-bottom:40px;"><a class="btn btn-default" type="buttom" style="float:right;" href="/ucenter/authenticate/enterprise?edit=1">编辑</a></p>
 								<?= DetailView::widget([
 									'template' => "<tr><th width='20%'>{label}</th><td width='80%'>{value}</td></tr>",	
 							        'model' => $model,
 							        'attributes' => [
 							            'category',
-										['label'=>'真实姓名','value'=> $model->name],
+										['label'=>'法人姓名','value'=> $model->name],
 										'number',
 										['attribute'=>'picture', 'format'=>'html', 'value'=> FileUploaded::formatImgView($model->picture)],
 										['attribute'=>'addtime','value'=>date("Y-m-d",$model->addtime)],

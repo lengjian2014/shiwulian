@@ -344,7 +344,8 @@ th {
 }
 /*******************/
 .ucenter-content{
-	
+	padding:30px 20px 60px 20px;
+	margin-bottom:20px;
 }
 .ucenter-content .field-userexpand-province .form-group {
     margin-left: 0px;

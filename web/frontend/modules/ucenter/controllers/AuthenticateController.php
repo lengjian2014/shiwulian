@@ -7,6 +7,7 @@ use frontend\models\UserCertification;
 use common\components\FileUploaded;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use frontend\models\UserRole;
 
 /**
  * 网站认证
@@ -37,7 +38,7 @@ class AuthenticateController extends FrontController
    			$model = new UserCertification();
    		$model->type = 1;
    		$data = $this->QualifiedCreate($model);
-   		
+
    		return $this->render("form", $data);
    	}
    	
@@ -58,7 +59,7 @@ class AuthenticateController extends FrontController
    			$model = new UserCertification();
    		$model->type = 0;
    		$data = $this->QualifiedCreate($model);
-   		
+
    		return $this->render("form", $data);
    	}
 
@@ -68,7 +69,7 @@ class AuthenticateController extends FrontController
    		{
    			$model->picture = FileUploaded::getInstances($model, "picture");
    			if($model->save())
-   				return $this->redirect(['view', 'id' => $model->id]);
+   				return $this->redirect([$this->action->id]);
    		}
    		
    		$picture = [];
@@ -77,19 +78,56 @@ class AuthenticateController extends FrontController
    			$picture = explode("|", $model->picture);
    			foreach ($picture as $k => $v)
    			{
-   				$picture[$k] = FileUploaded::formatImg($v, "UserCertification[picture][{$k}]");
+   				$picture[$k] = FileUploaded::formatImges($v, "UserCertification[picture][{$k}]");
    			}
    		}
    		
-   		return ['model' => $model, 'picture' => $picture];
+   		$category = $model->type == 0 ? ['0' => "身份证", '1' => "驾驶证"] : ['0' => "营业执照"];
+   		return ['model' => $model, 'picture' => $picture, 'category' => $category];
    	}
+	
+   	/**
+   	 * 角色认证
+   	 * @return Ambigous <string, string>
+   	 */
+   	public function actionRole()
+   	{
+   		$model = UserRole::getUserRoleByUid(\Yii::$app->user->id);
 
+   		return $this->render("role", ['model' => $model]);
+   	}
+	
+   	/**
+   	 * 角色认证编辑
+   	 * @return Ambigous <string, string>
+   	 */
+   	public function actionRolecreate()
+   	{
+   		$role = \Yii::$app->request->get("role", 0);
+   		$model = UserRole::getRoleByUidAndRole(\Yii::$app->user->id, $role);
+   		if(empty($model)) 
+   			$model = new UserRole();
+   		if ($model->load(Yii::$app->request->post())) 
+   		{
+   			$model->picture = FileUploaded::getInstances($model, "picture");
+			if($model->save())
+   				return $this->redirect(['role', 'id' => $model->id]);
+   		}
 
-
-
-
-
-
-
+   		$model->role = $role;
+   		return $this->renderAjax("_roleform", ['model' => $model]);
+   	}
+   	/**
+   	 * 角色认证视图
+   	 * @return Ambigous <string, string>
+   	 */
+   	public function actionRoleview($id)
+   	{
+   		$model = UserRole::getById($id);
+   		if(empty($model))
+   			$model = new UserRole();
+   		
+   		return $this->renderAjax("_roleview", ['model' => $model]);
+   	}
 
 }

@@ -8,7 +8,7 @@ use yii\widgets\DetailView;
 				  <li><a href="#">账号设置</a></li>
 				  <li class="active">详细</li>
 				</ol>
-				<div class="ucenter-content panel-content" style="padding:0px 20px 60px 20px;">
+				<div class="ucenter-content panel-content">
 					<p style="padding-top:8px;margin-bottom:40px;"><a class="btn btn-default" type="buttom" style="float:right;" href="/ucenter/default/update">编辑</a></p>
 						<?= DetailView::widget([
 							'template' => "<tr><th>{label}</th><td>{value}</td></tr>",	

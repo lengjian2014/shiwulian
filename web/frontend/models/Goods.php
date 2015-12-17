@@ -4,6 +4,7 @@ namespace frontend\models;
 
 use Yii;
 use yii\data\Pagination;
+use common\behaviors\TimeBehavior;
 /**
  * This is the model class for table "goods".
  *
@@ -41,6 +42,7 @@ use yii\data\Pagination;
  */
 class Goods extends \yii\db\ActiveRecord
 {
+	public $tags;
     /**
      * @inheritdoc
      */
@@ -55,19 +57,26 @@ class Goods extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-        	[['barcode', 'title', 'summary', 'picture', 'classify', 'picture', 'place', 'detail', 'soldarea'], 'required'],
+        	[['barcode', 'title', 'summary', 'picture', 'classify', 'picture', 'place', 'detail', 'soldarea', 'tags'], 'required'],
             [['uid', 'weight', 'classify', 'inventory', 'sales', 'comments', 'score', 'scan', 'dynamic', 'trace', 'status', 'admin_id', 'addtime', 'updatetime'], 'integer'],
-            [['detail', 'place'], 'string'],
+            [['detail', 'place', 'links'], 'string'],
             [['price', 'market_price'], 'number'],
             [['barcode', 'title', 'summary', 'picture', 'brand', 'address', 'keyword', 'description', 'reason'], 'string', 'max' => 250],
             [['unit', 'gps'], 'string', 'max' => 100],
             
-            [['picture'], 'file', 'extensions' => 'gif, jpg, png'],
-            
+            [['picture'], 'file', 'extensions' => 'gif, jpg, png', 'maxFiles' => 6],
             ['barcode', 'unique', 'targetClass' => '\frontend\models\Goods', 'message' => '编号必须唯一.'],
+            ['uid', 'default', 'value' => \Yii::$app->user->id],
         ];
     }
 
+    public function behaviors()
+    {
+    	return [
+    		TimeBehavior::className()
+    	];
+    }
+    
     /**
      * @inheritdoc
      */
@@ -100,11 +109,13 @@ class Goods extends \yii\db\ActiveRecord
             'gps' => Yii::t('app', '产地gps'),
             'keyword' => Yii::t('app', 'seo关键词'),
             'description' => Yii::t('app', 'seo描述'),
+            'links' => Yii::t('app', '友情链接'),
             'status' => Yii::t('app', '产品审核状态'),
             'admin_id' => Yii::t('app', '管理员'),
             'reason' => Yii::t('app', '审核原因'),
             'addtime' => Yii::t('app', 'Addtime'),
             'updatetime' => Yii::t('app', 'Updatetime'),
+            'tags' => Yii::t('app', '标签'),
         ];
     }
 

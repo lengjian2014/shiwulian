@@ -107,10 +107,9 @@ class FileUploaded extends Object
 	 * @param unknown $inputName
 	 * @return string
 	 */
-	public static function formatImg($picture, $inputName)
+	public static function formatImges($picture, $inputName)
 	{
-		$str = Html::img(IMGURL . $picture, ['class'=>'file-preview-image', 'alt'=>'', 'title'=>'']);
-		$str .= Html::input("hidden", $inputName, $picture);
+		$str = self::formatImg($picture, $inputName);
 
 		$html = <<<EOT
 			<div class="file-thumbnail-footer">
@@ -128,6 +127,26 @@ EOT;
 		return $str . $html;
 	}
 	
+	/**
+	 * 编辑时上传文件
+	 * @param unknown $picture
+	 * @param unknown $inputName
+	 * @return string
+	 */
+	public static function formatImg($picture, $inputName)
+	{
+		if(empty($picture)) return null;
+		$str = Html::img(IMGURL . $picture, ['class'=>'file-preview-image', 'alt'=>'', 'title'=>'']);
+		$str .= Html::input("hidden", $inputName, $picture);
+
+		return $str;
+	}
+	
+	/**
+	 * 图片视图预览
+	 * @param unknown $picture
+	 * @return string
+	 */
 	public static function formatImgView($picture)
 	{
 		$data = [];

@@ -8,7 +8,7 @@ use yii\widgets\DetailView;
 				  <li><a href="#">账号设置</a></li>
 				  <li class="active">详细</li>
 				</ol>
-				<div class="ucenter-content panel-content" style="padding:0px 20px 60px 20px;">
+				<div class="ucenter-content panel-content">
 					<div class="row main" style="margin-left:0px;margin-right:0px;margin-bottom:10px;padding-top:20px;border-bottom-color: #e9e9e9;border-bottom-style: solid;border-bottom-width: 1px;">
 						<div class="col-xs-3 col-sm-3">
 								<a href="#">

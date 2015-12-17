@@ -12,7 +12,7 @@ use yii\helpers\Url;
 				  <li><a href="#">账号设置</a></li>
 				  <li class="active">详细</li>
 				</ol>
-				<div class="ucenter-content panel-content" style="padding:0px 20px 60px 20px;min-height:550px;">
+				<div class="ucenter-content panel-content" style="min-height:550px;padding-top:0px;">
 					<ul id="myTabs" class="nav nav-tabs" role="tablist">
 							<li class="<?=$model->type == 0 ? 'active' : ''?>" role="presentation">
 								<a id="home-tab" aria-expanded="true" aria-controls="home" href="/ucenter/authenticate/realname">实名认证</a>
@@ -39,9 +39,9 @@ use yii\helpers\Url;
 								
 							    <?//= $form->field($model, 'type')->textInput() ?>
 							    
-							    <?= $form->field($model, 'name')->textInput()->label($model->type ? "证件名称" : "真实姓名") ?>
+							    <?= $form->field($model, 'name')->textInput()->label($model->type ? "法人姓名" : "真实姓名") ?>
 							
-							    <?= $form->field($model, 'category')->dropDownList(['0' => "身份证", '1' => "驾驶证"],['prompt'=>'选择证件类型...',]) ?>
+							    <?= $form->field($model, 'category')->dropDownList($category, ['prompt'=>'选择证件类型...',]) ?>
 							
 							    <?= $form->field($model, 'number')->textInput(['maxlength' => true]) ?>
 

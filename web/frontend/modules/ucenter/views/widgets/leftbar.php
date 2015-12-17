@@ -1,7 +1,7 @@
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+<div class="panel-group" id="leftaccordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <h4 class="panel-title" role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           用户中心
       </h4>
     </div>
@@ -18,13 +18,13 @@
   </div>
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingSix">
-      <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+      <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
           认证管理
       </h4>
     </div>
     <div id="collapseSix" class="panel-collapse collapse <?=$this->context->id == 'authenticate' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingSix">
 		<div class="list-group">
-			  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-user" style="margin-right: 5px;"></span> 角色认证</a>
+			  <a href="/ucenter/authenticate/role" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/authenticate/role' ? 'active' : ''?>"><span class="glyphicon glyphicon-user" style="margin-right: 5px;"></span> 角色认证</a>
 			  <a href="/ucenter/authenticate/realname" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/authenticate/realname' ? 'active' : ''?>"><span class="glyphicon glyphicon-credit-card" style="margin-right: 5px;"></span> 实名认证</a>
 			  <a href="/ucenter/authenticate/enterprise" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/authenticate/enterprise' ? 'active' : ''?>"><span class="glyphicon glyphicon-ok" style="margin-right: 5px;"></span> 企业认证</a>
 		</div>
@@ -32,7 +32,7 @@
   </div>
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           商品管理
       </h4>
     </div>
@@ -40,12 +40,13 @@
 		<div class="list-group">
 		  <a href="/ucenter/goods" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/goods/index' ? 'active' : ''?>"><span class="glyphicon glyphicon-menu-hamburger" style="margin-right: 5px;"></span> 我的产品</a>
 		  <a href="/ucenter/goods/create" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/goods/create' ? 'active' : ''?>"><span class="glyphicon glyphicon-plus" style="margin-right: 5px;"></span> 新增产品</a>
+		  <a href="/ucenter/goods/partner" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/goods/partner' ? 'active' : ''?>"><span class="glyphicon glyphicon-transfer" style="margin-right: 5px;"></span> 合作产品</a>
 		</div>
     </div>
   </div>
    <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+      <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           我的消息
       </h4>
     </div>
@@ -59,7 +60,7 @@
   </div>
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingFour">
-      <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
           我的关注
       </h4>
     </div>
@@ -72,7 +73,7 @@
   </div>
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingFives">
-      <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseFives" aria-expanded="false" aria-controls="collapseFives">
+      <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFives" aria-expanded="false" aria-controls="collapseFives">
           我的收藏
       </h4>
     </div>

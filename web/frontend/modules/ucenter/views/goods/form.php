@@ -8,14 +8,20 @@ use yii\helpers\ArrayHelper;
 use kartik\widgets\Select2;
 use kartik\money\MaskMoney;
 ?>
+<style>
+.field-goods-links .form-group {
+	padding-left:15px;
+	padding-right:15px;
+}
+</style>
       <div class="row">
 		<div class="col-xs-12 col-sm-9">
-				<ol class="breadcrumb">
+				<ol class="breadcrumb panel-default">
 				  <li><a href="#">个人中心</a></li>
-				  <li><a href="#">账号设置</a></li>
-				  <li class="active">详细</li>
+				  <li><a href="#">商品管理</a></li>
+				  <li class="active">新建</li>
 				</ol>
-				<div class="ucenter-content panel-content" style="padding:40px 20px 60px 20px;">
+				<div class="ucenter-content panel-content">
 					    <?php $form = ActiveForm::begin([
 													      	'id' => 'update-form',
 					    									'options' => ['class' => 'form-horizontal','enctype' => 'multipart/form-data'],
@@ -32,7 +38,13 @@ use kartik\money\MaskMoney;
 						
 							<?= $form->field($model, 'brand')->textInput(['maxlength' => true]) ?>
 						
-						    <?= $form->field($model, 'classify')->textInput() ?>
+						    <?= $form->field($model, 'classify')->widget(Select2::className(), [
+							    			'data' => ["水果" => ['1' => "苹果", '2' => "香蕉"]],
+								    		'options' => ['placeholder' => 'Select a state ...'],
+								    		'pluginOptions' => [
+								    			'allowClear' => true
+							    			],
+									])?>
 						
 						    <?= $form->field($model, 'summary')->textarea(['rows' => 5])?>
 						
@@ -40,30 +52,41 @@ use kartik\money\MaskMoney;
 						    <?= $form->field($model, 'picture[]')->widget(FileInput::className(), [
 											'language' => 'zh-CN',
 										    'options' => ['multiple' => true],
-										    'pluginOptions' => ['previewFileType' => 'any', 'uploadUrl' => Url::to(['/site/file-upload']), 'showUpload'=>true]
+										    'pluginOptions' => ['previewFileType' => 'any', 'uploadUrl' => Url::to(['/site/upload']), 'showUpload'=>true]
 								]); ?>
 
-							<?= $form->field($model, 'price')->widget(MaskMoney::className(), [
-							    		'pluginOptions' => [
-								    		'prefix' => '￥ ',
-								    		'suffix' => ' 元',
-								    		'allowNegative' => false
-							    		]
-						    		]) ?>
+						    <?= $form->field($model, 'tags')->widget(Select2::className(), [
+										'value' => $model->soldarea, // initial value
+										'data' => ArrayHelper::map(Areas::getAreasByParentId(0), 'id', 'name'),
+										'options' => ['placeholder' => '选择标签...', 'multiple' => true],
+										'pluginOptions' => [
+												'allowClear' => true,
+												'tags' => true,
+												'maximumInputLength' => 5
+										],
+									])?>
+						    
+							<?//= $form->field($model, 'price')->widget(MaskMoney::className(), [
+// 							    		'pluginOptions' => [
+// 								    		'prefix' => '￥ ',
+// 								    		'suffix' => ' 元',
+// 								    		'allowNegative' => false
+// 							    		]
+// 						    		//]) ?>
 							
-						    <?= $form->field($model, 'market_price')->widget(MaskMoney::className(), [
-							    		'pluginOptions' => [
-								    		'prefix' => '￥ ',
-								    		'suffix' => ' 元',
-								    		'allowNegative' => false
-							    		]
-						    		]) ?>
+						    <?//= $form->field($model, 'market_price')->widget(MaskMoney::className(), [
+// 							    		'pluginOptions' => [
+// 								    		'prefix' => '￥ ',
+// 								    		'suffix' => ' 元',
+// 								    		'allowNegative' => false
+// 							    		]
+// 						    		//]) ?>
 						    		
-						    <?= $form->field($model, 'unit')->textInput(['maxlength' => true]) ?>
+						    <?//= $form->field($model, 'unit')->textInput(['maxlength' => true]) ?>
 						
 						    <?//= $form->field($model, 'weight')->textInput() ?>
 						
-						    <?= $form->field($model, 'inventory')->textInput() ?>
+						    <?//= $form->field($model, 'inventory')->textInput() ?>
 						
 						    <?//= $form->field($model, 'sales')->textInput() ?>
 						    
@@ -85,10 +108,10 @@ use kartik\money\MaskMoney;
 													[
 														'prompt'=>'省、直辖市',
 														'onchange'=>'
-															$("select#userexpand-city").html("<option value=\"\">市</option>");
-															$("select#userexpand-county").html("<option value=\"\">区、县</option>");
+															$("select#goods-place-city").html("<option value=\"\">市</option>");
+															$("select#goods-place-county").html("<option value=\"\">区、县</option>");
 												            $.post("/classify/city?pid='.'"+$(this).val(),function(data){
-												                $("select#userexpand-city").html(data);
+												                $("select#goods-place-city").html(data);
 												            });',
 													]
 											) ?>
@@ -100,9 +123,9 @@ use kartik\money\MaskMoney;
 											[
 												'prompt'=>'市',
 												'onchange'=>'
-														$("select#userexpand-county").html("<option value=\"\">区、县</option>");
+														$("select#goods-place-county").html("<option value=\"\">区、县</option>");
 												      	$.post("/classify/county?pid='.'"+$(this).val(),function(data){
-												                $("select#userexpand-county").html(data);
+												                $("select#goods-place-county").html(data);
 														});',
 											]) ?>
 								</div>
@@ -117,11 +140,53 @@ use kartik\money\MaskMoney;
 						    
 						    <?//= $form->field($model, 'gps')->textInput(['maxlength' => true]) ?>
 						
+							<div class="links-content">
+								<div class="form-group field-goods-links">
+									<label class="col-lg-2 control-label" for="goods-links">友情链接</label>
+									<div class="col-lg-4">
+										<?= $form->field($model, 'links[name][]', ['template' => "<div class=\"control-group\">{input}</div>{error}\n"])->textInput(['placeholder' => "链接标题"]) ?>
+									</div>
+									<div class="col-lg-4">
+										<?= $form->field($model, 'links[url][]', ['template' => "<div class=\"control-group\">{input}</div>{error}\n"])->textInput(['placeholder' => "链接地址"]) ?>
+									</div>
+									<div class="col-lg-1">
+										<div class="form-group">
+											<button class="btn btn-success links-add" type="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							
 						    <?= $form->field($model, 'keyword')->textInput(['maxlength' => true]) ?>
 						
 						    <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
 						    
-						    <?= $form->field($model, 'detail')->textarea(['rows' => 6]) ?>
+						    <?//= $form->field($model, 'detail')->textarea(['rows' => 6]) ?>
+						    <?= $form->field($model, 'detail')->widget(\xj\ueditor\Ueditor::className(), [
+							    'style' => 'width:100%;height:350px',
+							    'renderTag' => true,
+							    'readyEvent' => "",
+							    'jsOptions' => [
+									'toolbars'=> [
+										[
+											'fullscreen', 'source', '|', 'undo', 'redo', '|',
+											'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+											'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+											'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+											'directionalityltr', 'directionalityrtl', 'indent', '|',
+											'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+											'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+											'simpleupload', 'insertimage', 'emotion', 'template', 'background', '|',
+											'preview'
+										]
+									],
+							        'serverUrl' => yii\helpers\Url::to(['upload']),
+									'maximumWords' => 100000,
+							        'autoHeightEnable' => true,
+							        'autoFloatEnable' => true,
+									'enableAutoSave ' => false
+							    ],
+							])?>
 						
 						    <div class="form-group">
 					        	<div class="col-lg-offset-2 col-lg-10">
@@ -136,3 +201,18 @@ use kartik\money\MaskMoney;
 			<?=$this->render("/widgets/leftbar")?>
 		</div>
 	  </div>
+<?php
+$script = <<<JS
+	$(document).on("click", ".links-add", function(){
+		$(this).parents(".field-goods-links").clone(true).appendTo(".links-content");
+		$(".links-content").find(".control-label").last().html('');
+		$(".links-content").find(".field-goods-links").last().find("input").val('');
+		$(".links-content").find(".col-lg-1 > .form-group").last().html('<button class="btn btn-danger links-delect" type="button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>');
+	});
+	
+	$(document).on("click", ".links-delect", function(){
+		$(this).parents(".field-goods-links").remove();
+	});
+JS;
+    $this->registerJs($script);
+?> 

@@ -10,7 +10,7 @@ use yii\helpers\Html;
 				  <li><a href="#">账号设置</a></li>
 				  <li class="active">详细</li>
 				</ol>
-				<div class="ucenter-content panel-content" style="padding:0px 20px 60px 20px;min-height:550px;">
+				<div class="ucenter-content panel-content" style="min-height:550px;">
 					<p style="padding-top:8px;margin-bottom:40px;"><a class="btn btn-default" type="buttom" style="float:right;" href="/ucenter/default/update">编辑</a></p>
 						<?= DetailView::widget([
 							'template' => "<tr><th width='20%'>{label}</th><td width='80%'>{value}</td></tr>",	

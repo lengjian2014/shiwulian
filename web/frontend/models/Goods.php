@@ -43,6 +43,7 @@ use common\behaviors\TimeBehavior;
 class Goods extends \yii\db\ActiveRecord
 {
 	public $tags;
+	public $links;
     /**
      * @inheritdoc
      */
@@ -57,10 +58,10 @@ class Goods extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-        	[['barcode', 'title', 'summary', 'picture', 'classify', 'picture', 'place', 'detail', 'soldarea', 'tags'], 'required'],
-            [['uid', 'weight', 'classify', 'inventory', 'sales', 'comments', 'score', 'scan', 'dynamic', 'trace', 'status', 'admin_id', 'addtime', 'updatetime'], 'integer'],
+        	[['barcode', 'title', 'summary', 'classify', 'picture', 'place', 'detail', 'soldarea', 'tags'], 'required'],
+            [['uid', 'weight', 'classify', 'inventory', 'sales', 'comments', 'scan', 'dynamic', 'trace', 'status', 'admin_id', 'addtime', 'updatetime'], 'integer'],
             [['detail', 'place', 'links'], 'string'],
-            [['price', 'market_price'], 'number'],
+            [['price', 'market_price', 'score'], 'number'],
             [['barcode', 'title', 'summary', 'picture', 'brand', 'address', 'keyword', 'description', 'reason'], 'string', 'max' => 250],
             [['unit', 'gps'], 'string', 'max' => 100],
             
@@ -90,7 +91,7 @@ class Goods extends \yii\db\ActiveRecord
             'summary' => Yii::t('app', '简介'),
             'soldarea' => Yii::t('app', '销售区域'),
             'detail' => Yii::t('app', '产品详细'),
-            'picture' => Yii::t('app', '图片'),
+            'picture' => Yii::t('app', '产品图片'),
             'price' => Yii::t('app', '销售价格'),
             'market_price' => Yii::t('app', '市场价格'),
             'unit' => Yii::t('app', '计量单位'),
@@ -147,7 +148,7 @@ class Goods extends \yii\db\ActiveRecord
 	 * @param number $pagesize
 	 * @return multitype:\yii\data\Pagination Ambigous <multitype:, multitype:\yii\db\ActiveRecord >
 	 */
-	public static function findAllByCondition($condition, $order, $limit, $pagesize = 10)
+	public static function findAllByCondition($condition, $order, $pagesize = 10)
 	{
 		$query = self::find()->where($condition);
 			
@@ -155,8 +156,8 @@ class Goods extends \yii\db\ActiveRecord
 		$pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pagesize]);
 		$models = $query->offset($pages->offset)
 											->orderBy($order)
-											->limit($limit)
-											->indexBy("uniqid")
+											->limit($pages->limit)
+											->indexBy("id")
 											->all();
 		
 		return [$models, $pages];
@@ -170,18 +171,18 @@ class Goods extends \yii\db\ActiveRecord
 	 * @param number $pagesize
 	 * @return multitype:\yii\data\Pagination Ambigous <multitype:, multitype:\yii\db\ActiveRecord >
 	 */
-	public static function getAllByCondition($condition, $order, $limit, $pagesize = 10)
+	public static function getAllByCondition($condition, $order, $pagesize = 10)
 	{
 		$query = self::find()->where($condition);
 			
 		$countQuery = clone $query;
 		$pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pagesize]);
 		$models = $query->offset($pages->offset)
-										->orderBy($order)
-										->limit($limit)
-										->indexBy("uniqid")
-										->asArray()
-										->all();
+											->orderBy($order)
+											->limit($pages->limit)
+											->indexBy("id")
+											->asArray()
+											->all();
 	
 		return [$models, $pages];
 	}

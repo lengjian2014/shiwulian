@@ -132,7 +132,18 @@ class GoodsTags extends \yii\db\ActiveRecord
 		}
 		self::deleteAll(['goods_id' => $goods_id]);
 		$result = \Yii::$app->db->createCommand()->batchInsert(self::tableName(), ['goods_id','tags_id'], $data)->execute();
-		 
+		return $result;
 	}
 	
+	/**
+	 * 根据产品id返回标签
+	 * @param unknown $goods_id
+	 * @return Ambigous <NULL, multitype:>
+	 */
+	public static function getTagsByGoodsId($goods_id)
+	{
+		$info = self::find()->where(['goods_id' => $goods_id])->indexBy("tags_id")->asArray()->all();
+		
+		return empty($info) ? null : array_keys($info);
+	}
 }

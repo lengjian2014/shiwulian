@@ -25,7 +25,7 @@ use kartik\money\MaskMoney;
 					    <?php $form = ActiveForm::begin([
 													      	'id' => 'update-form',
 					    									'options' => ['class' => 'form-horizontal','enctype' => 'multipart/form-data'],
-													        'fieldConfig' => [  
+													        'fieldConfig' => [
 													            'template' => "{label}\n<div class=\"col-lg-9\"><div class=\"control-group\">{input}</div>{error}</div>\n",  
 													            'labelOptions' => ['class' => 'col-lg-2 control-label'],  
 													            'inputOptions' => ['class' => 'form-control']
@@ -47,14 +47,19 @@ use kartik\money\MaskMoney;
 									])?>
 						
 						    <?= $form->field($model, 'summary')->textarea(['rows' => 5])?>
-						
-						    <?//= $form->field($model, 'picture')->textInput(['maxlength' => true]) ?>
+						    
 						    <?= $form->field($model, 'picture[]')->widget(FileInput::className(), [
+						    				'data' => $model->picture,
 											'language' => 'zh-CN',
-										    'options' => ['multiple' => true],
-										    'pluginOptions' => ['previewFileType' => 'any', 'uploadUrl' => Url::to(['/site/upload']), 'showUpload'=>true]
+										    'options' => ['multiple' => true, 'accept' => 'image/*'],
+										    'pluginOptions' => [
+															'previewFileType' => 'any', 
+															'uploadUrl' => Url::to(['/site/upload']), 
+															'showUpload'=>true, 
+														    'initialPreview'=> $picture, 
+														    'overwriteInitial' => false]
 								]); ?>
-
+						    
 						    <?= $form->field($model, 'tags')->widget(Select2::className(), [
 										'value' => $model->soldarea, // initial value
 										'data' => ArrayHelper::map(Areas::getAreasByParentId(0), 'id', 'name'),
@@ -141,6 +146,7 @@ use kartik\money\MaskMoney;
 						    <?//= $form->field($model, 'gps')->textInput(['maxlength' => true]) ?>
 						
 							<div class="links-content">
+								<?php if(empty($model->links)){?>
 								<div class="form-group field-goods-links">
 									<label class="col-lg-2 control-label" for="goods-links">友情链接</label>
 									<div class="col-lg-4">
@@ -155,6 +161,26 @@ use kartik\money\MaskMoney;
 										</div>
 									</div>
 								</div>
+								<?php }else{ foreach ($model->links['name'] as $k => $v){?>
+								<div class="form-group field-goods-links">
+									<label class="col-lg-2 control-label" for="goods-links"><?=$k==0? '友情链接' : ''?></label>
+									<div class="col-lg-4">
+										<?= $form->field($model, 'links[name]['.$k.']', ['template' => "<div class=\"control-group\">{input}</div>{error}\n"])->textInput(['placeholder' => "链接标题"]) ?>
+									</div>
+									<div class="col-lg-4">
+										<?= $form->field($model, 'links[url]['.$k.']', ['template' => "<div class=\"control-group\">{input}</div>{error}\n"])->textInput(['placeholder' => "链接地址"]) ?>
+									</div>
+									<div class="col-lg-1">
+										<div class="form-group">
+										<?php if($k==0){?>
+											<button class="btn btn-success links-add" type="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+										<?php }else{?>	
+											<button class="btn btn-danger links-delect" type="button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+										<?php }?>	
+										</div>
+									</div>
+								</div>
+								<?php }}?>
 							</div>
 							
 						    <?= $form->field($model, 'keyword')->textInput(['maxlength' => true]) ?>
@@ -209,10 +235,12 @@ $script = <<<JS
 		$(".links-content").find(".field-goods-links").last().find("input").val('');
 		$(".links-content").find(".col-lg-1 > .form-group").last().html('<button class="btn btn-danger links-delect" type="button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>');
 	});
-	
 	$(document).on("click", ".links-delect", function(){
 		$(this).parents(".field-goods-links").remove();
 	});
+	$(document).on("click", ".kv-file-remove", function(){
+		$(this).parents(".file-preview-frame").remove();
+	})
 JS;
     $this->registerJs($script);
 ?> 

@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\UserRoleSearch */
+/* @var $searchModel backend\models\GoodsLinksSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'User Roles');
+$this->title = Yii::t('app', 'Goods Links');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="user-role-index">
+<div class="goods-links-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <?php echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create User Role'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Create Goods Links'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -26,13 +26,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'uid',
-            'role',
-            'type',
-            'content',
-            // 'picture',
-            // 'status',
-            // 'addtime:datetime',
+            'goods_id',
+            'title',
+            'url:url',
+            'addtime:datetime',
             // 'updatetime:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],

@@ -1,5 +1,6 @@
 <?php 
 use yii\widgets\DetailView;
+use yii\helpers\Html;
 ?>
       <div class="row">
 		<div class="col-xs-12 col-sm-9">
@@ -8,62 +9,55 @@ use yii\widgets\DetailView;
 				  <li><a href="#">账号设置</a></li>
 				  <li class="active">详细</li>
 				</ol>
-				<div class="ucenter-content panel-content">
+				<div class="ucenter-content panel-content" style="padding-top: 0px;">
+					<div class="row" style="padding: 10px 15px;margin:0px;border-bottom-color: #e9e9e9;border-bottom-style: solid;border-bottom-width: 1px;">
+				  		<div class="btn-group" data-toggle="buttons" style="float:left;">
+					  		  <label class="btn btn-default active">
+							    <input type="radio" name="options" id="option1" autocomplete="off" checked><span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span> 最新
+							  </label>	
+							  <label class="btn btn-default">
+							    <input type="radio" name="options" id="option1" autocomplete="off"><span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span> 动态最新
+							  </label>
+							  <label class="btn btn-default">
+							    <input type="radio" name="options" id="option2" autocomplete="off"> 放心指数
+							  </label>
+							  <label class="btn btn-default">
+							    <input type="radio" name="options" id="option3" autocomplete="off"> 追溯数
+							  </label>
+							  <label class="btn btn-default">
+							    <input type="radio" name="options" id="option3" autocomplete="off"> 浏览量
+							  </label>
+							  <label class="btn btn-default">
+							    <input type="radio" name="options" id="option3" autocomplete="off"> 评论数
+							  </label>
+						</div>
+				  	</div>
+				  <?php if(!empty($model)){foreach ($model as $k => $v){?>
 					<div class="row main" style="margin-left:0px;margin-right:0px;margin-bottom:10px;padding-top:20px;border-bottom-color: #e9e9e9;border-bottom-style: solid;border-bottom-width: 1px;">
 						<div class="col-xs-3 col-sm-3">
 								<a href="#">
-									<img width="100%" src="https://gd4.alicdn.com/imgextra/i4/124309387/TB2KlX7dXXXXXX4XXXXXXXXXXXX_!!124309387.jpg_400x400.jpg" alt="100%x180">
+									<img width="100%" src="<?php $picture=explode("|", $v['picture']); echo IMGURL . $picture[0];?>" alt="100%x180">
 								</a>
 						</div>
 						<div class="col-xs-9 col-sm-9">
-							<h4>正宗秭归纽荷尔脐橙5斤 买2件送精美水果刀 新鲜采摘水果新鲜橙子</h4>
-							<p style="font-size:12px;color:#9d9d9d">正宗秭归脐橙5斤 不打蜡 破损包赔 5斤约12个左右 购买2件以上无特殊说明，均是合并为一箱发货，如需要分开包装请留言备注分开包装，未备注均默认合并为一箱发货这样安全点</p>
+							<h4><?=Html::encode($v['title'])?></h4>
+							<p style="font-size:12px;color:#9d9d9d"><?=Html::encode($v['summary'])?></p>
 							<p style=" margin-bottom: 1px;">
-								<span><small>产品分类：水果</small></span><span style="padding-left:20px;"><small>浏览次数：</small>100</span><span style="padding-left:20px;"><small>追溯次数：</small>110</span><span style="padding-left:20px;"><small>评论次数：</small>12</span>
+								<span><small>产品分类：水果</small></span><span style="padding-left:20px;"><small>浏览次数：</small><?=intval($v['scan'])?></span><span style="padding-left:20px;"><small>追溯次数：</small><?=intval($v['trace'])?></span><span style="padding-left:20px;"><small>评论次数：</small><?=intval($v['comments'])?></span>
 							</p>
 							<p style=" margin-bottom: 1px;">
-								<span><small>放心指数：</small><i style="color:red;font-size:20px;">10.0</i></span><a style="margin-left:5px;float:right;" class="btn btn-danger btn-xs">关闭</a><a style="float:right;" class="btn btn-info btn-xs">编辑</a>
+								<span><small>放心指数：</small><i style="color:red;font-size:20px;"><?=$v['score']?></i></span>
 							</p>
 						</div>
-						<div class="col-xs-12 col-sm-12" style="padding:10px 20px;"><span><small>养殖户：<a>漠冷</a></small></span><span style="padding-left:20px;"><small>加工企业：<a>漠冷</a></small></span><span style="padding-left:20px;"><small>检疫检验：<a>未设置</a></small></span><span style="padding-left:20px;"><small>运输保存：<a>未设置</a></small></span><span style="padding-left:20px;"><small>批发销售：<a>漠冷</a></small></span></div>
+						<div class="col-xs-12 col-sm-12" style="padding:10px 20px;">
+							<?php foreach (Yii::$app->params['noderole'] as $key => $val){?>
+								<span style="padding-right:20px;"><small>养殖户：<a><?=isset($role[$v['id']][$key]) && !empty($role[$v['id']][$key]) ? implode('&nbsp;', $role[$v['id']][$key]) : '<a>未设置</a>'?></a></small></span>
+							<?php }?>
+							<a style="margin-left:5px;float:right;" class="btn-danger btn-xs">关闭</a><a href="/ucenter/goods/update/<?=$v['id']?>" style="float:right;" class="btn-info btn-xs">编辑</a>
+						</div>
 					</div>
-					<div class="row main" style="margin-left:0px;margin-right:0px;margin-bottom:10px;padding-top:20px;border-bottom-color: #e9e9e9;border-bottom-style: solid;border-bottom-width: 1px;">
-						<div class="col-xs-3 col-sm-3">
-								<a href="#">
-									<img width="100%" src="https://gd2.alicdn.com/imgextra/i2/124309387/TB2hphNdXXXXXbfXpXXXXXXXXXX_!!124309387.jpg_400x400.jpg" alt="100%x180">
-								</a>
-						</div>
-						<div class="col-xs-9 col-sm-9">
-							<h4>正宗秭归纽荷尔脐橙5斤 买2件送精美水果刀 新鲜采摘水果新鲜橙子</h4>
-							<p style="font-size:12px;color:#9d9d9d">正宗秭归脐橙5斤 不打蜡 破损包赔 5斤约12个左右 购买2件以上无特殊说明，均是合并为一箱发货，如需要分开包装请留言备注分开包装，未备注均默认合并为一箱发货这样安全点</p>
-							<p style=" margin-bottom: 1px;">
-								<span><small>产品分类：水果</small></span><span style="padding-left:20px;"><small>浏览次数：</small>100</span><span style="padding-left:20px;"><small>追溯次数：</small>110</span><span style="padding-left:20px;"><small>评论次数：</small>12</span>
-							</p>
-							<p style=" margin-bottom: 1px;">
-								<span><small>放心指数：</small><i style="color:red;font-size:20px;">10.0</i></span><a style="margin-left:5px;float:right;" class="btn btn-danger btn-xs">关闭</a><a style="float:right;" class="btn btn-info btn-xs">编辑</a>
-							</p>
-						</div>
-						<div class="col-xs-12 col-sm-12" style="padding:10px 20px;"><span><small>养殖户：<a>漠冷</a></small></span><span style="padding-left:20px;"><small>加工企业：<a>漠冷</a></small></span><span style="padding-left:20px;"><small>检疫检验：<a>未设置</a></small></span><span style="padding-left:20px;"><small>运输保存：<a>未设置</a></small></span><span style="padding-left:20px;"><small>批发销售：<a>漠冷</a></small></span></div>
-					</div>
-					<div class="row main" style="margin-left:0px;margin-right:0px;margin-bottom:10px;padding-top:20px;border-bottom-color: #e9e9e9;border-bottom-style: solid;border-bottom-width: 1px;">
-						<div class="col-xs-3 col-sm-3">
-								<a href="#">
-									<img width="100%" src="https://gd4.alicdn.com/imgextra/i4/124309387/TB2VrhWdXXXXXcoXXXXXXXXXXXX_!!124309387.jpg_400x400.jpg" alt="100%x180">
-								</a>
-						</div>
-						<div class="col-xs-9 col-sm-9">
-							<h4>正宗秭归纽荷尔脐橙5斤 买2件送精美水果刀 新鲜采摘水果新鲜橙子</h4>
-							<p style="font-size:12px;color:#9d9d9d">正宗秭归脐橙5斤 不打蜡 破损包赔 5斤约12个左右 购买2件以上无特殊说明，均是合并为一箱发货，如需要分开包装请留言备注分开包装，未备注均默认合并为一箱发货这样安全点</p>
-							<p style=" margin-bottom: 1px;">
-								<span><small>产品分类：水果</small></span><span style="padding-left:20px;"><small>浏览次数：</small>100</span><span style="padding-left:20px;"><small>追溯次数：</small>110</span><span style="padding-left:20px;"><small>评论次数：</small>12</span>
-							</p>
-							<p style=" margin-bottom: 1px;">
-								<span><small>放心指数：</small><i style="color:red;font-size:20px;">10.0</i></span><a style="margin-left:5px;float:right;" class="btn btn-danger btn-xs">关闭</a><a style="float:right;" class="btn btn-info btn-xs">编辑</a>
-							</p>
-						</div>
-						<div class="col-xs-12 col-sm-12" style="padding:10px 20px;"><span><small>养殖户：<a>漠冷</a></small></span><span style="padding-left:20px;"><small>加工企业：<a>漠冷</a></small></span><span style="padding-left:20px;"><small>检疫检验：<a>未设置</a></small></span><span style="padding-left:20px;"><small>运输保存：<a>未设置</a></small></span><span style="padding-left:20px;"><small>批发销售：<a>漠冷</a></small></span></div>
-					</div>
-				</div>
+					<?php }}?>
+			</div>
 		</div>
 		<div class="col-xs-12 col-sm-3">
 			<?=$this->render("/widgets/leftbar")?>

@@ -145,4 +145,21 @@ class Areas extends \yii\db\ActiveRecord
 		return $this->hasMany(Areas::className(), ['pid' => 'id']);
 	}
 
+	/**
+	 * 根据id返回所有父分类
+	 * @param unknown $id
+	 * @return multitype:
+	 */
+	public static function getParentBuChildId($id)
+	{
+		$data = [];
+		$info = self::find()->where(['id' => $id])->asArray()->one();
+		if($info['pid'] != 0)
+		{
+			$data = self::getParentBuChildId($info['pid']);
+		}
+		$data = array_merge([$info], $data);
+		
+		return $data;
+	}
 }

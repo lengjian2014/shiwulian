@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * GoodsEvaluateController implements the CRUD actions for GoodsEvaluate model.
  */
-class GoodsEvaluateController extends Controller
+class GoodsevaluateController extends Controller
 {
     public function behaviors()
     {

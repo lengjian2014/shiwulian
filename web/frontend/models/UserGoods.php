@@ -118,4 +118,44 @@ class UserGoods extends \yii\db\ActiveRecord
 	
 		return [$models, $pages];
 	}
+	
+	/**
+	 * 创建产品时更新角色的产品
+	 * @param unknown $uid
+	 * @param unknown $goods_id
+	 * @return number
+	 */
+	public static function createGoodsRole($uid, $goods_id)
+	{
+		$role = UserRole::getUserRoleByUid($uid);
+		$data = [];
+		foreach ($role as $k => $v)
+		{
+			$data[] = [$uid, $v->role, $goods_id, time(), time()];
+		}
+		$result = \Yii::$app->db->createCommand()->batchInsert(self::tableName(), ['uid', 'role', 'goods_id', 'addtime', 'updatetime'], $data)->execute();
+		
+		return $result;
+	}
+	
+	/**
+	 * 根据产品id返回角色信息
+	 * @param unknown $goods_id
+	 * @return NULL|Ambigous <\yii\db\ActiveRecord, multitype:, NULL>
+	 */
+	public static function getUserRoleByGoodsId($goods_id)
+	{
+		if(empty($goods_id)) return null;
+		$goods_id = !is_array($goods_id) ? [$goods_id] : $goods_id;
+		$info = self::find()->where(['goods_id' => $goods_id, 'user_role.status' => 1])->leftJoin("user_role", "user_role.uid = " .self::tableName() . ".uid")->all();
+		$data = [];
+		if(!empty($info))
+		{
+			foreach ($info as $k => $v)
+			{
+				$data[$v->goods_id][$v->role][] = $v->uid;
+			}
+		}
+		return $data;
+	}
 }

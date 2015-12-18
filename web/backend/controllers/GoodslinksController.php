@@ -3,16 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use frontend\models\UserCertification;
-use backend\models\UserCertificationSearch;
+use frontend\models\GoodsLinks;
+use backend\models\GoodsLinksSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * UserCertificationController implements the CRUD actions for UserCertification model.
+ * GoodsLinksController implements the CRUD actions for GoodsLinks model.
  */
-class UsercertificationController extends Controller
+class GoodslinksController extends Controller
 {
     public function behaviors()
     {
@@ -27,12 +27,12 @@ class UsercertificationController extends Controller
     }
 
     /**
-     * Lists all UserCertification models.
+     * Lists all GoodsLinks models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new UserCertificationSearch();
+        $searchModel = new GoodsLinksSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -42,7 +42,7 @@ class UsercertificationController extends Controller
     }
 
     /**
-     * Displays a single UserCertification model.
+     * Displays a single GoodsLinks model.
      * @param integer $id
      * @return mixed
      */
@@ -54,13 +54,13 @@ class UsercertificationController extends Controller
     }
 
     /**
-     * Creates a new UserCertification model.
+     * Creates a new GoodsLinks model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new UserCertification();
+        $model = new GoodsLinks();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -72,7 +72,7 @@ class UsercertificationController extends Controller
     }
 
     /**
-     * Updates an existing UserCertification model.
+     * Updates an existing GoodsLinks model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -91,7 +91,7 @@ class UsercertificationController extends Controller
     }
 
     /**
-     * Deletes an existing UserCertification model.
+     * Deletes an existing GoodsLinks model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -104,15 +104,15 @@ class UsercertificationController extends Controller
     }
 
     /**
-     * Finds the UserCertification model based on its primary key value.
+     * Finds the GoodsLinks model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return UserCertification the loaded model
+     * @return GoodsLinks the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = UserCertification::findOne($id)) !== null) {
+        if (($model = GoodsLinks::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

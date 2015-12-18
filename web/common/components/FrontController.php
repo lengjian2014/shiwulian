@@ -11,7 +11,7 @@ use yii\web\Response;
  */
 class FrontController extends \yii\web\Controller
 {
-	public static $PAGE_SIZE = 10;
+	public static $PAGE_SIZE = 20;
 	//列表页大分页
 	public static $LIST_PAGE_SIZE = 50;
 

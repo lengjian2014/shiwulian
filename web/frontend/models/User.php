@@ -171,4 +171,18 @@ class User extends \yii\db\ActiveRecord
 	
 		return [$models, $pages];
 	}
+	
+	/**
+	 * 批量查询
+	 * @param unknown $uids
+	 * @return NULL|Ambigous <multitype:, multitype:\yii\db\ActiveRecord >
+	 */
+	public static function getUsersByUids($uids)
+	{
+		if(empty($uids)) return null;
+		$uids = is_array($uids) ? $uids : [$uids];
+		
+		return self::find()->where(['uid' => $uids])->asArray()->all();
+	}
+
 }

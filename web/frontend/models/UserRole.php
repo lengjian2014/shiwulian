@@ -117,7 +117,7 @@ class UserRole extends \yii\db\ActiveRecord
 	 * @param number $pagesize
 	 * @return multitype:\yii\data\Pagination Ambigous <multitype:, multitype:\yii\db\ActiveRecord >
 	 */
-	public static function getAllByCondition($condition, $order, $limit, $pagesize = 10)
+	public static function getAllByCondition($condition, $order, $pagesize = 10)
 	{
 		$query = self::find()->where($condition);
 			
@@ -125,8 +125,6 @@ class UserRole extends \yii\db\ActiveRecord
 		$pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pagesize]);
 		$models = $query->offset($pages->offset)
 										->orderBy($order)
-										->limit($limit)
-										->indexBy("uniqid")
 										->asArray()
 										->all();
 	
@@ -152,4 +150,5 @@ class UserRole extends \yii\db\ActiveRecord
 	{
 		return self::find()->where(['uid' => $uid, 'role' => $role])->indexBy("type")->one();
 	}
+
 }

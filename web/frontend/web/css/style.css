@@ -202,7 +202,7 @@ th, td {
   margin-top: 0px;
 }
 .content .main .img-box-row{
-  padding: 5px;
+	padding: 5px;
 }
 .content .main .img-box-row img{
   height:180px;
@@ -351,8 +351,18 @@ th, td {
     margin-left: 0px;
     margin-right: 0px;
 }
-
 .ucenter-content .thumbnail-img{
 	width: 30%;
+	padding:5px;
+}
+.dynamic-content {
+	padding-top:20px;
+	margin-bottom:0px;
+}
+.dynamic-img{
+	padding-left:15px;
+	padding-right:15px;
+}
+.dynamic-img .col-sm-3, .col-xs-4{
 	padding:5px;
 }

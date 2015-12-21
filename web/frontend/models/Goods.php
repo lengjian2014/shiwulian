@@ -186,4 +186,26 @@ class Goods extends \yii\db\ActiveRecord
 	
 		return [$models, $pages];
 	}
+	
+	/**
+	 * 根据产品id返回产品信息
+	 * @param unknown $goods_id
+	 * @return NULL|Ambigous <multitype:, multitype:\yii\db\ActiveRecord >
+	 */
+	public static function getGoodsByGoodsId($goods_id)
+	{
+		if(empty($goods_id)) return null;
+		$info = self::find()->where(['id' => $goods_id, 'status' => 1])->asArray()->indexBy("id")->all();
+		
+		return $info;
+	}
+	
+	public static function updateDataByParam($goods_id, $param, $num = 1)
+	{
+		if(empty($goods_id)) return null;
+		$num = intval($num);
+		$goods_id = is_array($goods_id) ? implode(",", $goods_id) : $goods_id;
+		$sql = "UPDATE `".self::tableName()."` SET `{$param}` = {$param}+{$num} WHERE `id` in ({$goods_id})";
+		return \Yii::$app->db->createCommand($sql)->execute();
+	}
 }

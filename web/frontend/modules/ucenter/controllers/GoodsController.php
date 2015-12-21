@@ -173,13 +173,23 @@ class GoodsController extends FrontController
             $model->links = json_decode($model->links, true);
             $model->place = $place;
         }
-
+		
+        $picture = [];
+        if(!empty($model->picture))
+        {
+        	$picture = explode("|", $model->picture);
+        	foreach ($picture as $k => $v)
+        	{
+        		$picture[$k] = FileUploaded::formatImges($v, "Goods[picture][]");
+        	}
+        }
         $model->soldarea = !empty($model->soldarea) ? explode(",", $model->soldarea) : [];
       	return $this->render('form', [
                 'model' => $model,
+      			'picture' => $picture
             ]);
     }
-		
+	
     public function actionPartner()
     {
     	$condition = ['uid' => \Yii::$app->user->id];

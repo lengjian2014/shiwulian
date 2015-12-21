@@ -31,6 +31,19 @@
     </div>
   </div>
   <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingSeven">
+      <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          产品动态
+      </h4>
+    </div>
+    <div id="collapseSeven" class="panel-collapse collapse <?=$this->context->id == 'dynamic' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingSeven">
+		<div class="list-group">
+		  <a href="/ucenter/dynamic" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/dynamic/index' ? 'active' : ''?>"><span class="glyphicon glyphicon glyphicon-comment" style="margin-right: 5px;"></span> 所有动态</a>
+		  <a href="/ucenter/dynamic/create" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/dynamic/create' ? 'active' : ''?>"><span class="glyphicon glyphicon-plus" style="margin-right: 5px;"></span> 添加动态</a>
+		</div>
+    </div>
+  </div>
+  <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingThree">
       <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           商品管理

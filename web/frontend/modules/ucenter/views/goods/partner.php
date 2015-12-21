@@ -10,28 +10,9 @@ use yii\helpers\Html;
 				  <li class="active">详细</li>
 				</ol>
 				<div class="ucenter-content panel-content" style="padding: 0px;padding-bottom:60px;min-height:550px;">
-					<div class="row" style="padding: 10px 15px;margin:0px;">
-				  		<div class="btn-group" data-toggle="buttons" style="float:left;">
-					  		  <label class="btn btn-default active">
-							    <input type="radio" name="options" id="option1" autocomplete="off" checked><span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span> 最新
-							  </label>	
-							  <label class="btn btn-default">
-							    <input type="radio" name="options" id="option1" autocomplete="off"><span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span> 动态最新
-							  </label>
-							  <label class="btn btn-default">
-							    <input type="radio" name="options" id="option2" autocomplete="off"> 放心指数
-							  </label>
-							  <label class="btn btn-default">
-							    <input type="radio" name="options" id="option3" autocomplete="off"> 追溯数
-							  </label>
-							  <label class="btn btn-default">
-							    <input type="radio" name="options" id="option3" autocomplete="off"> 浏览量
-							  </label>
-							  <label class="btn btn-default">
-							    <input type="radio" name="options" id="option3" autocomplete="off"> 评论数
-							  </label>
-						</div>
-				  	</div>
+<!-- 					<div class="row" style="padding: 10px 15px;margin:0px;text-align:right;">
+						<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 搜索合作产品</button> -->
+<!-- 				  	</div> -->
 				  	<div class="row" style="padding: 10px 15px;margin:0px;">
 						<table class="table table-hover">
 							<thead>

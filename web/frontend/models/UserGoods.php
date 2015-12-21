@@ -158,4 +158,16 @@ class UserGoods extends \yii\db\ActiveRecord
 		}
 		return $data;
 	}
+	
+	/**
+	 * 根据用户id返回其所有有用产品id
+	 * @param unknown $uid
+	 * @return Ambigous <string, multitype:>
+	 */
+	public static function getGoodsByUserId($uid)
+	{
+		$info = self::find()->select("goods_id")->where(['uid' => $uid, 'status' => 1])->indexBy("goods_id")->asArray()->all();
+
+		return empty($info) ? '' : array_keys($info);
+	}
 }

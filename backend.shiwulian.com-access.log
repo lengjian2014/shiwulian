@@ -393,3 +393,15 @@
 127.0.0.1 - - [18/Dec/2015:17:49:25 +0800] "GET /assets/8bb60d5/js/bootstrap.js HTTP/1.1" 304 -
 127.0.0.1 - - [18/Dec/2015:17:49:25 +0800] "GET /assets/d5cab628/toolbar.js HTTP/1.1" 304 -
 127.0.0.1 - - [18/Dec/2015:17:49:25 +0800] "GET /debug/default/toolbar?tag=5673d6a525dc4 HTTP/1.1" 200 19640
+127.0.0.1 - - [18/Dec/2015:18:23:55 +0800] "GET /favicon.ico HTTP/1.1" 200 318
+127.0.0.1 - - [21/Dec/2015:09:43:12 +0800] "GET /favicon.ico HTTP/1.1" 304 -
+127.0.0.1 - - [21/Dec/2015:09:43:52 +0800] "GET /assets/d5cab628/toolbar.js HTTP/1.1" 200 1665
+127.0.0.1 - - [21/Dec/2015:09:43:16 +0800] "GET /userrole HTTP/1.1" 500 112517
+127.0.0.1 - - [21/Dec/2015:09:43:53 +0800] "GET /debug/default/toolbar?tag=56775949037a7 HTTP/1.1" 200 19469
+127.0.0.1 - - [21/Dec/2015:09:58:13 +0800] "GET /favicon.ico HTTP/1.1" 200 318
+127.0.0.1 - - [21/Dec/2015:09:58:59 +0800] "GET /assets/d5cab628/toolbar.js HTTP/1.1" 200 1665
+127.0.0.1 - - [21/Dec/2015:09:58:52 +0800] "GET /userrole HTTP/1.1" 500 112519
+127.0.0.1 - - [21/Dec/2015:09:59:00 +0800] "GET /debug/default/toolbar?tag=56775cde26421 HTTP/1.1" 200 19467
+127.0.0.1 - - [21/Dec/2015:10:05:20 +0800] "GET /assets/d5cab628/toolbar.js HTTP/1.1" 304 -
+127.0.0.1 - - [21/Dec/2015:10:05:18 +0800] "GET /userrole HTTP/1.1" 500 112561
+127.0.0.1 - - [21/Dec/2015:10:05:20 +0800] "GET /debug/default/toolbar?tag=56775e5ebdde8 HTTP/1.1" 200 19467

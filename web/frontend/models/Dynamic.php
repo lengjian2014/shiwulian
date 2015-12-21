@@ -38,10 +38,13 @@ class Dynamic extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['uid'], 'required'],
-            [['uid', 'goods_id', 'series_id', 'classify_id', 'scan', 'like', 'comment', 'addtime', 'updatetime'], 'integer'],
+            [['content', 'goods_id'], 'required'],
+            [['uid', 'goods_id', 'series_id', 'classify_id', 'scan', 'like', 'comment', 'addtime', 'updatetime', 'status'], 'integer'],
+            
             [['file'], 'string'],
-            [['content'], 'string', 'max' => 500],
+            [['file'], 'file', 'maxFiles' => 10],
+            
+            [['content'], 'string'],
             [['address', 'gps'], 'string', 'max' => 250]
         ];
     }
@@ -54,11 +57,11 @@ class Dynamic extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'uid' => Yii::t('app', '发布动态人'),
-            'goods_id' => Yii::t('app', '动态所属产品'),
-            'series_id' => Yii::t('app', '系列id'),
-            'classify_id' => Yii::t('app', '动态类别'),
+            'goods_id' => Yii::t('app', '产品'),
+            'series_id' => Yii::t('app', '系列'),
+            'classify_id' => Yii::t('app', '类别'),
             'content' => Yii::t('app', '内容'),
-            'file' => Yii::t('app', '文件，图片或音频'),
+            'file' => Yii::t('app', '文件'),
             'scan' => Yii::t('app', '浏览'),
             'like' => Yii::t('app', '点赞'),
             'comment' => Yii::t('app', '评论数'),
@@ -97,7 +100,7 @@ class Dynamic extends \yii\db\ActiveRecord
 	 * @param number $pagesize
 	 * @return multitype:\yii\data\Pagination Ambigous <multitype:, multitype:\yii\db\ActiveRecord >
 	 */
-	public static function findAllByCondition($condition, $order, $limit, $pagesize = 10)
+	public static function findAllByCondition($condition, $order, $pagesize = 10)
 	{
 		$query = self::find()->where($condition);
 			
@@ -105,8 +108,7 @@ class Dynamic extends \yii\db\ActiveRecord
 		$pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pagesize]);
 		$models = $query->offset($pages->offset)
 											->orderBy($order)
-											->limit($limit)
-											->indexBy("uniqid")
+											->indexBy("id")
 											->all();
 		
 		return [$models, $pages];
@@ -120,7 +122,7 @@ class Dynamic extends \yii\db\ActiveRecord
 	 * @param number $pagesize
 	 * @return multitype:\yii\data\Pagination Ambigous <multitype:, multitype:\yii\db\ActiveRecord >
 	 */
-	public static function getAllByCondition($condition, $order, $limit, $pagesize = 10)
+	public static function getAllByCondition($condition, $order, $pagesize = 10)
 	{
 		$query = self::find()->where($condition);
 			
@@ -128,11 +130,37 @@ class Dynamic extends \yii\db\ActiveRecord
 		$pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pagesize]);
 		$models = $query->offset($pages->offset)
 										->orderBy($order)
-										->limit($limit)
-										->indexBy("uniqid")
+										->indexBy("id")
 										->asArray()
 										->all();
 	
 		return [$models, $pages];
+	}
+	
+	/**
+	 * 格式化图片音频等文件
+	 * @param unknown $file
+	 * @param string $class
+	 * @return NULL|string
+	 */
+	public static function formatFile($file, $class = 'col-xs-4 col-sm-3')
+	{
+		if(empty($file)) return null;
+		$file = explode("|", $file);
+		$data = '';
+		foreach ($file as $k => $v)
+		{
+			$ext = explode(".", $v);
+			$html = '';
+			if(in_array($ext[1], ['jpg', 'jpeg', 'png', 'gif']))
+			{
+				$html .= '<div class="'.$class.'">';
+				$html .= '<a href="#"><img style="width: 100%; display: block;" src="'.IMGURL . $v .'"></a>';
+				$html .= '</div>';
+			}
+			$data[] = $html;
+		}
+		
+		return $data;
 	}
 }

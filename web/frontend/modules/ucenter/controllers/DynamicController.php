@@ -21,9 +21,10 @@ class DynamicController extends FrontController
     public function actionIndex()
     {
     	$goods_id = UserGoods::getGoodsByUserId(\Yii::$app->user->id);
+    	$goods = Goods::getGoodsByGoodsId($goods_id);
     	$condition = ['and', 'status = 1', ['or', ['goods_id' => $goods_id], ['uid' => \Yii::$app->user->id]]];
     	list($model, $pages) = Dynamic::getAllByCondition($condition, "id desc");
-        return $this->render('index', ['model' => $model]);
+        return $this->render('index', ['model' => $model, 'goods' => $goods]);
     }
 
     /**

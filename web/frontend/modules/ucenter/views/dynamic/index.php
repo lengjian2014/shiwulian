@@ -16,7 +16,8 @@ use frontend\models\Dynamic;
 						<div class="col-sm-1"></div>
 						<div class="col-xs-12 col-sm-10">
 							<div class="subject">
-								<h4><small><a>百凤野鸡蛋30枚装 农家散养 柴鸡蛋 草鸡蛋 新鲜七彩野山鸡土鸡蛋</a></small></h4>
+								<h4><small><a><?=$goods[$item['goods_id']]['title']?></a></small></h4>
+								<p>食品原料 - 种子</p>
 								<p>
 									<?=Html::encode($item['content'])?>
 								</p>

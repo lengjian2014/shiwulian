@@ -36,7 +36,7 @@ use kartik\money\MaskMoney;
 							 
 						    <?//= $form->field($model, 'series_id')->textInput() ?>
 						
-						    <?= $form->field($model, 'classify_id')->textInput() ?>
+							<?= $form->field($model, 'classify_id')->dropDownList(Yii::$app->params['classify'],['prompt'=>'选择动态类别...'])?>
 						
 						    <?= $form->field($model, 'content')->textarea(['rows' => 5]) ?>
 						

@@ -174,10 +174,8 @@ th, td {
   height: 24px;
   overflow: hidden;
   width: 100%;
-  background: rgba(0, 0, 0, 0) url("../images/isay24.png") no-repeat scroll 0px 0px;
 }
 .content .main .corner .isayc{
-  background: rgba(0, 0, 0, 0) url("../images/isay24.png") no-repeat scroll  -660px 0;
   float: right;
   height: 20px;
   overflow: hidden;
@@ -185,15 +183,13 @@ th, td {
   width: 21px;
 }
 .content .main .subject{
-  background: rgba(0, 0, 0, 0) url("../images/isay24.png") repeat-y -1015px 0;
-  padding: 3px 32px 20px 53px;
+  padding: 20px 30px 20px 30px;
 }
 .content .main .subject .row{
   padding-left:10px;
   padding-bottom: 10px;
 }
 .content .main .isayb{
-  background: rgba(0, 0, 0, 0) url("../images/isay24.png") no-repeat scroll -1649px 0;
   height: 3px;
   overflow: hidden;
   margin-bottom: 30px;

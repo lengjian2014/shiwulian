@@ -34,7 +34,7 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => '首页', 'url' => ['/index/index']],
-        ['label' => '广场', 'url' => ['/site/about']],
+        ['label' => '广场', 'url' => ['/goods/index']],
         ['label' => '技术交流', 'url' => ['/site/contact']],
         ['label' => '最新资讯', 'url' => ['/site/contact']],
         ['label' => '<span class="glyphicon glyphicon-phone" aria-hidden="true"></span> 手机客户端', 'url' => 'javascript:;'],

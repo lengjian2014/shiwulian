@@ -55,7 +55,7 @@ class GoodsController extends FrontController
     	//排序方式
     	$order = \Yii::$app->request->get("order", "desc");
     	$condition = ['uid' => \Yii::$app->user->id];
-    	list($goods, $pages) = goods::getAllByCondition($condition, $param .' ' . $order, self::$PAGE_SIZE);
+    	list($goods, $pages) = Goods::getAllByCondition($condition, $param .' ' . $order, self::$PAGE_SIZE);
 		$goodsrole = $this->formatUserRole(UserGoods::getUserRoleByGoodsId(array_keys($goods)));
 
         return $this->render('index', ['model' => $goods, 'role' => $goodsrole]);

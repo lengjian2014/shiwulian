@@ -7,9 +7,9 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse <?=$this->context->id == 'default' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingOne">
       <div class="list-group">
-		  <a href="/ucenter" class="list-group-item"><span class="glyphicon glyphicon-cog" style="margin-right: 5px;"></span> 账户设置</a>
+		  <a href="/ucenter" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/default/index' ? 'active' : ''?>"><span class="glyphicon glyphicon-cog" style="margin-right: 5px;"></span> 账户设置</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-user" style="margin-right: 5px;"></span> 修改头像</a>
-		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-asterisk" style="margin-right: 5px;"></span> 修改密码</a>
+		  <a href="/ucenter/default/changepwd" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/default/changepwd' ? 'active' : ''?>"><span class="glyphicon glyphicon-asterisk" style="margin-right: 5px;"></span> 修改密码</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope" style="margin-right: 5px;"></span> 邮箱验证</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-phone" style="margin-right: 5px;"></span> 手机验证</a>
 		  

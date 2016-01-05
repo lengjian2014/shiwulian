@@ -22,7 +22,7 @@ class IndexController extends FrontController
     }
     
     public function actionUpdate()
-    {print_r(1);exit;
+    {
     	$model = User::findById(\Yii::$app->user->id);
     	
     	if ($model->load(Yii::$app->request->post()) && $model->save()) {

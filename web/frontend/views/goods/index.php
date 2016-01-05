@@ -81,7 +81,7 @@ use frontend\models\Dynamic;
 				</div>
 				<div class="col-xs-7 col-lg-12">
 				<div class="caption">
-					<h4 style="margin-top:0px;height:70px;"><a href="#"><small><?=Html::encode($item['title'])?></small></a></h4>
+					<h4 style="margin-top:0px;height:70px;"><a href="<?=Yii::$app->urlManager->createUrl(['goods/view', 'id' => $item['id']])?>"><small><?=Html::encode($item['title'])?></small></a></h4>
 					<p>
 						<!--<span style="font-size:12px;float: right;padding-left:5px;"><a>追溯(34)</a></span>-->
 						<span style="float: right;"><small>放心指数：</small><i style="color:red;font-size:20px;"><?=$item['score']?></i></span>

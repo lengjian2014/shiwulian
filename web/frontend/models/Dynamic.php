@@ -4,6 +4,7 @@ namespace frontend\models;
 
 use Yii;
 use yii\data\Pagination;
+use common\behaviors\TimeBehavior;
 /**
  * This is the model class for table "dynamic".
  *
@@ -45,10 +46,19 @@ class Dynamic extends \yii\db\ActiveRecord
             [['file'], 'file', 'maxFiles' => 10],
             
             [['content'], 'string'],
-            [['address', 'gps'], 'string', 'max' => 250]
+            [['address', 'gps'], 'string', 'max' => 250],
+            
+            ['uid', 'default', 'value' => \Yii::$app->user->id],
         ];
     }
-
+	
+    public function behaviors()
+    {
+    	return [
+    		TimeBehavior::className()
+    	];
+    }
+    
     /**
      * @inheritdoc
      */

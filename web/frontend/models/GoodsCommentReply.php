@@ -35,7 +35,12 @@ class GoodsCommentReply extends \yii\db\ActiveRecord
     {
         return [
             [['uid', 'reply_id', 'comment_id', 'type', 'like', 'status', 'addtime', 'updatetime'], 'integer'],
-            [['content'], 'string', 'max' => 500]
+            
+            [['content'], 'string'],
+            ['content', 'filter', 'filter' => 'trim'],
+            [['content'], 'required'],
+            
+            ['uid', 'default', 'value' => \Yii::$app->user->id],
         ];
     }
 
@@ -109,7 +114,7 @@ class GoodsCommentReply extends \yii\db\ActiveRecord
 	 * @param number $pagesize
 	 * @return multitype:\yii\data\Pagination Ambigous <multitype:, multitype:\yii\db\ActiveRecord >
 	 */
-	public static function getAllByCondition($condition, $order, $limit, $pagesize = 10)
+	public static function getAllByCondition($condition, $order, $pagesize = 10)
 	{
 		$query = self::find()->where($condition);
 			
@@ -117,8 +122,7 @@ class GoodsCommentReply extends \yii\db\ActiveRecord
 		$pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pagesize]);
 		$models = $query->offset($pages->offset)
 										->orderBy($order)
-										->limit($limit)
-										->indexBy("uniqid")
+										->indexBy("id")
 										->asArray()
 										->all();
 	

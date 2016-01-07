@@ -7,12 +7,24 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse <?=$this->context->id == 'default' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingOne">
       <div class="list-group">
-		  <a href="/ucenter" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/default/index' ? 'active' : ''?>"><span class="glyphicon glyphicon-cog" style="margin-right: 5px;"></span> 账户设置</a>
+		  <a href="/ucenter" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/default/index' || Yii::$app->controller->getRoute() == 'ucenter/default/update'? 'active' : ''?>"><span class="glyphicon glyphicon-cog" style="margin-right: 5px;"></span> 账户设置</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-user" style="margin-right: 5px;"></span> 修改头像</a>
 		  <a href="/ucenter/default/changepwd" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/default/changepwd' ? 'active' : ''?>"><span class="glyphicon glyphicon-asterisk" style="margin-right: 5px;"></span> 修改密码</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope" style="margin-right: 5px;"></span> 邮箱验证</a>
 		  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-phone" style="margin-right: 5px;"></span> 手机验证</a>
 		  
+		</div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingEight">
+      <h4 class="panel-title" role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+          我的店铺
+      </h4>
+    </div>
+    <div id="collapseEight" class="panel-collapse collapse <?=$this->context->id == 'stores' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingEight">
+      <div class="list-group">
+		  <a href="/ucenter/stores" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/stores/index' || Yii::$app->controller->getRoute() == 'ucenter/stores/update'? 'active' : ''?>"><span class="glyphicon glyphicon-cog" style="margin-right: 5px;"></span> 店铺设置</a>
 		</div>
     </div>
   </div>
@@ -25,8 +37,8 @@
     <div id="collapseSix" class="panel-collapse collapse <?=$this->context->id == 'authenticate' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingSix">
 		<div class="list-group">
 			  <a href="/ucenter/authenticate/role" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/authenticate/role' ? 'active' : ''?>"><span class="glyphicon glyphicon-user" style="margin-right: 5px;"></span> 角色认证</a>
-			  <a href="/ucenter/authenticate/realname" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/authenticate/realname' ? 'active' : ''?>"><span class="glyphicon glyphicon-credit-card" style="margin-right: 5px;"></span> 实名认证</a>
-			  <a href="/ucenter/authenticate/enterprise" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/authenticate/enterprise' ? 'active' : ''?>"><span class="glyphicon glyphicon-ok" style="margin-right: 5px;"></span> 企业认证</a>
+			  <!--<a href="/ucenter/authenticate/realname" class="list-group-item <?//=Yii::$app->controller->getRoute() == 'ucenter/authenticate/realname' ? 'active' : ''?>"><span class="glyphicon glyphicon-credit-card" style="margin-right: 5px;"></span> 实名认证</a>
+			  <a href="/ucenter/authenticate/enterprise" class="list-group-item <?//=Yii::$app->controller->getRoute() == 'ucenter/authenticate/enterprise' ? 'active' : ''?>"><span class="glyphicon glyphicon-ok" style="margin-right: 5px;"></span> 企业认证</a>-->
 		</div>
     </div>
   </div>

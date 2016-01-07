@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'logo')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'introduction')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'introduction')->textarea(['rows' => 4])?>
 
     <?= $form->field($model, 'website')->textInput(['maxlength' => true]) ?>
 

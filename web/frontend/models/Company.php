@@ -4,6 +4,7 @@ namespace frontend\models;
 
 use Yii;
 use yii\data\Pagination;
+use common\behaviors\TimeBehavior;
 /**
  * This is the model class for table "company".
  *
@@ -32,11 +33,21 @@ class Company extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['uid'], 'required'],
+        	[['company', 'introduction', 'address'], 'required'],
             [['uid'], 'integer'],
-            [['company', 'logo', 'introduction', 'website', 'address'], 'string', 'max' => 250],
-            [['gps'], 'string', 'max' => 150]
+            [['company', 'introduction', 'website', 'address', 'phone', 'mobile'], 'string', 'max' => 250],
+            [['gps'], 'string', 'max' => 150],
+            [['logo'], 'file', 'extensions' => 'gif, jpg, png'],
+            ['uid', 'default', 'value' => \Yii::$app->user->id],
+            ['email', 'email'],
         ];
+    }
+
+    public function behaviors()
+    {
+    	return [
+    		TimeBehavior::className()
+    	];
     }
 
     /**
@@ -47,12 +58,17 @@ class Company extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'uid' => Yii::t('app', 'Uid'),
-            'company' => Yii::t('app', '企业认证公司名称'),
+            'company' => Yii::t('app', '公司名称'),
             'logo' => Yii::t('app', 'Logo'),
             'introduction' => Yii::t('app', '公司简介'),
             'website' => Yii::t('app', '公司官网'),
             'address' => Yii::t('app', '公司地址'),
-            'gps' => Yii::t('app', '公司所在地GPS'),
+            'gps' => Yii::t('app', '地图定位'),
+            'email' => Yii::t('app', '企业邮箱'),
+            'phone' => Yii::t('app', '座机电话'),
+            'mobile' => Yii::t('app', '手机号'),
+            'addtime' => Yii::t('app', 'Addtime'),
+            'updatetime' => Yii::t('app', 'Updatetime'),
         ];
     }
 
@@ -121,5 +137,25 @@ class Company extends \yii\db\ActiveRecord
 										->all();
 	
 		return [$models, $pages];
+	}
+	
+	/**
+	 * 根据用户id返回公司信息
+	 * @param unknown $uid
+	 * @return Ambigous <\yii\db\ActiveRecord, multitype:, NULL>
+	 */
+	public static function findCompanyByUid($uid)
+	{
+		return self::find()->where(['uid' => $uid])->one();
+	}
+	
+	/**
+	 * 根据用户id返回公司信息
+	 * @param unknown $uid
+	 * @return Ambigous <\yii\db\ActiveRecord, multitype:, NULL>
+	 */
+	public static function getCompanyByUid($uid)
+	{
+		return self::find()->where(['uid' => $uid])->asArray()->one();
 	}
 }

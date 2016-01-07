@@ -118,28 +118,35 @@ use frontend\models\Dynamic;
 		</div>
 		<div class="col-xs-12 col-sm-3">
 			<!-- 个人信息 -->
-		 	<div class="panel-content" style="margin-bottom:20px;padding:10px;">
+		 	<div class="panel-content">
+		 		<div class="right-sidebar-title" ><p style="margin:0;"><span class="glyphicon glyphicon-tags"></span>&nbsp;店铺信息</p></div>
+		 		<div style="margin-bottom:20px;padding:10px 10px 10px 15px;">
 		 		<div class="media-left">
 		 			<a href="#">
+		 				<?php if(!empty($company['logo'])){?>
+		 				<img class="media-object" style="width: 64px; height: 64px;" src="<?=IMGURL . $company['logo']?>">
+		 				<?php }else{?>
 						<img class="media-object" alt="64x64" data-src="holder.js/64x64" style="width: 64px; height: 64px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTEwZjhjMjdkYyB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MTBmOGMyN2RjIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMi41IiB5PSIzNi44Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
+						<?php }?>
 					</a>
 		 		</div>
 		 		<div class="media-body">
-		 			<h4 style="margin-top:0px;"><small>广信园艺工具农资店</small></h4>
+		 			<h4 style="margin-top:0px;"><small><?=Html::encode($company['company'])?></small></h4>
 		 			<p><span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="glyphicon glyphicon-user" aria-hidden="true" style="padding-left:5px;"></span></p>
 		 		</div>
-		 		<div style="font-size:12px;color:#9d9d9d;padding-bottom:10px;">欢迎光临本店，我们特为您准备了一系列的专属特权，在节日和您的特殊纪念日里，送上我们的一份惊喜，记得常常来哦~</div>
+		 		<div style="font-size:12px;color:#9d9d9d;padding-bottom:10px;"><?=Html::encode($company['introduction'])?></div>
 		 		<div>
 				  <address style="margin-bottom:10px;">
 				  <strong>地址</strong><br>
-				  795 Folsom Ave, Suite 600<br>
-				  San Francisco, CA 94107<br>
-				  <abbr title="Phone">P:</abbr> (123) 456-7890
+				  <?=Html::encode($company['address'])?><br>
+				  <abbr>固定电话:</abbr> <?=Html::encode($company['phone'])?><br>
+				  <abbr>手机号码:</abbr> <?=Html::encode($company['mobile'])?><br>
 				</address>
 				<address style="margin-bottom:10px;">
 				  <strong>邮箱</strong><br>
-				  <a href="mailto:#">first.last@example.com</a>
+				  <a href="mailto:#"><?=Html::encode($company['email'])?></a><br>
 				</address>
+				</div>
 				</div>
 		 </div>
 		 <ul class="nav nav-sidebar right-sidebar panel-content">

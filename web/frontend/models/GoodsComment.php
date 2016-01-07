@@ -4,6 +4,7 @@ namespace frontend\models;
 
 use Yii;
 use yii\data\Pagination;
+use common\behaviors\TimeBehavior;
 /**
  * This is the model class for table "goods_comment".
  *
@@ -36,11 +37,22 @@ class GoodsComment extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+	        [['content'], 'string'],
+	        ['content', 'filter', 'filter' => 'trim'],
+        	[['content'], 'required'],
+        	
             [['uid', 'goods_id', 'series_id', 'dynamic_id', 'like', 'reply', 'top', 'status', 'addtime', 'updatetime'], 'integer'],
-            [['content'], 'string', 'max' => 500]
+            ['uid', 'default', 'value' => \Yii::$app->user->id],
         ];
     }
 
+    public function behaviors()
+    {
+    	return [
+    		TimeBehavior::className()
+    	];
+    }
+    
     /**
      * @inheritdoc
      */
@@ -124,7 +136,15 @@ class GoodsComment extends \yii\db\ActiveRecord
 										->indexBy("id")
 										->asArray()
 										->all();
-	
+		if(!empty($models))
+		{
+			foreach ($models as $k => $v)
+			{
+				$condition = ['comment_id' => $v['id'], 'status' => 1];
+				list($replay, $pages) = GoodsCommentReply::getAllByCondition($condition, $order, 100);
+				$models[$k]['replaycontent'] = $replay;
+			}
+		}
 		return [$models, $pages];
 	}
 }

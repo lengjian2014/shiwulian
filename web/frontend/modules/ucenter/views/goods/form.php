@@ -19,9 +19,10 @@ use kartik\money\MaskMoney;
 				<ol class="breadcrumb panel-default">
 				  <li><a href="#">个人中心</a></li>
 				  <li><a href="#">商品管理</a></li>
-				  <li class="active">新建</li>
+				  <li class="active"><?=$model->isNewRecord ? Yii::t('app', '新增') : Yii::t('app', '修改')?></li>
 				</ol>
 				<div class="ucenter-content panel-content">
+					<div class="right-sidebar-title" style="margin-bottom: 20px;"><p style="margin:0;"><span class="glyphicon glyphicon-tags"></span>&nbsp;产品信息</p></div>
 					    <?php $form = ActiveForm::begin([
 													      	'id' => 'update-form',
 					    									'options' => ['class' => 'form-horizontal','enctype' => 'multipart/form-data'],

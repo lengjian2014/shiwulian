@@ -75,11 +75,11 @@
           我的消息
       </h4>
     </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+    <div id="collapseTwo" class="panel-collapse collapse <?=$this->context->id == 'letter' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingTwo">
 		<div class="list-group">
-			  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope" style="margin-right: 5px;"></span> 私信</a>
+			  <a href="/ucenter/letter" class="list-group-item"><span class="glyphicon glyphicon-envelope" style="margin-right: 5px;"></span> 私信</a>
 			  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-shopping-cart" style="margin-right: 5px;"></span> 询单</a>
-			  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-file" style="margin-right: 5px;"></span> 站内信</a>
+			  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-file" style="margin-right: 5px;"></span> 系统消息</a>
 		</div>
     </div>
   </div>

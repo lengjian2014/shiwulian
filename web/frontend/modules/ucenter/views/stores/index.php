@@ -11,11 +11,11 @@ use yii\helpers\Html;
 				  <li class="active">详细</li>
 				</ol>
 				<div class="ucenter-content panel-content" style="min-height:550px;">
+					<div class="right-sidebar-title" style="margin-bottom: 20px;"><p style="margin:0;"><span class="glyphicon glyphicon-tags"></span>&nbsp;店铺信息</p></div>
 					<p style="padding-top:8px;margin-bottom:40px;">
 						<?php if($model->body == 0){?><a class="btn btn-success" type="buttom" style="float:right;margin-left:10px;" href="/ucenter/stores/enterprise">升级企业店铺</a><?php }?>
 						<a class="btn btn-default" type="buttom" style="float:right;" href="/ucenter/stores/<?=$model->body == 0?'personal' : 'enterprise'?>">编辑</a>
 					</p>
-						<div class="right-sidebar-title" style="margin-bottom: 20px;margin-top:20px;"><p style="margin:0;"><span class="glyphicon glyphicon-tags"></span>&nbsp;店铺信息</p></div>
 						<?= DetailView::widget([
 							'template' => "<tr><th width='20%'>{label}</th><td width='80%'>{value}</td></tr>",	
 					        'model' => $model,

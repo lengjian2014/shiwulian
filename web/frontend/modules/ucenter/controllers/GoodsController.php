@@ -12,6 +12,7 @@ use frontend\models\UserRole;
 use frontend\models\UserGoods;
 use frontend\models\GoodsLinks;
 use frontend\models\Areas;
+use frontend\models\Inquiry;
 
 /**
  * 用户中心 - 账户设置
@@ -190,11 +191,23 @@ class GoodsController extends FrontController
             ]);
     }
 	
+    /**
+     * 合作产品
+     * @return Ambigous <string, string>
+     */
     public function actionPartner()
     {
     	$condition = ['uid' => \Yii::$app->user->id];
     	$model = UserRole::getAllByCondition($condition, "id desc");
     	
     	return $this->render("partner", ['model' => $model]);
+    }
+    
+    public function actionInquiry()
+    {
+    	//收件箱
+    	list($inbox, $pages) = Inquiry::getAllByCondition(['seller_uid' => \Yii::$app->user->id], "id desc");
+    	 
+    	return $this->render('inquiry', ['model' => $inbox, 'pages' => $pages]);
     }
 }

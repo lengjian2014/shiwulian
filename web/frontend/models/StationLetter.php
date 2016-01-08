@@ -4,6 +4,7 @@ namespace frontend\models;
 
 use Yii;
 use yii\data\Pagination;
+use common\behaviors\TimeBehavior;
 /**
  * This is the model class for table "station_letter".
  *
@@ -34,10 +35,18 @@ class StationLetter extends \yii\db\ActiveRecord
     {
         return [
             [['from_uid', 'to_uid', 'type', 'status', 'addtime', 'updatetime', 'pid', 'sum'], 'integer'],
-            [['content', 'url'], 'string', 'max' => 250]
+            [['content', 'url'], 'string', 'max' => 250],
+            ['from_uid', 'default', 'value' => \Yii::$app->user->id],
         ];
     }
 
+    public function behaviors()
+    {
+    	return [
+    		TimeBehavior::className()
+    	];
+    }
+    
     /**
      * @inheritdoc
      */

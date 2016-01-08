@@ -58,14 +58,16 @@
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingThree">
       <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          商品管理
+          产品管理
       </h4>
     </div>
     <div id="collapseThree" class="panel-collapse collapse <?=$this->context->id == 'goods' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingThree">
 		<div class="list-group">
 		  <a href="/ucenter/goods" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/goods/index' ? 'active' : ''?>"><span class="glyphicon glyphicon-menu-hamburger" style="margin-right: 5px;"></span> 我的产品</a>
 		  <a href="/ucenter/goods/create" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/goods/create' ? 'active' : ''?>"><span class="glyphicon glyphicon-plus" style="margin-right: 5px;"></span> 新增产品</a>
+		  <a href="/ucenter/goods/inquiry" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/goods/inquiry' ? 'active' : ''?>"><span class="glyphicon glyphicon-shopping-cart" style="margin-right: 5px;"></span> 询单</a>
 		  <a href="/ucenter/goods/partner" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/goods/partner' ? 'active' : ''?>"><span class="glyphicon glyphicon-transfer" style="margin-right: 5px;"></span> 合作产品</a>
+		  <a href="/ucenter/goods" class="list-group-item"><span class="glyphicon glyphicon-shopping-cart" style="margin-right: 5px;"></span> 申请合作</a>
 		</div>
     </div>
   </div>
@@ -77,9 +79,9 @@
     </div>
     <div id="collapseTwo" class="panel-collapse collapse <?=$this->context->id == 'letter' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingTwo">
 		<div class="list-group">
-			  <a href="/ucenter/letter" class="list-group-item"><span class="glyphicon glyphicon-envelope" style="margin-right: 5px;"></span> 私信</a>
-			  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-shopping-cart" style="margin-right: 5px;"></span> 询单</a>
-			  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-file" style="margin-right: 5px;"></span> 系统消息</a>
+			  <a href="/ucenter/letter/inbox" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/letter/inbox' ? 'active' : ''?>"><span class="glyphicon glyphicon-envelope" style="margin-right: 5px;"></span> 收件箱</a>
+			  <a href="/ucenter/letter/outbox" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/letter/outbox' ? 'active' : ''?>"><span class="glyphicon glyphicon-envelope" style="margin-right: 5px;"></span> 发件箱</a>
+			  <a href="/ucenter/letter/system" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/letter/system' ? 'active' : ''?>"><span class="glyphicon glyphicon-file" style="margin-right: 5px;"></span> 系统消息</a>
 		</div>
     </div>
   </div>

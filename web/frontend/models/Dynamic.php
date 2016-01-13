@@ -157,7 +157,7 @@ class Dynamic extends \yii\db\ActiveRecord
 	{
 		if(empty($file)) return null;
 		$file = explode("|", $file);
-		$data = '';
+		$data = [];
 		foreach ($file as $k => $v)
 		{
 			$ext = explode(".", $v);

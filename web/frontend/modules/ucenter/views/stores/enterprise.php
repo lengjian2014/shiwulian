@@ -10,12 +10,12 @@ use yii\helpers\Url;
       <div class="row">
 		<div class="col-xs-12 col-sm-9">
 				<ol class="breadcrumb">
-				  <li><a href="#">企业管理</a></li>
-				  <li><a href="#">企业设置</a></li>
+				  <li><a href="#">店铺管理</a></li>
+				  <li><a href="#">店铺设置</a></li>
 				  <li class="active">企业店铺</li>
 				</ol>
-				<div class="ucenter-content panel-content" style="min-height:550px;">
-					    <div class="right-sidebar-title" style="margin-bottom: 20px;"><p style="margin:0;"><span class="glyphicon glyphicon-tags"></span>&nbsp;店铺信息</p></div>
+				<div class="ucenter-content panel-content" style="min-height:550px;padding-top: 10px;">
+					    <div class="right-sidebar-title" style="margin-bottom: 20px;"><p style="margin:0;"><span class="glyphicon glyphicon-tags"></span>&nbsp;企业店铺</p></div>
 					    <?php $form = ActiveForm::begin([
 													      	'id' => 'update-form',
 					    									'options' => ['class' => 'form-horizontal','enctype' => 'multipart/form-data'],

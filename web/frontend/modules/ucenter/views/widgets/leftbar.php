@@ -85,29 +85,28 @@
 		</div>
     </div>
   </div>
-  <div class="panel panel-default">
+<div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingFour">
       <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          我的关注
+          我关注的
       </h4>
     </div>
-    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+    <div id="collapseFour" class="panel-collapse collapse <?=$this->context->id == 'follow' ? 'in' : ''?>" role="tabpanel" aria-labelledby="headingFour">
 		<div class="list-group">
-			  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-star-empty" style="margin-right: 5px;"></span> 我关注的</a>
-			  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-star" style="margin-right: 5px;"></span> 关注我的</a>
+			  <a href="/ucenter/follow" class="list-group-item <?=Yii::$app->controller->getRoute() == 'ucenter/follow/index' ? 'active' : ''?>"><span class="glyphicon glyphicon-star-empty" style="margin-right: 5px;"></span> 关注产品</a>
 		</div>
     </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingFives">
-      <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFives" aria-expanded="false" aria-controls="collapseFives">
-          我的收藏
-      </h4>
-    </div>
-    <div id="collapseFives" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFives">
-		<div class="list-group">
+<!--<div class="panel panel-default"> -->
+<!--     <div class="panel-heading" role="tab" id="headingFives"> -->
+<!--       <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFives" aria-expanded="false" aria-controls="collapseFives"> -->
+<!--           我的收藏 -->
+<!--       </h4> -->
+<!--     </div> -->
+<!--     <div id="collapseFives" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFives"> -->
+<!-- 		<div class="list-group">
 			  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-tags" style="margin-right: 5px;"></span> 我的收藏</a>
-		</div>
-    </div>
-  </div>
+<!-- 		</div> -->
+<!--     </div> -->
+<!--   </div> -->
 </div>

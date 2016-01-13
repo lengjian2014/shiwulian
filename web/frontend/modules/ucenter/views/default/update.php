@@ -12,7 +12,8 @@ use kartik\date\DatePicker;
 				  <li><a href="#">账号设置</a></li>
 				  <li class="active">详细</li>
 				</ol>
-				<div class="ucenter-content panel-content" style="min-height:550px;">
+				<div class="ucenter-content panel-content" style="min-height:550px;padding-top: 10px;">
+					<div class="right-sidebar-title" style="margin-bottom: 15px;"><p style="margin:0;"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;账户设置</p></div>
 					    <?php $form = ActiveForm::begin([
 													      	'id' => 'update-form',
 					    									'options' => ['class' => 'form-horizontal','enctype' => 'multipart/form-data'],

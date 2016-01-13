@@ -10,7 +10,7 @@ use yii\helpers\Html;
 				  <li><a href="#">店铺设置</a></li>
 				  <li class="active">详细</li>
 				</ol>
-				<div class="ucenter-content panel-content" style="min-height:550px;">
+				<div class="ucenter-content panel-content" style="min-height:550px;padding-top: 10px;">
 					<div class="right-sidebar-title" style="margin-bottom: 20px;"><p style="margin:0;"><span class="glyphicon glyphicon-tags"></span>&nbsp;店铺信息</p></div>
 					<p style="padding-top:8px;margin-bottom:40px;">
 						<?php if($model->body == 0){?><a class="btn btn-success" type="buttom" style="float:right;margin-left:10px;" href="/ucenter/stores/enterprise">升级企业店铺</a><?php }?>

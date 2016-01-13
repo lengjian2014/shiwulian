@@ -53,7 +53,7 @@ AppAsset::register($this);
 				['label' => '个人中心', 'url' => ['/ucenter']],
 				['label' => '动态', 'url' => ['/ucenter/dynamic']],
 				['label' => '产品列表', 'url' => ['/ucenter/goods']],
-				['label' => '消息', 'url' => ['/site/contact']],
+				['label' => '消息', 'url' => ['/ucenter/letter']],
 				['label' => '退出登录', 'url' => ['/site/logout'], 'linkOptions' => ['data-method' => 'post']],
 			]
         ];

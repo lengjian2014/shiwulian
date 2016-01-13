@@ -12,7 +12,8 @@ use kartik\date\DatePicker;
 				  <li><a href="#">账号设置</a></li>
 				  <li class="active">详细</li>
 				</ol>
-				<div class="ucenter-content panel-content" style="min-height:550px;">
+				<div class="ucenter-content panel-content" style="min-height:550px;padding-top: 10px;">
+					<div class="right-sidebar-title" style="margin-bottom: 20px;"><p style="margin:0;"><span class="glyphicon glyphicon-asterisk"></span>&nbsp;修改密码</p></div>
 					    <?php $form = ActiveForm::begin([
 													      	'id' => 'change-form',
 					    									'enableAjaxValidation'=>true, 

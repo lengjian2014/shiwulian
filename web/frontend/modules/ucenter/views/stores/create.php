@@ -6,7 +6,7 @@ use yii\helpers\Html;
       <div class="row">
 		<div class="col-xs-12 col-sm-9">
 				<ol class="breadcrumb">
-				  <li><a href="#">我的店铺</a></li>
+				  <li><a href="#">店铺管理</a></li>
 				  <li><a href="#">店铺设置</a></li>
 				  <li class="active">新建</li>
 				</ol>

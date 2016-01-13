@@ -21,7 +21,8 @@ use kartik\money\MaskMoney;
 				  <li><a href="#">产品动态</a></li>
 				  <li class="active">新建</li>
 				</ol>
-				<div class="ucenter-content panel-content">
+				<div class="ucenter-content panel-content" style="padding-top: 10px;">
+					<div class="right-sidebar-title" style="margin-bottom: 20px;"><p style="margin:0;"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;新增动态</p></div>
 					    <?php $form = ActiveForm::begin([
 													      	'id' => 'update-form',
 					    									'options' => ['class' => 'form-horizontal','enctype' => 'multipart/form-data'],

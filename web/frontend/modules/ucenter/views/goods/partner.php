@@ -9,7 +9,7 @@ use yii\helpers\Html;
 				  <li><a href="#">账号设置</a></li>
 				  <li class="active">详细</li>
 				</ol>
-				<div class="ucenter-content panel-content" style="padding-bottom:60px;min-height:550px;">
+				<div class="ucenter-content panel-content" style="min-height:550px;padding-top: 10px;">
 					<div class="right-sidebar-title" style="margin-bottom: 20px;"><p style="margin:0;"><span class="glyphicon glyphicon-tags"></span>&nbsp;合作产品</p></div>
 <!-- 					<div class="row" style="padding: 10px 15px;margin:0px;text-align:right;">
 						<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 搜索合作产品</button> -->

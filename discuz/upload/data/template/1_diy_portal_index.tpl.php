@@ -1,0 +1,4 @@
+<?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('index');?><?php include template('common/header'); ?><style id="diy_style" type="text/css"></style>
+<div class="wp">
+<!--[diy=diy1]--><div id="diy1" class="area"><div id="frame4C8Lj1" class="cl_frame_bm frame move-span cl frame-1-1-1"><div class="title frame-title"><span class="titletext">1-1-1框架</span></div><div id="frame4C8Lj1_left" class="column frame-1-1-1-l"><div id="frame4C8Lj1_left_temp" class="move-span temp"></div></div><div id="frame4C8Lj1_center" class="column frame-1-1-1-c"><div id="frame4C8Lj1_center_temp" class="move-span temp"></div></div><div id="frame4C8Lj1_right" class="column frame-1-1-1-r"><div id="frame4C8Lj1_right_temp" class="move-span temp"></div></div></div></div><!--[/diy]-->
+</div><?php include template('common/footer'); ?>

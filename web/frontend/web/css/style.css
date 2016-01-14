@@ -27,6 +27,10 @@ body {
   letter-spacing: 2px;
   padding-right:  45px;
 }
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+    background-color: transparent;
+    color: #4cae4c;
+}
 .navbar-nav > li > a {
   line-height: 25px;
   font-size: 15px;
@@ -192,7 +196,7 @@ th, td {
 .content .main .isayb{
   height: 3px;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .content .main h4{
   margin-top: 0px;

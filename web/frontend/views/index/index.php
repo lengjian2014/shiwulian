@@ -1,6 +1,7 @@
 <?php 
 use yii\helpers\Html;
 use frontend\models\Dynamic;
+use yii\widgets\LinkPager;
 ?>
 <div class="row content">
 		<div class="col-xs-12 col-lg-3" style="float: right;">
@@ -63,7 +64,7 @@ use frontend\models\Dynamic;
 				</li>
 			</ul>
 		</div>
-		<div class="col-xs-12 col-lg-8" style="float: right;">
+		<div class="col-xs-12 col-lg-8 main-content" style="float: right;">
 			<div class="main">
 				<div class="col-xs-2 col-lg-2"></div>
 				<div class="col-xs-10 col-lg-10" style="margin-bottom:20px;padding-left:10px">
@@ -90,19 +91,19 @@ use frontend\models\Dynamic;
 				<div class="col-xs-10 col-sm-10">
 					<div class="panel-content">
 					<div class="subject">
-						<h4><small><a><?=$goods[$item['goods_id']]['title']?></a></small></h4>
+						<h4><small><a href="<?=Yii::$app->urlManager->createUrl(['goods/view', 'id' => $item['goods_id']])?>"><?=$goods[$item['goods_id']]['title']?></a></small></h4>
 						<p>
 							<?=Html::encode($item['content'])?>
 						</p>
 						<div class="row">
-							<?=implode("", Dynamic::formatFile($item['file'], "col-xs-4 col-sm-4 img-box-row"));?>
+							<?=!empty($item['file']) ? implode("", Dynamic::formatFile($item['file'], "col-xs-4 col-sm-4 img-box-row")) : '';?>
 						</div>
 						<div class="content-foot">
-							<span><span class="glyphicon glyphicon-user main-panel-user" aria-hidden="true"></span>&nbsp;<a href="">moleng</a><small>2015/11/15</small></span>
+							<span><span class="glyphicon glyphicon-user main-panel-user" aria-hidden="true"></span>&nbsp;<a href="<?=Yii::$app->urlManager->createUrl(['home/index', 'id' => $item['uid']])?>"><?=isset($user[$item['uid']]) ? $user[$item['uid']]['username'] : ''?></a><small><?=date("Y-m-d H:i", $item['addtime'])?></small></span>
 							<div class="content-foot-ext">
-								<span><a>评论(12)</a></span>
-								<span><a>追溯(34)</a></span>
-								<span><a>浏览(111)</a></span>
+								<span><a>评论(<?=$item['comment']?>)</a></span>
+								<span><a>点赞(<?=$item['like']?>)</a></span>
+								<span><a>浏览(<?=$item['scan']?>)</a></span>
 							</div>
 						</div>
 					</div>
@@ -111,5 +112,12 @@ use frontend\models\Dynamic;
 				</div>
 			</div>
 		<?php }}?>
+		<?php if(isset($pages['next'])){?>
+			<div class="row main" style="text-align: center;">
+				<div class="col-xs-10 col-sm-10" style="float: right;">
+					<a class="btn btn-default content-loading" href="javascript:;" role="button" style="width: 100%;" next-url="<?=$pages['next']?>">加载下一页</a>
+				</div>
+			</div>
+		<?php }?>
 		</div>
 	  </div>

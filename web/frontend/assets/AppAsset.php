@@ -22,7 +22,8 @@ class AppAsset extends AssetBundle
         'css/style.css',
     ];
     public $js = [
-    	'js/jquery.ad-gallery.min.js'
+    	'js/jquery.ad-gallery.min.js',
+    	'js/script.js',		
     ];
     public $depends = [
         'yii\web\YiiAsset',

@@ -13,57 +13,57 @@ use frontend\models\Dynamic;
 					          <ul class="ad-thumb-list">
 					            <li>
 					              <a href="/images/1.jpg">
-					                <img src="/images/thumbs/t1.jpg" class="image0">
+					                <img src="/images/thumbs/t1.jpg">
 					              </a>
 					            </li>
 					            <li>
 					              <a href="/images/10.jpg">
-					                <img src="/images/thumbs/t10.jpg" title="A title for 10.jpg" alt="This is a nice, and incredibly descriptive, description of the image 10.jpg" class="image1">
+					                <img src="/images/thumbs/t10.jpg">
 					              </a>
 					            </li>
 					            <li>
 					              <a href="/images/11.jpg">
-					                <img src="/images/thumbs/t11.jpg" title="A title for 11.jpg" longdesc="http://coffeescripter.com" alt="This is a nice, and incredibly descriptive, description of the image 11.jpg" class="image2">
+					                <img src="/images/thumbs/t11.jpg">
 					              </a>
 					            </li>
 					            <li>
 					              <a href="/images/12.jpg">
-					                <img src="/images/thumbs/t12.jpg" title="A title for 12.jpg" alt="This is a nice, and incredibly descriptive, description of the image 12.jpg" class="image3">
+					                <img src="/images/thumbs/t12.jpg">
 					              </a>
 					            </li>
 					            <li>
 					              <a href="/images/13.jpg">
-					                <img src="/images/thumbs/t13.jpg" title="A title for 13.jpg" alt="This is a nice, and incredibly descriptive, description of the image 13.jpg" class="image4">
+					                <img src="/images/thumbs/t13.jpg">
 					              </a>
 					            </li>
 					            <li>
 					              <a href="/images/14.jpg">
-					                <img src="/images/thumbs/t14.jpg" title="A title for 14.jpg" alt="This is a nice, and incredibly descriptive, description of the image 14.jpg" class="image5">
+					                <img src="/images/thumbs/t14.jpg">
 					              </a>
 					            </li>
 					            <li>
 					              <a href="/images/2.jpg" id="t2">
-					                <img src="/images/thumbs/t2.jpg" title="A title for 2.jpg" alt="This is a nice, and incredibly descriptive, description of the image 2.jpg" class="image6">
+					                <img src="/images/thumbs/t2.jpg">
 					              </a>
 					            </li>
 					            <li>
 					              <a href="/images/3.jpg">
-					                <img src="/images/thumbs/t3.jpg" title="A title for 3.jpg" alt="This is a nice, and incredibly descriptive, description of the image 3.jpg" class="image7">
+					                <img src="/images/thumbs/t3.jpg">
 					              </a>
 					            </li>
 					            <li>
 					              <a href="/images/4.jpg">
-					                <img src="/images/thumbs/t4.jpg" title="A title for 4.jpg" alt="This is a nice, and incredibly descriptive, description of the image 4.jpg" class="image8">
+					                <img src="/images/thumbs/t4.jpg">
 					              </a>
 					            </li>
 					            <li>
 					              <a href="/images/5.jpg">
-					                <img src="/images/thumbs/t5.jpg" title="A title for 5.jpg" alt="This is a nice, and incredibly descriptive, description of the image 5.jpg" class="image9">
+					                <img src="/images/thumbs/t5.jpg">
 					              </a>
 					            </li>
 					            <li>
 					              <a href="/images/6.jpg">
-					                <img src="/images/thumbs/t6.jpg" title="A title for 6.jpg" alt="This is a nice, and incredibly descriptive, description of the image 6.jpg" class="image10">
+					                <img src="/images/thumbs/t6.jpg">
 					              </a>
 					            </li>
 					          </ul>
@@ -157,8 +157,8 @@ use frontend\models\Dynamic;
 			</ul>
 			<ul class="nav nav-sidebar right-sidebar panel-content">
 				<li><div class="right-sidebar-title" ><p style="margin:0;"><span class="glyphicon glyphicon-tags"></span>&nbsp;其他产品</p></div></li>
-				<li class="right-sidebar-key">
-					<div class="thumbnail">
+				<li class="right-sidebar-key" style="padding-bottom: 0px;">
+					<div class="thumbnail" style="margin-bottom: 0px;">
 						<div class="row">
 							<div class="col-xs-5 col-lg-12">
 								<img alt="100%x200" style="height: 200px; width: 100%; display: block;" src="https://gd2.alicdn.com/imgextra/i2/124309387/TB2hphNdXXXXXbfXpXXXXXXXXXX_!!124309387.jpg_400x400.jpg" data-holder-rendered="true">
@@ -176,7 +176,7 @@ use frontend\models\Dynamic;
 					</div>
 				</li>
 				<li class="right-sidebar-key">
-					<div class="thumbnail">
+					<div class="thumbnail" style="margin-bottom: 0px;">
 						<div class="row">
 							<div class="col-xs-5 col-lg-12">
 								<img alt="100%x200" data-src="holder.js/100%x200" style="height: 200px; width: 100%; display: block;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxMTQ1Zjg4OTcgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTExNDVmODg5NyI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTAwMDAzODE0Njk3MyIgeT0iMTA1LjciPjI0MngyMDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" data-holder-rendered="true">
@@ -245,7 +245,15 @@ use frontend\models\Dynamic;
 	  </div>
 <?php
 $script = <<<JS
-	var galleries = $('.ad-gallery').adGallery({loader_image : '/images/loader.gif',});
+	var galleries = $('.ad-gallery').adGallery({
+									loader_image : '/images/loader.gif',
+									update_window_hash: false,
+									slideshow: {
+										    enable: true,
+										    autostart: true,
+										    speed: 3000,
+									}
+								});
 	$("#dynamic").load("/goods/dynamic?gid={$model['id']}", function(){});
 	$(document).on("click", "#myTabs > li > a", function(){
 		var action = $(this).attr("href").substr(1);

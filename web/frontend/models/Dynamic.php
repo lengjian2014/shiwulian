@@ -118,6 +118,7 @@ class Dynamic extends \yii\db\ActiveRecord
 		$pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pagesize]);
 		$models = $query->offset($pages->offset)
 											->orderBy($order)
+											->limit($pages->limit)
 											->indexBy("id")
 											->all();
 		
@@ -140,6 +141,7 @@ class Dynamic extends \yii\db\ActiveRecord
 		$pages = new Pagination(['totalCount' => $countQuery->count(), 'defaultPageSize' => $pagesize]);
 		$models = $query->offset($pages->offset)
 										->orderBy($order)
+										->limit($pages->limit)
 										->indexBy("id")
 										->asArray()
 										->all();

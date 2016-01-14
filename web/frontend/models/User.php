@@ -182,7 +182,7 @@ class User extends \yii\db\ActiveRecord
 		if(empty($uids)) return null;
 		$uids = is_array($uids) ? $uids : [$uids];
 		
-		return self::find()->where(['uid' => $uids])->asArray()->all();
+		return self::find()->select(self::tableName(). ".uid, username, email, mobile, role, user_expand.photo")->where([self::tableName(). '.uid' => $uids])->leftJoin("user_expand", "user_expand.uid=" .self::tableName(). ".uid")->indexBy("uid")->asArray()->all();
 	}
 
 }

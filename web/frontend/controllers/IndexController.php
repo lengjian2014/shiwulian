@@ -18,7 +18,6 @@ class IndexController extends Controller
      */
     public function actionIndex()
     {
-    	\Yii::$app->memcache->set("12", 1);
     	$condition = ['status' => 1];
     	list($model, $pages) = Dynamic::getAllByCondition($condition, "id desc", 20);
     	$goods_id = $goods = $user = $uid = [];

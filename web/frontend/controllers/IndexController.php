@@ -37,4 +37,4 @@ class IndexController extends Controller
     		return $this->render('index', ['model' => $model, 'goods' => $goods, 'user' => $user, 'pages' => $pages->getLinks()]);
     }
 
-}
+} 

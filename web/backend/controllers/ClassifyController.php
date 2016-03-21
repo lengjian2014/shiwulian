@@ -62,7 +62,21 @@ class ClassifyController extends Controller
     {
         $model = new Classify();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) 
+        {
+        	$title = explode(" ", $model->title);
+        	if(count($title) > 1)
+        	{
+        		foreach ($title as $k => $v)
+        		{
+        			$child = new Classify();
+        			$child->pid = $model->pid;
+        			$child->title = $v;
+        			$child->save();
+        		}
+        	}
+        	else 
+        		$model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

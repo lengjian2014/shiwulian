@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use frontend\models\Classify;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Classify */
@@ -11,10 +13,10 @@ use yii\widgets\ActiveForm;
 <div class="classify-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
+    
+    <?= $form->field($model, 'pid')->dropDownList(ArrayHelper::map( Classify::find()->where("pid=1")->all(),'id','title'),['prompt'=>'选择一级分类',])?>
+    
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'pid')->textInput() ?>
 
     <?= $form->field($model, 'describe')->textInput(['maxlength' => true]) ?>
 

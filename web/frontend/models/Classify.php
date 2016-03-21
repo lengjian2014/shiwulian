@@ -29,6 +29,7 @@ class Classify extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+        	['pid', 'filter', 'filter' => 'intval'],
             [['pid', 'order'], 'integer'],
             [['title', 'describe'], 'string', 'max' => 250]
         ];

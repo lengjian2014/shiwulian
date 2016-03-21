@@ -1,0 +1,1185 @@
+2016-03-08 09:01:51 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The 'pluginOptions["depends"]' property must be set and must be an array of dependent dropdown element ID.' in E:\workspace\shiwulian\web\vendor\kartik-v\yii2-widget-depdrop\DepDrop.php:55
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Object.php(107): kartik\depdrop\DepDrop->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#3 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('kartik\\depdrop\\...', Array, Array)
+#4 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('kartik\\depdrop\\...', Array, Array)
+#5 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Widget.php(97): yii\BaseYii::createObject(Array)
+#6 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\widgets\ActiveField.php(665): yii\base\Widget::widget(Array)
+#7 E:\workspace\shiwulian\web\backend\views\classify\_form.php(25): yii\widgets\ActiveField->widget('kartik\\depdrop\\...', Array)
+#8 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(325): require('E:\\workspace\\sh...')
+#9 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\workspace\\sh...', Array)
+#10 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\workspace\\sh...', Array, NULL)
+#11 E:\workspace\shiwulian\web\backend\views\classify\create.php(19): yii\base\View->render('_form', Array)
+#12 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(325): require('E:\\workspace\\sh...')
+#13 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\workspace\\sh...', Array)
+#14 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\workspace\\sh...', Array, Object(backend\controllers\ClassifyController))
+#15 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('create', Array, Object(backend\controllers\ClassifyController))
+#16 E:\workspace\shiwulian\web\backend\controllers\ClassifyController.php(70): yii\base\Controller->render('create', Array)
+#17 [internal function]: backend\controllers\ClassifyController->actionCreate()
+#18 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#19 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#20 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('create', Array)
+#21 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('classify/create', Array)
+#22 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#24 {main}
+2016-03-08 09:01:51 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://backend.shiwulian.com/classify/index'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '52052'
+    'REDIRECT_URL' => '/classify/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457424111.156
+    'REQUEST_TIME' => 1457424111
+]
+2016-03-08 09:06:36 [127.0.0.1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'pid' cannot be null' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\db\Command.php:781
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\db\Command.php(781): PDOStatement->execute()
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 E:\workspace\shiwulian\web\backend\controllers\ClassifyController.php(65): yii\db\BaseActiveRecord->save()
+#6 [internal function]: backend\controllers\ClassifyController->actionCreate()
+#7 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#9 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#10 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#11 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'pid' cannot be null
+The SQL being executed was: INSERT INTO `classify` (`title`, `pid`, `describe`, `order`) VALUES ('农产品分类', NULL, '', NULL)' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `cl...')
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\db\ActiveRecord.php(454): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\db\ActiveRecord.php(424): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 E:\workspace\shiwulian\web\backend\controllers\ClassifyController.php(65): yii\db\BaseActiveRecord->save()
+#6 [internal function]: backend\controllers\ClassifyController->actionCreate()
+#7 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#9 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#10 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#11 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1048
+    [2] => Column 'pid' cannot be null
+)
+
+2016-03-08 09:06:36 [127.0.0.1][-][-][info][application] $_POST = [
+    '_csrf' => 'ODE2ZnVTVlRQfHhVPGUFMQlzTFUhIGEhV39MVEE4DjtBc3E8Nxg6GA=='
+    'Classify' => [
+        'title' => '农产品分类'
+        'pid' => ''
+        'describe' => ''
+        'order' => ''
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://backend.shiwulian.com/classify/create'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '196'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '52141'
+    'REDIRECT_URL' => '/classify/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457424396.325
+    'REQUEST_TIME' => 1457424396
+]
+2016-03-08 09:06:36 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: classify/sizzle.min.map' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('sizzle.min.map', Array)
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('classify/sizzle...', Array)
+#2 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-03-08 09:06:36 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '52143'
+    'REDIRECT_URL' => '/classify/sizzle.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/sizzle.min.map'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457424396.775
+    'REQUEST_TIME' => 1457424396
+]
+2016-03-08 09:24:51 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\bootstrap\Tabs::model' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\BaseYii.php(518): yii\base\Component->__set('model', Object(frontend\models\Classify))
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\bootstrap\Tabs), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#4 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('yii\\bootstrap\\T...', Array, Array)
+#5 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\bootstrap\\T...', Array, Array)
+#6 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Widget.php(97): yii\BaseYii::createObject(Array)
+#7 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\widgets\ActiveField.php(665): yii\base\Widget::widget(Array)
+#8 E:\workspace\shiwulian\web\backend\views\classify\_form.php(20): yii\widgets\ActiveField->widget('yii\\bootstrap\\T...')
+#9 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(325): require('E:\\workspace\\sh...')
+#10 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\workspace\\sh...', Array)
+#11 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\workspace\\sh...', Array, NULL)
+#12 E:\workspace\shiwulian\web\backend\views\classify\create.php(19): yii\base\View->render('_form', Array)
+#13 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(325): require('E:\\workspace\\sh...')
+#14 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\workspace\\sh...', Array)
+#15 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\workspace\\sh...', Array, Object(backend\controllers\ClassifyController))
+#16 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('create', Array, Object(backend\controllers\ClassifyController))
+#17 E:\workspace\shiwulian\web\backend\controllers\ClassifyController.php(70): yii\base\Controller->render('create', Array)
+#18 [internal function]: backend\controllers\ClassifyController->actionCreate()
+#19 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#20 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#21 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('create', Array)
+#22 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('classify/create', Array)
+#23 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#25 {main}
+2016-03-08 09:24:51 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://backend.shiwulian.com/classify/index'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '52914'
+    'REDIRECT_URL' => '/classify/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457425491.757
+    'REQUEST_TIME' => 1457425491
+]
+2016-03-08 09:24:52 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: classify/sizzle.min.map' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('sizzle.min.map', Array)
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('classify/sizzle...', Array)
+#2 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-03-08 09:24:52 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '52916'
+    'REDIRECT_URL' => '/classify/sizzle.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/sizzle.min.map'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457425492.038
+    'REQUEST_TIME' => 1457425492
+]
+2016-03-08 09:26:35 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\bootstrap\Tabs::model' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\BaseYii.php(518): yii\base\Component->__set('model', Object(frontend\models\Classify))
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\bootstrap\Tabs), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#4 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('yii\\bootstrap\\T...', Array, Array)
+#5 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\bootstrap\\T...', Array, Array)
+#6 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Widget.php(97): yii\BaseYii::createObject(Array)
+#7 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\widgets\ActiveField.php(665): yii\base\Widget::widget(Array)
+#8 E:\workspace\shiwulian\web\backend\views\classify\_form.php(26): yii\widgets\ActiveField->widget('yii\\bootstrap\\T...', Array)
+#9 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(325): require('E:\\workspace\\sh...')
+#10 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\workspace\\sh...', Array)
+#11 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\workspace\\sh...', Array, NULL)
+#12 E:\workspace\shiwulian\web\backend\views\classify\create.php(19): yii\base\View->render('_form', Array)
+#13 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(325): require('E:\\workspace\\sh...')
+#14 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\\workspace\\sh...', Array)
+#15 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\\workspace\\sh...', Array, Object(backend\controllers\ClassifyController))
+#16 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('create', Array, Object(backend\controllers\ClassifyController))
+#17 E:\workspace\shiwulian\web\backend\controllers\ClassifyController.php(70): yii\base\Controller->render('create', Array)
+#18 [internal function]: backend\controllers\ClassifyController->actionCreate()
+#19 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#20 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#21 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('create', Array)
+#22 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('classify/create', Array)
+#23 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#25 {main}
+2016-03-08 09:26:34 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://backend.shiwulian.com/classify/index'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '52933'
+    'REDIRECT_URL' => '/classify/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457425594.929
+    'REQUEST_TIME' => 1457425594
+]
+2016-03-08 09:26:35 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: classify/sizzle.min.map' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('sizzle.min.map', Array)
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('classify/sizzle...', Array)
+#2 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-03-08 09:26:35 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '52935'
+    'REDIRECT_URL' => '/classify/sizzle.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/sizzle.min.map'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457425595.176
+    'REQUEST_TIME' => 1457425595
+]
+2016-03-08 09:30:43 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Select2' not found' in E:\workspace\shiwulian\web\backend\views\classify\_form.php:19
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-03-08 09:30:43 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://backend.shiwulian.com/classify/index'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '53064'
+    'REDIRECT_URL' => '/classify/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457425843.572
+    'REQUEST_TIME' => 1457425843
+]
+2016-03-08 09:30:43 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: classify/sizzle.min.map' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('sizzle.min.map', Array)
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('classify/sizzle...', Array)
+#2 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-03-08 09:30:43 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '53067'
+    'REDIRECT_URL' => '/classify/sizzle.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/sizzle.min.map'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457425843.794
+    'REQUEST_TIME' => 1457425843
+]
+2016-03-08 09:38:45 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: id' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Controller.php:93
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\InlineAction.php(49): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#2 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#3 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('classify/view', Array)
+#4 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2016-03-08 09:38:45 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://backend.shiwulian.com/classify/create'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '53230'
+    'REDIRECT_URL' => '/classify/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/view'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457426325.184
+    'REQUEST_TIME' => 1457426325
+]
+2016-03-08 09:45:48 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: id' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Controller.php:93
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\InlineAction.php(49): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#2 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#3 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('classify/view', Array)
+#4 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2016-03-08 09:45:48 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://backend.shiwulian.com/classify/create'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '53442'
+    'REDIRECT_URL' => '/classify/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/view'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457426748.604
+    'REQUEST_TIME' => 1457426748
+]
+2016-03-08 09:52:10 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: id' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Controller.php:93
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\InlineAction.php(49): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#2 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#3 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('classify/view', Array)
+#4 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2016-03-08 09:52:10 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://backend.shiwulian.com/classify/create'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '53585'
+    'REDIRECT_URL' => '/classify/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/view'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457427130.439
+    'REQUEST_TIME' => 1457427130
+]
+2016-03-08 10:10:28 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: id' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Controller.php:93
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\InlineAction.php(49): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#2 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#3 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('classify/view', Array)
+#4 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2016-03-08 10:10:28 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://backend.shiwulian.com/classify/create'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '53801'
+    'REDIRECT_URL' => '/classify/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/view'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457428228.638
+    'REQUEST_TIME' => 1457428228
+]
+2016-03-08 10:49:42 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: id' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Controller.php:93
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\InlineAction.php(49): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#2 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#3 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('classify/view', Array)
+#4 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2016-03-08 10:49:42 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://backend.shiwulian.com/classify/create'
+    'HTTP_COOKIE' => 'PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D; _identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '54852'
+    'REDIRECT_URL' => '/classify/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/view'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457430582.44
+    'REQUEST_TIME' => 1457430582
+]
+2016-03-09 04:57:51 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: id' in E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Controller.php:93
+Stack trace:
+#0 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\InlineAction.php(49): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#2 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#3 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('classify/view', Array)
+#4 E:\workspace\shiwulian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 E:\workspace\shiwulian\web\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2016-03-09 04:57:51 [127.0.0.1][1][kl89rh85j61ahnijuc7hj6avc0][info][application] $_COOKIE = [
+    '_identity' => '141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir\",2592000]\";}'
+    'PHPSESSID' => 'kl89rh85j61ahnijuc7hj6avc0'
+    '_csrf' => 'cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'backend.shiwulian.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://backend.shiwulian.com/classify/create'
+    'HTTP_COOKIE' => '_identity=141ced30d2d27758baa41e51a218b8357f1dc772af6c167b4bbf0d5f6854c7f6a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22JM6J6x9L3xgQhsHxgDNBX0nJ1JE9MHir%22%2C2592000%5D%22%3B%7D; PHPSESSID=kl89rh85j61ahnijuc7hj6avc0; _csrf=cdee0e9ff189c1c8eee758332ca415a94022fee0d7be14aeef58bdcc6e48ad94a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hMN3I6Se1Bz3Ts7uoNz24kXoyBGZBKlL%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at backend.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'backend.shiwulian.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/backend/web/index.php'
+    'REMOTE_PORT' => '52441'
+    'REDIRECT_URL' => '/classify/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/classify/view'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1457495871.744
+    'REQUEST_TIME' => 1457495871
+]

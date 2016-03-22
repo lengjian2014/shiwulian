@@ -4552,3 +4552,310 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1457316721.431
     'REQUEST_TIME' => 1457316721
 ]
+2016-03-21 15:55:40 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'yii2advanced'' in D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#6 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(385): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#7 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#8 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\ActiveQuery.php(339): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#9 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Query.php(296): yii\db\ActiveQuery->queryScalar('<span class="st...', '<span class="ke...')
+#10 D:\xampp\htdocs\splian\web\frontend\models\Dynamic.php(141): yii\db\Query->count()
+#11 D:\xampp\htdocs\splian\web\frontend\controllers\IndexController.php(22): frontend\models\Dynamic::getAllByCondition('[<span class="s...', '<span class="st...', '<span class="nu...')
+#12 [internal function]: frontend\controllers\IndexController->actionIndex()
+#13 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#14 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#15 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#16 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#17 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 D:\xampp\htdocs\splian\web\frontend\web\index.php(18): yii\base\Application->run()
+#19 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1049] Unknown database 'yii2advanced'' in D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#4 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(385): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#5 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#6 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\ActiveQuery.php(339): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#7 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Query.php(296): yii\db\ActiveQuery->queryScalar('<span class="st...', '<span class="ke...')
+#8 D:\xampp\htdocs\splian\web\frontend\models\Dynamic.php(141): yii\db\Query->count()
+#9 D:\xampp\htdocs\splian\web\frontend\controllers\IndexController.php(22): frontend\models\Dynamic::getAllByCondition('[<span class="s...', '<span class="st...', '<span class="nu...')
+#10 [internal function]: frontend\controllers\IndexController->actionIndex()
+#11 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#12 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#13 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#14 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#15 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\xampp\htdocs\splian\web\frontend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+Additional Information:
+
+2016-03-21 15:55:40 [::1][-][-][info][application] $_COOKIE = [
+    'remember_user_5ab1837e91245bf513442c708b50254d' => 'eyJpdiI6IldUZUZFMTZoYStcL2pTcWNWQ1R5VmZZZE8xZE1XMzVOV2Y3VXdmRGU3K0pVPSIsInZhbHVlIjoiNFRsamNxOGZnaGpSN1k0OTdcLzFVWmJPN1I2RjBkcEtHa1wvdFQ2OHBKV200TWQ5MU9DZzlyWlhkV01DY01nc2ZPaHNrcHhBZWlxY1wvZ3BoY1wvZUxCVnJQZDJmNzBWRU9xUXZpcWM5d2hwWkdIU3hXZ1BKXC9OREJESGRNYXJGS3AzcyIsIm1hYyI6IjljYTU2YWNmM2M5Y2NjZTZhMjM4ZmUxNGY4OGRhNDc5N2EwNWRkYWZmYmFmNDJkMzJjNTkyYWZhMDRhMzAyODYifQ=='
+    'Ut0r_2132_ulastactivity' => '0bf80qnvxf5CHyOh42CNrrZH2k0QIa8xFf/WHuqdzEcwOUASscHl'
+    'ECS' => [
+        'visit_times' => '31'
+    ]
+    '__utma' => '111872281.488179596.1454296561.1454296561.1454296561.1'
+    '__utmz' => '111872281.1454296561.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'sAV5_2132_nofavfid' => '1'
+    'sAV5_2132_ulastactivity' => '9a52nzdBGGsKjDdG7U7+eDqPiuOb9MYHpkifcz5l1Pt1aRSFKrki'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'remember_user_5ab1837e91245bf513442c708b50254d=eyJpdiI6IldUZUZFMTZoYStcL2pTcWNWQ1R5VmZZZE8xZE1XMzVOV2Y3VXdmRGU3K0pVPSIsInZhbHVlIjoiNFRsamNxOGZnaGpSN1k0OTdcLzFVWmJPN1I2RjBkcEtHa1wvdFQ2OHBKV200TWQ5MU9DZzlyWlhkV01DY01nc2ZPaHNrcHhBZWlxY1wvZ3BoY1wvZUxCVnJQZDJmNzBWRU9xUXZpcWM5d2hwWkdIU3hXZ1BKXC9OREJESGRNYXJGS3AzcyIsIm1hYyI6IjljYTU2YWNmM2M5Y2NjZTZhMjM4ZmUxNGY4OGRhNDc5N2EwNWRkYWZmYmFmNDJkMzJjNTkyYWZhMDRhMzAyODYifQ%3D%3D; Ut0r_2132_ulastactivity=0bf80qnvxf5CHyOh42CNrrZH2k0QIa8xFf%2FWHuqdzEcwOUASscHl; ECS[visit_times]=31; __utma=111872281.488179596.1454296561.1454296561.1454296561.1; __utmz=111872281.1454296561.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); sAV5_2132_nofavfid=1; sAV5_2132_ulastactivity=9a52nzdBGGsKjDdG7U7%2BeDqPiuOb9MYHpkifcz5l1Pt1aRSFKrki'
+    'PATH' => 'C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Subversion\\bin;D:\\adt-bundle-windows-x86_64-20140702\\sdk\\tools;D:\\Program Files\\nodejs\\;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python35\\;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python35\\Scripts;C:\\Users\\Administrator\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/splian/web/frontend/web/index.php'
+    'REMOTE_PORT' => '57654'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/splian/web/frontend/web/'
+    'SCRIPT_NAME' => '/splian/web/frontend/web/index.php'
+    'PHP_SELF' => '/splian/web/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1458546940.312
+    'REQUEST_TIME' => 1458546940
+]
+2016-03-21 15:55:50 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'yii2advanced'' in D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#6 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(385): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#7 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#8 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\ActiveQuery.php(339): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#9 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Query.php(296): yii\db\ActiveQuery->queryScalar('<span class="st...', '<span class="ke...')
+#10 D:\xampp\htdocs\splian\web\frontend\models\Dynamic.php(141): yii\db\Query->count()
+#11 D:\xampp\htdocs\splian\web\frontend\controllers\IndexController.php(22): frontend\models\Dynamic::getAllByCondition('[<span class="s...', '<span class="st...', '<span class="nu...')
+#12 [internal function]: frontend\controllers\IndexController->actionIndex()
+#13 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#14 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#15 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#16 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#17 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 D:\xampp\htdocs\splian\web\frontend\web\index.php(18): yii\base\Application->run()
+#19 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1049] Unknown database 'yii2advanced'' in D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#4 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(385): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#5 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#6 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\ActiveQuery.php(339): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#7 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Query.php(296): yii\db\ActiveQuery->queryScalar('<span class="st...', '<span class="ke...')
+#8 D:\xampp\htdocs\splian\web\frontend\models\Dynamic.php(141): yii\db\Query->count()
+#9 D:\xampp\htdocs\splian\web\frontend\controllers\IndexController.php(22): frontend\models\Dynamic::getAllByCondition('[<span class="s...', '<span class="st...', '<span class="nu...')
+#10 [internal function]: frontend\controllers\IndexController->actionIndex()
+#11 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#12 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#13 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#14 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#15 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\xampp\htdocs\splian\web\frontend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+Additional Information:
+
+2016-03-21 15:55:50 [::1][-][-][info][application] $_COOKIE = [
+    'remember_user_5ab1837e91245bf513442c708b50254d' => 'eyJpdiI6IldUZUZFMTZoYStcL2pTcWNWQ1R5VmZZZE8xZE1XMzVOV2Y3VXdmRGU3K0pVPSIsInZhbHVlIjoiNFRsamNxOGZnaGpSN1k0OTdcLzFVWmJPN1I2RjBkcEtHa1wvdFQ2OHBKV200TWQ5MU9DZzlyWlhkV01DY01nc2ZPaHNrcHhBZWlxY1wvZ3BoY1wvZUxCVnJQZDJmNzBWRU9xUXZpcWM5d2hwWkdIU3hXZ1BKXC9OREJESGRNYXJGS3AzcyIsIm1hYyI6IjljYTU2YWNmM2M5Y2NjZTZhMjM4ZmUxNGY4OGRhNDc5N2EwNWRkYWZmYmFmNDJkMzJjNTkyYWZhMDRhMzAyODYifQ=='
+    'Ut0r_2132_ulastactivity' => '0bf80qnvxf5CHyOh42CNrrZH2k0QIa8xFf/WHuqdzEcwOUASscHl'
+    'ECS' => [
+        'visit_times' => '31'
+    ]
+    '__utma' => '111872281.488179596.1454296561.1454296561.1454296561.1'
+    '__utmz' => '111872281.1454296561.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'sAV5_2132_nofavfid' => '1'
+    'sAV5_2132_ulastactivity' => '9a52nzdBGGsKjDdG7U7+eDqPiuOb9MYHpkifcz5l1Pt1aRSFKrki'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'remember_user_5ab1837e91245bf513442c708b50254d=eyJpdiI6IldUZUZFMTZoYStcL2pTcWNWQ1R5VmZZZE8xZE1XMzVOV2Y3VXdmRGU3K0pVPSIsInZhbHVlIjoiNFRsamNxOGZnaGpSN1k0OTdcLzFVWmJPN1I2RjBkcEtHa1wvdFQ2OHBKV200TWQ5MU9DZzlyWlhkV01DY01nc2ZPaHNrcHhBZWlxY1wvZ3BoY1wvZUxCVnJQZDJmNzBWRU9xUXZpcWM5d2hwWkdIU3hXZ1BKXC9OREJESGRNYXJGS3AzcyIsIm1hYyI6IjljYTU2YWNmM2M5Y2NjZTZhMjM4ZmUxNGY4OGRhNDc5N2EwNWRkYWZmYmFmNDJkMzJjNTkyYWZhMDRhMzAyODYifQ%3D%3D; Ut0r_2132_ulastactivity=0bf80qnvxf5CHyOh42CNrrZH2k0QIa8xFf%2FWHuqdzEcwOUASscHl; ECS[visit_times]=31; __utma=111872281.488179596.1454296561.1454296561.1454296561.1; __utmz=111872281.1454296561.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); sAV5_2132_nofavfid=1; sAV5_2132_ulastactivity=9a52nzdBGGsKjDdG7U7%2BeDqPiuOb9MYHpkifcz5l1Pt1aRSFKrki'
+    'PATH' => 'C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Subversion\\bin;D:\\adt-bundle-windows-x86_64-20140702\\sdk\\tools;D:\\Program Files\\nodejs\\;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python35\\;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python35\\Scripts;C:\\Users\\Administrator\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/splian/web/frontend/web/index.php'
+    'REMOTE_PORT' => '57657'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/splian/web/frontend/web/'
+    'SCRIPT_NAME' => '/splian/web/frontend/web/index.php'
+    'PHP_SELF' => '/splian/web/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1458546950.45
+    'REQUEST_TIME' => 1458546950
+]
+2016-03-21 15:56:54 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=10.1...', 'root', 'www.splian.com', NULL)
+#1 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#6 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(385): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#7 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#8 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\ActiveQuery.php(339): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#9 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Query.php(296): yii\db\ActiveQuery->queryScalar('<span class="st...', '<span class="ke...')
+#10 D:\xampp\htdocs\splian\web\frontend\models\Dynamic.php(141): yii\db\Query->count()
+#11 D:\xampp\htdocs\splian\web\frontend\controllers\IndexController.php(22): frontend\models\Dynamic::getAllByCondition('[<span class="s...', '<span class="st...', '<span class="nu...')
+#12 [internal function]: frontend\controllers\IndexController->actionIndex()
+#13 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#14 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#15 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#16 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#17 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 D:\xampp\htdocs\splian\web\frontend\web\index.php(18): yii\base\Application->run()
+#19 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#4 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Command.php(385): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#5 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#6 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\ActiveQuery.php(339): yii\db\Query->queryScalar('<span class="st...', '<span class="ke...')
+#7 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\db\Query.php(296): yii\db\ActiveQuery->queryScalar('<span class="st...', '<span class="ke...')
+#8 D:\xampp\htdocs\splian\web\frontend\models\Dynamic.php(141): yii\db\Query->count()
+#9 D:\xampp\htdocs\splian\web\frontend\controllers\IndexController.php(22): frontend\models\Dynamic::getAllByCondition('[<span class="s...', '<span class="st...', '<span class="nu...')
+#10 [internal function]: frontend\controllers\IndexController->actionIndex()
+#11 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#12 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[]')
+#13 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[]')
+#14 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#15 D:\xampp\htdocs\splian\web\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\xampp\htdocs\splian\web\frontend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+Additional Information:
+
+2016-03-21 15:56:33 [::1][-][-][info][application] $_COOKIE = [
+    'remember_user_5ab1837e91245bf513442c708b50254d' => 'eyJpdiI6IldUZUZFMTZoYStcL2pTcWNWQ1R5VmZZZE8xZE1XMzVOV2Y3VXdmRGU3K0pVPSIsInZhbHVlIjoiNFRsamNxOGZnaGpSN1k0OTdcLzFVWmJPN1I2RjBkcEtHa1wvdFQ2OHBKV200TWQ5MU9DZzlyWlhkV01DY01nc2ZPaHNrcHhBZWlxY1wvZ3BoY1wvZUxCVnJQZDJmNzBWRU9xUXZpcWM5d2hwWkdIU3hXZ1BKXC9OREJESGRNYXJGS3AzcyIsIm1hYyI6IjljYTU2YWNmM2M5Y2NjZTZhMjM4ZmUxNGY4OGRhNDc5N2EwNWRkYWZmYmFmNDJkMzJjNTkyYWZhMDRhMzAyODYifQ=='
+    'Ut0r_2132_ulastactivity' => '0bf80qnvxf5CHyOh42CNrrZH2k0QIa8xFf/WHuqdzEcwOUASscHl'
+    'ECS' => [
+        'visit_times' => '31'
+    ]
+    '__utma' => '111872281.488179596.1454296561.1454296561.1454296561.1'
+    '__utmz' => '111872281.1454296561.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'sAV5_2132_nofavfid' => '1'
+    'sAV5_2132_ulastactivity' => '9a52nzdBGGsKjDdG7U7+eDqPiuOb9MYHpkifcz5l1Pt1aRSFKrki'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'remember_user_5ab1837e91245bf513442c708b50254d=eyJpdiI6IldUZUZFMTZoYStcL2pTcWNWQ1R5VmZZZE8xZE1XMzVOV2Y3VXdmRGU3K0pVPSIsInZhbHVlIjoiNFRsamNxOGZnaGpSN1k0OTdcLzFVWmJPN1I2RjBkcEtHa1wvdFQ2OHBKV200TWQ5MU9DZzlyWlhkV01DY01nc2ZPaHNrcHhBZWlxY1wvZ3BoY1wvZUxCVnJQZDJmNzBWRU9xUXZpcWM5d2hwWkdIU3hXZ1BKXC9OREJESGRNYXJGS3AzcyIsIm1hYyI6IjljYTU2YWNmM2M5Y2NjZTZhMjM4ZmUxNGY4OGRhNDc5N2EwNWRkYWZmYmFmNDJkMzJjNTkyYWZhMDRhMzAyODYifQ%3D%3D; Ut0r_2132_ulastactivity=0bf80qnvxf5CHyOh42CNrrZH2k0QIa8xFf%2FWHuqdzEcwOUASscHl; ECS[visit_times]=31; __utma=111872281.488179596.1454296561.1454296561.1454296561.1; __utmz=111872281.1454296561.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); sAV5_2132_nofavfid=1; sAV5_2132_ulastactivity=9a52nzdBGGsKjDdG7U7%2BeDqPiuOb9MYHpkifcz5l1Pt1aRSFKrki'
+    'PATH' => 'C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Subversion\\bin;D:\\adt-bundle-windows-x86_64-20140702\\sdk\\tools;D:\\Program Files\\nodejs\\;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python35\\;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python35\\Scripts;C:\\Users\\Administrator\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/splian/web/frontend/web/index.php'
+    'REMOTE_PORT' => '57665'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/splian/web/frontend/web/'
+    'SCRIPT_NAME' => '/splian/web/frontend/web/index.php'
+    'PHP_SELF' => '/splian/web/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1458546993.354
+    'REQUEST_TIME' => 1458546993
+]

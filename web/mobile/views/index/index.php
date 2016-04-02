@@ -40,9 +40,9 @@ use mobile\widgets\FooterWidget;?>
 			<div class="col-xs-12">
 				<i class="weizhi"></i>洛阳市涧西区西苑路
 			</div>
-			<div class="col-xs-4"><img src="images/product.jpg"></div>
-			<div class="col-xs-4"><img src="images/product.jpg"></div>
-			<div class="col-xs-4"><img src="images/product.jpg"></div>
+			<div class="col-xs-4"><img class="img-responsive" src="images/product.jpg"></div>
+			<div class="col-xs-4"><img class="img-responsive" src="images/product.jpg"></div>
+			<div class="col-xs-4"><img class="img-responsive" src="images/product.jpg"></div>
 			<div class="col-xs-12">
 				简介：洛阳市涧西区西苑路洛阳市涧西区西苑路洛阳市涧西区西苑路洛阳市涧西区西苑路洛阳市涧西区西苑路洛阳市涧西区西苑路洛阳市涧西区西苑路
 			洛阳市涧西区西苑路洛阳市涧西区西苑路洛阳市涧西区西苑路
@@ -55,6 +55,29 @@ use mobile\widgets\FooterWidget;?>
 			</div>
 			<div class="col-xs-4 jiaohu" align="center">
 				<i class="kan"></i><span>5555</span>
+			</div>
+		</div>
+	</div>
+	<div class="caption">
+		<h3><a>农场推荐</a></h3>
+		<span><a href="">查看全部</a></span>
+	</div>
+	<div class="container farmlist">
+		<div class="row">
+			<div class="col-xs-12">
+				<span class="name">河南山坡喝呀</span><span class="stars"></span>
+			</div>
+			<div class="col-xs-12">
+				<i class="farm-v"></i>
+				<i class="farm-bei"></i>
+				<i class="farm-ziliao"></i>
+			</div>
+			<div class="col-xs-12">
+				<span class="farm-type">产品类型：鲜鸭肉</span>
+			</div>
+			<div class="col-xs-12 handle">
+				<div class="col-xs-6">5555</div>
+				<div class="col-xs-6"><i class="collect"></i></div>
 			</div>
 		</div>
 	</div>
@@ -99,5 +122,6 @@ var banner = Swipe(document.getElementById('mySwipe'), {
 	}
 });
 </script>
-<?/*= FooterWidget::widget();*/
+<div class="blank50"></div>
+<?= FooterWidget::widget();
 ?>

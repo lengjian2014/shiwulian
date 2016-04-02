@@ -68,7 +68,6 @@ strong, h1, h2, h3, h4, h5, h6 { font-weight:normal }
 #position{ position:absolute; height:15px; bottom:0; right:0; padding:5px 10px 0 0; margin:0; background:#000; opacity:0.4; width:100%; filter:alpha(opacity=50);text-align:right;}
 #position li{width:10px;height:10px;margin-left:5px;display:inline-block;-webkit-border-radius:5px;border-radius:5px;background-color:#AFAFAF;}
 #position li.cur{background-color:#FF0000;}
-.img-responsive { display:block; max-width:100%; height:auto;}
 
 .item { padding:10px; background-color:#fff; margin-bottom:10px; }
 .caption { border-bottom:1px solid #ddd; line-height:20px; padding:0 1% 5px; margin-bottom:8px;height: 20px; }
@@ -77,11 +76,20 @@ strong, h1, h2, h3, h4, h5, h6 { font-weight:normal }
 .caption span{display: inline-block;float: right;}
 .caption span a{font-size: 14px;}
 
+.goodslist{line-height: 20px;}
 .goodslist .created{padding-left: 20px;}
 .goodslist .xin{background: url(../images/xin.png) no-repeat;float: left;}
 .goodslist .zan{background: url(../images/zan.png);}
 .goodslist .jiaohu{height: }
 
+.farmlist .row{background: url(../images/farm.png);height: 275px;position: relative;}
+.farm-v{background: url(../images/iconfont-renzheng.png)}
+.farm-bei{background: url(../images/iconfont-jiangbei.png)}
+.farm-ziliao{background: url(../images/) no-repeat 0 -60px;}
+.farmlist .farm-type{background-color: #34AC4A;padding:5px;color: #fff;font-size: 20px;}
+.farmlist .name{font-size: 30px;font-weight: blod;}
+.farmlist .handle{background-color: #F3A114;height: 40px;line-height: 40px;color: #fff;position: absolute;bottom: 0;}
+.farmlist .handle .collect{background: url(../images/icon-f.png) no-repeat 0 -60px;}
 
 .pubtop a { display:block; height:45px; width:45px; position:absolute; }
 a.back { left:0; top:0; background:url(../images/back.png) no-repeat center center; background-size:55% 55%; }

@@ -7,11 +7,30 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'app-frontend',
+    'id' => 'app-mobile',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'controllerNamespace' => 'frontend\controllers',
+    'language' => 'zh-CN',
+    'controllerNamespace' => 'mobile\controllers',
+    'defaultRoute' => 'index/index',
+    'modules' => [
+        'ucenter' => [
+            'class' => 'frontend\modules\ucenter\Module',
+        ],
+    ],
     'components' => [
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            //'suffix' => '.html',
+            'rules' => [
+                '/' => 'index/index',
+                'ucenter' => 'ucenter/default/index',
+                'ucenter/<controller:\w+>/<action:\w+>/<id:\w+>' => 'ucenter/<controller>/<action>',
+                '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>'
+            ],
+        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
@@ -28,14 +47,6 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        */
     ],
     'params' => $params,
 ];

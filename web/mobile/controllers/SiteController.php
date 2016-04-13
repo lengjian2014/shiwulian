@@ -1,5 +1,5 @@
 <?php
-namespace frontend\controllers;
+namespace mobile\controllers;
 
 use Yii;
 use common\models\LoginForm;

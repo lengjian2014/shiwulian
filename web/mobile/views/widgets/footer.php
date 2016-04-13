@@ -7,7 +7,7 @@
 	</li>
 	<li>
 		<a href="http://m.huiyoucn.com<{:U('Account/index')}>">
-			<i class="icon_dynamic"></i>
+			<i class="icon iconfont" style="font-size:25px;color:#6D6D6D">&#xe606;</i>
 			<span>动态</span>
 		</a>
 	</li>

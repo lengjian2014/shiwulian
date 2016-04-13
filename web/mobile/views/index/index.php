@@ -33,7 +33,10 @@ use mobile\widgets\FooterWidget;?>
 	<div class="container goodslist">
 		<div class="row">
 			<div class="col-xs-6">河南山坡喝呀</div>
-			<div class="col-xs-6" align="right"><i class="xin"></i>放心指数：<span>8.0</span></div>
+			<div class="col-xs-6" align="right">
+				<i class="icon iconfont" style="color:#FC7700">&#xe604;</i>放心指数：<span>8.0</span>
+				<i class="icon iconfont">&#xe605;</i>
+			</div>
 			<div class="col-xs-12">
 				<span>我是鸭长180</span><span class="created">创建于3小时前</span>
 			</div>
@@ -48,13 +51,13 @@ use mobile\widgets\FooterWidget;?>
 			洛阳市涧西区西苑路洛阳市涧西区西苑路洛阳市涧西区西苑路
 			</div>
 			<div class="col-xs-4" align="center">
-				<i class="zan"></i><span>5555</span>
+				<i class="icon iconfont">&#xe60f;</i><span>5555</span>
 			</div>
 			<div class="col-xs-4" align="center">
-				<i class="comment"></i><span>5555</span>
+				<i class="icon iconfont">&#xe60d;</i><span>5555</span>
 			</div>
 			<div class="col-xs-4 jiaohu" align="center">
-				<i class="kan"></i><span>5555</span>
+				<i class="icon iconfont">&#xe60e;</i><span>5555</span>
 			</div>
 		</div>
 	</div>
@@ -76,35 +79,11 @@ use mobile\widgets\FooterWidget;?>
 				<span class="farm-type">产品类型：鲜鸭肉</span>
 			</div>
 			<div class="col-xs-12 handle">
-				<div class="col-xs-6">5555</div>
-				<div class="col-xs-6"><i class="collect"></i></div>
+				<div class="col-xs-6"><i class="icon iconfont">&#xe60f;</i>5555</div>
+				<div class="col-xs-6"><i class="icon iconfont">&#xe602;</i></div>
 			</div>
 		</div>
 	</div>
-	<!-- <dl class="item_con2">
-		<li class="goods-list">
-			<a href="">
-				<span class="goods-name">河南山坡喝呀</span>
-				<span class="goods-heart"><i class="goods-free"></i>放心指数:<span>8.0</span><a href=""></a></span>
-			</a>
-		</li>
-		<volist name="hottop" id="vo" key="key">
-			<if condition="$key == 1">
-				<dt>
-					<a href="<{$vo.link}>">
-					<img data-original="<{$vo.src}>" title="<{$vo.name}>" alt="<{$vo.name}>" />
-					</a>
-				</dt>
-				<else />
-				<dd>
-					<a href="<{$vo.link}>">
-						<img data-original="<{$vo['src']}>" title="<{$vo.name}>" alt="<{$vo.name}>" />
-					</a>
-				</dd>
-			</if>
-		</volist>
-		<div class="clearfix"></div>
-	</dl> -->
 </div>
 <script src="js/swipe.min.js"></script>
 <script type="text/javascript">

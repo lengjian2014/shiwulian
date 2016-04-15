@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace frontend\assets;
+namespace mobile\assets;
 
 use yii\web\AssetBundle;
 
@@ -19,11 +19,13 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
+        'css/iconfont.css',
+        '//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css'
     ];
     public $js = [
     ];
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        /*'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',*/
     ];
 }

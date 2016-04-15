@@ -1,3 +1,9 @@
+<?php
+use mobile\assets\AppAsset;
+$this->title = '食物链';
+AppAsset::register($this);
+?>
+<?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +15,12 @@
 <meta content="telephone=no" name="format-detection">
 <meta name="wap-font-scale" content="no">
 <title>splian</title>
-<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/site.css">
-<link rel="stylesheet" href="css/iconfont.css">
+<?php $this->head() ?>
 </head>
 <body>
+<?php $this->beginBody() ?>
 	<?= $content?>
+<?php $this->endBody() ?>
 </body>
 </html>
+<?php $this->endPage() ?>

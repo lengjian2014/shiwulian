@@ -4552,3 +4552,135 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1457316721.431
     'REQUEST_TIME' => 1457316721
 ]
+2016-03-25 06:06:46 [192.168.10.231][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.231
+    in E:\workspace\shiwulian\web\frontend\views\layouts\layout.php:82
+    in E:\workspace\shiwulian\web\frontend\views\layouts\main.php:35
+    in E:\workspace\shiwulian\web\frontend\controllers\IndexController.php:37
+2016-03-25 06:06:43 [192.168.10.231][-][-][info][application] $_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at www.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'www.shiwulian.com'
+    'SERVER_ADDR' => '192.168.10.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.231'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/frontend/web/index.php'
+    'REMOTE_PORT' => '49762'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1458882402.359
+    'REQUEST_TIME' => 1458882402
+]
+2016-03-25 06:15:02 [192.168.10.231][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.231
+    in E:\workspace\shiwulian\web\frontend\views\layouts\layout.php:82
+    in E:\workspace\shiwulian\web\frontend\views\layouts\main.php:35
+    in E:\workspace\shiwulian\web\frontend\controllers\IndexController.php:37
+2016-03-25 06:15:02 [192.168.10.231][-][-][info][application] $_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at www.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'www.shiwulian.com'
+    'SERVER_ADDR' => '192.168.10.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.231'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/frontend/web/index.php'
+    'REMOTE_PORT' => '50850'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1458882902.113
+    'REQUEST_TIME' => 1458882902
+]
+2016-07-26 07:50:52 [192.168.10.220][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.10.220
+    in E:\workspace\shiwulian\web\frontend\views\layouts\layout.php:82
+    in E:\workspace\shiwulian\web\frontend\views\layouts\main.php:35
+    in E:\workspace\shiwulian\web\frontend\controllers\IndexController.php:37
+2016-07-26 07:50:51 [192.168.10.220][-][-][info][application] $_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'PATH' => 'C:\\Program Files\\ImageMagick-6.9.3-Q16;C:\\ProgramData\\Oracle\\Java\\javapath;D:\\Python27\\;D:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\hs150304\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\libexec\\git-core;E:\\nodejs;C:\\Program Files\\Java\\jdk1.8.0_73\\bin;C:\\Program Files\\Git\\cmd;C:\\Python34;C:\\Program Files (x86)\\ImageMagick-6.9.3-Q16-x86;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19 Server at www.shiwulian.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.19'
+    'SERVER_NAME' => 'www.shiwulian.com'
+    'SERVER_ADDR' => '192.168.10.186'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.10.220'
+    'DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/workspace/shiwulian/web/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/workspace/shiwulian/web/frontend/web/index.php'
+    'REMOTE_PORT' => '50513'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1469512251.118
+    'REQUEST_TIME' => 1469512251
+]

@@ -1,0 +1,7 @@
+[Mon Aug 15 14:25:36.069024 2016] [cgi:error] [pid 4612:tid 1876] [client 127.0.0.1:52612] script not found or unable to stat: E:/xampp/cgi-bin/micromsg-bin
+[Mon Aug 15 14:25:41.400329 2016] [cgi:error] [pid 4612:tid 1876] [client 127.0.0.1:52614] script not found or unable to stat: E:/xampp/cgi-bin/micromsg-bin
+[Mon Aug 15 14:26:38.963621 2016] [cgi:error] [pid 4612:tid 1876] [client 127.0.0.1:52638] script not found or unable to stat: E:/xampp/cgi-bin/micromsg-bin
+[Mon Aug 15 14:27:45.071402 2016] [cgi:error] [pid 4612:tid 1896] [client 127.0.0.1:52732] script not found or unable to stat: E:/xampp/cgi-bin/micromsg-bin
+[Mon Aug 15 14:31:12.106244 2016] [cgi:error] [pid 4612:tid 1896] [client 127.0.0.1:52821] script not found or unable to stat: E:/xampp/cgi-bin/micromsg-bin
+[Mon Aug 15 14:40:02.334571 2016] [cgi:error] [pid 4612:tid 1896] [client 127.0.0.1:52981] script not found or unable to stat: E:/xampp/cgi-bin/micromsg-bin
+[Mon Aug 15 14:40:17.346430 2016] [cgi:error] [pid 4612:tid 1896] [client 127.0.0.1:52990] script not found or unable to stat: E:/xampp/cgi-bin/micromsg-bin

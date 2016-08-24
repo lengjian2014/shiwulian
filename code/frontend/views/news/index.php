@@ -1,5 +1,6 @@
 <?php
 /* @var $this yii\web\View */
+
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', '行业资讯'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = '最新资讯';
 
@@ -37,9 +38,9 @@ $this->params['breadcrumbs'][] = '最新资讯';
 				</div>
 			</div>
 			<ul class="card-handle">
-				<li><a href="javascript:;"><font class="glyphicon glyphicon-eye-open"></font><span>4482</span></a></li>
-				<li><a class="" href="javascript:;"><i class="glyphicon glyphicon-comment"></i><span>2</span></a></li>
-				<li><a class="" href="javascript:;"><i class="glyphicon glyphicon-thumbs-up"></i><span>7</span></a></li>
+				<li>浏览 (<a href="javascript:;">4482</a>)</li>
+				<li><a class="" href="javascript:;">评论 (2)</a></li>
+				<li><a class="" href="javascript:;">点赞 (7)</a></li>
 				<li><a class="" href="javascript:;"><i class="glyphicon glyphicon-star"></i><span>收藏</span></a></li>
 			</ul>
 		</div>
@@ -55,9 +56,9 @@ $this->params['breadcrumbs'][] = '最新资讯';
 				</div>
 			</div>
 			<ul class="card-handle">
-				<li><a href="javascript:;"><font class="glyphicon glyphicon-eye-open"></font><span>4482</span></a></li>
-				<li><a class="" href="javascript:;"><i class="glyphicon glyphicon-comment"></i><span>2</span></a></li>
-				<li><a class="" href="javascript:;"><i class="glyphicon glyphicon-thumbs-up"></i><span>7</span></a></li>
+				<li>浏览 (<a href="javascript:;">4482</a>)</li>
+				<li><a class="" href="javascript:;">评论 (2)</a></li>
+				<li><a class="" href="javascript:;">点赞 (7)</a></li>
 				<li><a class="" href="javascript:;"><i class="glyphicon glyphicon-star"></i><span>收藏</span></a></li>
 			</ul>
 		</div>
@@ -73,9 +74,9 @@ $this->params['breadcrumbs'][] = '最新资讯';
 				</div>
 			</div>
 			<ul class="card-handle">
-				<li><a href="javascript:;"><font class="glyphicon glyphicon-eye-open"></font><span>4482</span></a></li>
-				<li><a class="" href="javascript:;"><i class="glyphicon glyphicon-comment"></i><span>2</span></a></li>
-				<li><a class="" href="javascript:;"><i class="glyphicon glyphicon-thumbs-up"></i><span>7</span></a></li>
+				<li>浏览 (<a href="javascript:;">4482</a>)</li>
+				<li><a class="" href="javascript:;">评论 (2)</a></li>
+				<li><a class="" href="javascript:;">点赞 (7)</a></li>
 				<li><a class="" href="javascript:;"><i class="glyphicon glyphicon-star"></i><span>收藏</span></a></li>
 			</ul>
 		</div>
@@ -91,9 +92,9 @@ $this->params['breadcrumbs'][] = '最新资讯';
 				</div>
 			</div>
 			<ul class="card-handle">
-				<li><a href="javascript:;"><font class="glyphicon glyphicon-eye-open"></font><span>4482</span></a></li>
-				<li><a class="" href="javascript:;"><i class="glyphicon glyphicon-comment"></i><span>2</span></a></li>
-				<li><a class="" href="javascript:;"><i class="glyphicon glyphicon-thumbs-up"></i><span>7</span></a></li>
+				<li>浏览 (<a href="javascript:;">4482</a>)</li>
+				<li><a class="" href="javascript:;">评论 (2)</a></li>
+				<li><a class="" href="javascript:;">点赞 (7)</a></li>
 				<li><a class="" href="javascript:;"><i class="glyphicon glyphicon-star"></i><span>收藏</span></a></li>
 			</ul>
 		</div>
@@ -143,20 +144,20 @@ $this->params['breadcrumbs'][] = '最新资讯';
 			</ul>
 			<div class="media popular-tags">
 				<a href="/tag/4#pvareaid=2125120" target="_blank"> 最新车讯</a>
-<a href="/tag/5#pvareaid=2125120" target="_blank"> 评测体验</a>
-<a href="/tag/6#pvareaid=2125120" target="_blank"> 热点聚焦</a>
-<a href="/tag/7#pvareaid=2125120" target="_blank"> 选车指南</a>
-<a href="/tag/9#pvareaid=2125120" target="_blank"> 汽车旅行</a>
-<a href="/tag/11#pvareaid=2125120" target="_blank"> 文化历史</a>
-<a href="/tag/12#pvareaid=2125120" target="_blank"> 黑科技</a>
-<a href="/tag/13#pvareaid=2125120" target="_blank"> 技术详解</a>
-<a href="/tag/14#pvareaid=2125120" target="_blank"> 越野</a>
-<a href="/tag/15#pvareaid=2125120" target="_blank"> 探险</a>
-<a href="/tag/16#pvareaid=2125120" target="_blank"> 车事杂谈</a>
-<a href="/tag/18#pvareaid=2125120" target="_blank"> 海外车坛</a>
-<a href="/tag/19#pvareaid=2125120" target="_blank"> 行业分析</a>
-<a href="/tag/20#pvareaid=2125120" target="_blank"> 新鲜趣闻</a>
-<a href="/tag/21#pvareaid=2125120" target="_blank"> 真人秀</a>
+				<a href="/tag/5#pvareaid=2125120" target="_blank"> 评测体验</a>
+				<a href="/tag/6#pvareaid=2125120" target="_blank"> 热点聚焦</a>
+				<a href="/tag/7#pvareaid=2125120" target="_blank"> 选车指南</a>
+				<a href="/tag/9#pvareaid=2125120" target="_blank"> 汽车旅行</a>
+				<a href="/tag/11#pvareaid=2125120" target="_blank"> 文化历史</a>
+				<a href="/tag/12#pvareaid=2125120" target="_blank"> 黑科技</a>
+				<a href="/tag/13#pvareaid=2125120" target="_blank"> 技术详解</a>
+				<a href="/tag/14#pvareaid=2125120" target="_blank"> 越野</a>
+				<a href="/tag/15#pvareaid=2125120" target="_blank"> 探险</a>
+				<a href="/tag/16#pvareaid=2125120" target="_blank"> 车事杂谈</a>
+				<a href="/tag/18#pvareaid=2125120" target="_blank"> 海外车坛</a>
+				<a href="/tag/19#pvareaid=2125120" target="_blank"> 行业分析</a>
+				<a href="/tag/20#pvareaid=2125120" target="_blank"> 新鲜趣闻</a>
+				<a href="/tag/21#pvareaid=2125120" target="_blank"> 真人秀</a>
 			</div>
 		</div>
 	</div>

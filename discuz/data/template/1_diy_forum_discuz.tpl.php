@@ -1,5 +1,4 @@
-<?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('discuz');
-block_get('4,7,8,9');?><?php include template('common/header'); ?><div id="pt" class="bm cl">
+<?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('discuz');?><?php include template('common/header'); ?><div id="pt" class="bm cl">
 <?php if(empty($gid) && $announcements) { ?>
 <div class="y">
 <div id="an">
@@ -26,7 +25,7 @@ block_get('4,7,8,9');?><?php include template('common/header'); ?><div id="pt" c
 
 <?php if(empty($gid)) { ?>
 <div class="wp">
-<!--[diy=diy1]--><div id="diy1" class="area"><div id="framet2THDu" class="frame move-span cl frame-1-1-1"><div class="title frame-title"><span class="titletext">1-1-1框架</span></div><div id="framet2THDu_left" class="column frame-1-1-1-l"><div id="framet2THDu_left_temp" class="move-span temp"></div><?php block_display('4');?></div><div id="framet2THDu_center" class="column frame-1-1-1-c"><div id="framet2THDu_center_temp" class="move-span temp"></div><?php block_display('7');?><?php block_display('8');?></div><div id="framet2THDu_right" class="column frame-1-1-1-r"><div id="framet2THDu_right_temp" class="move-span temp"></div><?php block_display('9');?></div></div></div><!--[/diy]-->
+<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
 </div>
 <?php } ?>
 

@@ -1,7 +1,7 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); 
 0
-|| checktplrefresh('./template/default/common/header.htm', './template/default/common/header_common.htm', 1472204013, '1', './data/template/1_1_common_header_forum_index.tpl.php', './template/default', 'common/header_forum_index')
-|| checktplrefresh('./template/default/common/header.htm', './template/default/common/pubsearchform.htm', 1472204013, '1', './data/template/1_1_common_header_forum_index.tpl.php', './template/default', 'common/header_forum_index')
+|| checktplrefresh('./template/default/common/header.htm', './template/default/common/header_common.htm', 1472457259, '1', './data/template/1_1_common_header_forum_index.tpl.php', './template/default', 'common/header_forum_index')
+|| checktplrefresh('./template/default/common/header.htm', './template/default/common/pubsearchform.htm', 1472457259, '1', './data/template/1_1_common_header_forum_index.tpl.php', './template/default', 'common/header_forum_index')
 ;?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -81,7 +81,6 @@
 
 <div id="hd">
 <div class="wp">
-
 <?php if(!empty($_G['setting']['plugins']['jsmenu'])) { ?>
 <ul class="p_pop h_pop" id="plugin_menu" style="display: none"><?php if(is_array($_G['setting']['plugins']['jsmenu'])) foreach($_G['setting']['plugins']['jsmenu'] as $module) { ?> <?php if(!$module['adminid'] || ($module['adminid'] && $_G['adminid'] > 0 && $module['adminid'] >= $_G['adminid'])) { ?>
  <li><?php echo $module['url'];?></li>
@@ -139,7 +138,7 @@ EOF;
 <input type="hidden" name="q" id="cloudsearchquery" value="" />
 
 <style>
-#scbar { overflow: visible; position: relative; }
+#scbar { overflow: visible; float: right; margin-bottom: 30px;}
 #sg{ background: #FFF; width:456px; border: 1px solid #B2C7DA; }
 .scbar_narrow #sg { width: 316px; }
 #sg li { padding:0 8px; line-height:30px; font-size:14px; }
@@ -153,39 +152,8 @@ EOF;
 <?php } ?>
 <table cellspacing="0" cellpadding="0">
 <tr>
-<td class="scbar_icon_td"></td>
 <td class="scbar_txt_td"><input type="text" name="srchtxt" id="scbar_txt" value="请输入搜索内容" autocomplete="off" x-webkit-speech speech /></td>
-<td class="scbar_type_td"><a href="javascript:;" id="scbar_type" class="xg1" onclick="showMenu(this.id)" hidefocus="true">搜索</a></td>
-<td class="scbar_btn_td"><button type="submit" name="searchsubmit" id="scbar_btn" sc="1" class="pn pnc" value="true"><strong class="xi2">搜索</strong></button></td>
-<td class="scbar_hot_td">
-<div id="scbar_hot">
-<?php if($_G['setting']['srchhotkeywords']) { ?>
-<strong class="xw1">热搜: </strong><?php if(is_array($_G['setting']['srchhotkeywords'])) foreach($_G['setting']['srchhotkeywords'] as $val) { if($val=trim($val)) { $valenc=rawurlencode($val);?><?php
-$__FORMHASH = FORMHASH;$srchhotkeywords[] = <<<EOF
-
-
-EOF;
- if(!empty($searchparams['url'])) { 
-$srchhotkeywords[] .= <<<EOF
-
-<a href="{$searchparams['url']}?q={$valenc}&source=hotsearch{$srchotquery}" target="_blank" class="xi2" sc="1">{$val}</a>
-
-EOF;
- } else { 
-$srchhotkeywords[] .= <<<EOF
-
-<a href="search.php?mod=forum&amp;srchtxt={$valenc}&amp;formhash={$__FORMHASH}&amp;searchsubmit=true&amp;source=hotsearch" target="_blank" class="xi2" sc="1">{$val}</a>
-
-EOF;
- } 
-$srchhotkeywords[] .= <<<EOF
-
-
-EOF;
-?>
-<?php } } echo implode('', $srchhotkeywords);; } ?>
-</div>
-</td>
+<td class="scbar_btn_td"><button type="submit" name="searchsubmit" id="scbar_btn" sc="1" value="true">搜索</button></td>
 </tr>
 </table>
 </form>

@@ -40,30 +40,8 @@
 		<!--{/if}-->
 		<table cellspacing="0" cellpadding="0">
 			<tr>
-				<td class="scbar_icon_td"></td>
 				<td class="scbar_txt_td"><input type="text" name="srchtxt" id="scbar_txt" value="{lang enter_content}" autocomplete="off" x-webkit-speech speech /></td>
-				<td class="scbar_type_td"><a href="javascript:;" id="scbar_type" class="xg1" onclick="showMenu(this.id)" hidefocus="true">{lang search}</a></td>
-				<td class="scbar_btn_td"><button type="submit" name="searchsubmit" id="scbar_btn" sc="1" class="pn pnc" value="true"><strong class="xi2">{lang search}</strong></button></td>
-				<td class="scbar_hot_td">
-					<div id="scbar_hot">
-						<!--{if $_G['setting']['srchhotkeywords']}-->
-							<strong class="xw1">{lang hot_search}: </strong>
-							<!--{loop $_G['setting']['srchhotkeywords'] $val}-->
-								<!--{if $val=trim($val)}-->
-									<!--{eval $valenc=rawurlencode($val);}-->
-									<!--{block srchhotkeywords[]}-->
-										<!--{if !empty($searchparams[url])}-->
-											<a href="$searchparams[url]?q=$valenc&source=hotsearch{$srchotquery}" target="_blank" class="xi2" sc="1">$val</a>
-										<!--{else}-->
-											<a href="search.php?mod=forum&srchtxt=$valenc&formhash={FORMHASH}&searchsubmit=true&source=hotsearch" target="_blank" class="xi2" sc="1">$val</a>
-										<!--{/if}-->
-									<!--{/block}-->
-								<!--{/if}-->
-							<!--{/loop}-->
-							<!--{echo implode('', $srchhotkeywords);}-->
-						<!--{/if}-->
-					</div>
-				</td>
+				<td class="scbar_btn_td"><button type="submit" name="searchsubmit" id="scbar_btn" sc="1" value="true">{lang search}</button></td>
 			</tr>
 		</table>
 	</form>

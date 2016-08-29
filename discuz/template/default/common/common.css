@@ -584,7 +584,7 @@ a.bailink:hover { color:#f30; }
 		.pmfl			PM friend list (Window)
 		*/
 
-/* 通用容器，定义页面宽度 */ .wp { margin: 0 auto; width: 1170px; padding-left: 15px; padding-right: 15px;} #wp .wp { width: auto;}
+/* 通用容器，定义页面宽度 */ .wp { margin: 0 auto; width: 1090px; padding-left: 15px; padding-right: 15px;background-color: #fff;} #wp .wp { width: auto;}
 
 /* 页头 */
 	#toptb { min-width: 960px; border-bottom: 1px solid {COMMONBORDER}; background: {COMMONBG}; line-height: 28px; }
@@ -593,8 +593,8 @@ a.bailink:hover { color:#f30; }
 		#toptb a.hover { background-color: #FFF; }
 		#toptb .pipe { float: left; display: none; }
 
-	#hd { border-bottom: {HEADERBORDER} solid {SPECIALBORDER}; {HEADERBGCODE} }
-		#hd .wp { padding: 10px 0 0; }
+	#hd { border-bottom: {HEADERBORDER} solid {SPECIALBORDER}; {HEADERBGCODE} ;margin-bottom: 30px;}
+		#hd .wp { padding: 0; background-color: #f3f3f3;}
 
 			.hdc { min-height: 70px; }
 				.ie6 .hdc { height: 70px; }
@@ -602,13 +602,89 @@ a.bailink:hover { color:#f30; }
 				#space #hd h2 { margin-top: 0; }
 			#hd .fastlg { padding-top: 10px; }
 
-			#scbar { overflow: hidden; height: 42px; line-height: 42px; border-top: 1px solid #FFF; border-bottom: 1px solid #E9EFF5; background: #E8EFF5; }
-				.scbar_icon_td { width: 21px; background: url({IMGDIR}/search.png) no-repeat 0 -50px; }
-				.scbar_txt_td, .scbar_type_td { background: url({IMGDIR}/search.png) repeat-x 0 -93px; }
-					#scbar_txt { width: 400px; border: 1px solid #FFF; outline: none; }
-					.scbar_narrow #scbar_txt { width: 260px; }
-				.scbar_btn_td { width: 38px; background: url({IMGDIR}/search.png) no-repeat 8px -142px; }
-					#scbar_btn { margin: 0; padding: 0; border: none; background: transparent none; box-shadow: none; }
+#scbar { overflow: hidden; height: 42px; line-height: 42px; float: right; margin-bottom: 30px;}
+.scbar_icon_td { width: 21px; background: url({IMGDIR}/search.png) no-repeat 0 -50px; }
+.scbar_txt_td, .scbar_type_td { background: url({IMGDIR}/search.png) repeat-x 0 -93px; }
+#scbar_txt {     
+	-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #fff;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #fff;
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: medium;
+    border-top-color: #fff;
+    border-top-style: solid;
+    border-top-width: 3px;
+    color: #666;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    width: 500px;
+}
+.scbar_narrow #scbar_txt { width: 260px; }
+.scbar_btn_td { width: 38px; background: url({IMGDIR}/search.png) no-repeat 8px -142px; }
+#scbar_btn { 
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -x-system-font: none;
+    background-color: #f3a114;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: medium;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: medium;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: medium;
+    color: #fff;
+    cursor: pointer;
+    font-family: "΢���ź�";
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: 20px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-weight: normal;
+    height: 37px;
+    line-height: 36px;
+    padding-bottom: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 0;
+}
 						#scbar_btn strong { line-height: 84px; }
 				.scbar_type_td { width: 61px; background: url({IMGDIR}/search.png) no-repeat 0 -193px; }
 					#scbar_type { display: block; padding-left: 10px; text-align: left; text-decoration: none; }

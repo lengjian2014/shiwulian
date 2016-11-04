@@ -1,6 +1,6 @@
 html,
 body {
-    height: 100%;font-family:Microsoft YaHei,Verdana,Arial; font-size:14px; color:#333; background-color:#f3f3f3;
+    height: 100%;font-family:Microsoft YaHei,Verdana,Arial; font-size:14px; color:#333; background-color:#fff;
 }
 
 a { color:#444; text-decoration:none; -webkit-transition:all 0.2s ease; }
@@ -11,13 +11,6 @@ a.lanlink { color:#0064c8; }
 a.lanlink:hover { color:#f30; }
 a.bailink { color:#0064c8; }
 a.bailink:hover { color:#f30; }
-
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-    min-height: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
-    position: relative;
-}
 
 .wrap {
     min-height: 100%;
@@ -1423,6 +1416,22 @@ a.desc:after {
 	text-shadow: 0 0 2px rgba(0, 0, 0, 0.52);
 }
 
+/*****************************/
+
+.main-attention dl {padding: 0px 0px;}
+.main-attention dl dt a{letter-spacing:2px;line-height: 25px;color: #004276;font-size: 18px;}
+.main-attention dl dd {padding-bottom: 5px;font-size: 12px;}
+
+.img-showcase {
+    margin-bottom: 2px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+	position: relative;
+    z-index: 1
+}
+.img-showcase img {
+    vertical-align: top;
+}
 .nav-left .nav-course-items .title-mask {
     background-attachment: scroll;
     background-clip: border-box;
@@ -1433,7 +1442,6 @@ a.desc:after {
     background-repeat: repeat-x;
     background-size: auto auto;
     bottom: 0;
-    height: 50px;
     left: 0;
     position: absolute;
     width: 100%;
@@ -1442,3 +1450,176 @@ a.desc:after {
 .nav-left .nav-course-items:hover {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
 }
+
+.img-showcase .img-mask {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-image: none;
+    background-origin: padding-box;
+    background-position-x: 0;
+    background-position-y: 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    bottom: 0;
+    left: 0;
+    opacity: 0.1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition-delay: 0s;
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: ease-out;
+    z-index: 2;
+}
+.img-showcase .img-bg {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(transparent, black);
+    background-origin: padding-box;
+    background-position-x: left;
+    background-position-y: bottom;
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    bottom: 0;
+    height: 48px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 3;
+}
+.img-showcase .img-title {
+    bottom: 0;
+    font-size: 16px;
+    height: 48px;
+    left: 0;
+    line-height: 48px;
+    position: absolute;
+    right: 0;
+    text-indent: 18px;
+    z-index: 4;
+	color: #fff;
+}
+
+.main-agricultural-information ul{
+	padding:0 0 0 15px;
+	margin: 0px;
+}
+
+.main-agricultural-information li{
+	line-height: 30px;
+	font-size: 16px;
+}
+
+.main-agricultural-information li > span{
+	float: right;
+}
+
+.on{
+	background-color: #fff;
+    border-bottom-color: #fff;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-left-color: #ff8b00;
+    border-left-style: solid;
+    border-left-width: 4px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 0;
+    font-size: 20px;padding-left: 5px;
+}
+/************/
+ .plate-title {
+    border-bottom-color: #444;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    height: 50px;
+ 	margin-bottom: 30px;
+}
+ .plate-title h2 {
+    border-bottom-color: #e13a3b;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    float: left;
+    font-size: 34px;
+    font-weight: normal;
+    height: 50px;
+    line-height: 1;
+    position: relative;
+    width: 200px;
+ 	margin-top: 0px;
+}
+ .plate-title h2::before {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #fff;
+    background-image: none;
+    background-origin: padding-box;
+    background-position-x: 0;
+    background-position-y: 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    bottom: -5px;
+    content: "";
+    display: block;
+    height: 5px;
+    position: absolute;
+    right: 0;
+    width: 4px;
+}
+ .plate-title h2 a {
+    color: #e13a3b;
+    white-space: nowrap;
+}
+ .plate-title h2 a:hover {
+    color: #ba2636;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+ .plate-title .plate-title-sub {
+    float: right;
+    margin-top: 17px;
+}
+ .plate-title .plate-title-sub a {
+    color: #666;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 12px;
+}
+ .plate-title .plate-title-sub a:hover {
+    color: #ba2636;
+}
+
+ .plate-point {
+    background-color: #e13a3b;
+    display: inline-block;
+    height: 5px;
+    margin-bottom: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    vertical-align: middle;
+    width: 5px;
+}
+
+/*********************/
+.main-market h3{
+	margin-top: 0px;
+}
+
+.main-market ul{
+	margin: 0px;
+	padding-left: 15px;
+}
+
+.main-market ul li{
+	font-size: 16px;
+    line-height: 30px;
+}
+
+
+

@@ -31,7 +31,7 @@ AppAsset::register($this);
         'brandLabel' => '<img height="70" src="/images/logo.png">',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse ',//navbar-fixed-top
         ],
     ]);
     $menuItems = [
@@ -65,21 +65,21 @@ AppAsset::register($this);
     NavBar::end();
     ?>
     
-    <div class="jumbotron">
-      <div class="container">
-        	<div class="row">
-        		<div class="col-xs-12 col-md-6 breadcrumbs-bar">
-        			<div style="float: left;padding-top: 8px;color:#a3a3a3;">当前位置：</div><?= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],]) ?>
-        		</div>
-        		<div class="col-xs-12 col-md-6">
-	        		<div class="input-group">
-				      <input type="text" class="sint" placeholder="请输入查询的关键字……">
-				      <span class="input-group-btn"><button class="ssub" type="button">Go!</button></span>
-				    </div>
-			    </div>
-        	</div>
-      </div>
-    </div>
+<!--     <div class="jumbotron"> -->
+<!--       <div class="container"> -->
+<!--         	<div class="row"> -->
+<!--         		<div class="col-xs-12 col-md-6 breadcrumbs-bar">
+        			<div style="float: left;padding-top: 8px;color:#a3a3a3;">当前位置：</div><?//= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],]) ?>
+<!--         		</div> -->
+<!--         		<div class="col-xs-12 col-md-6"> -->
+<!-- 	        		<div class="input-group"> -->
+<!-- 				      <input type="text" class="sint" placeholder="请输入查询的关键字……"> -->
+<!-- 				      <span class="input-group-btn"><button class="ssub" type="button">Go!</button></span> -->
+<!-- 				    </div> -->
+<!-- 			    </div> -->
+<!--         	</div> -->
+<!--       </div> -->
+<!--     </div> -->
     
     <div class="container">
         <?//= Alert::widget() ?>

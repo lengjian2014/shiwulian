@@ -88,8 +88,8 @@ CSS 写作注意事项：
 	Last Modify:	Pony
 */
 	* { word-wrap: break-word; }
-	body { height: 100%;font-family:Microsoft YaHei,Verdana,Arial; font-size:14px; color:#333; background-color:#f3f3f3; }
-	body, input, button, select, textarea { font: {FONTSIZE} {FONT}; color: {TABLETEXT}; }
+	body { height: 100%;font-family: "Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体"; font-size:14px; color:#333; background-color:#f3f3f3; }
+	body, input, button, select, textarea { font: {FONTSIZE} {FONT}; color: {TABLETEXT};font-family: "Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体"; }
 		textarea { resize: none; }
 	body, ul, ol, li, dl, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset, .pr, .pc { margin: 0; padding: 0; }
 	table { empty-cells: show; border-collapse: collapse; }
@@ -584,7 +584,7 @@ a.bailink:hover { color:#f30; }
 		.pmfl			PM friend list (Window)
 		*/
 
-/* 通用容器，定义页面宽度 */ .wp { margin: 0 auto; width: 1090px; padding-left: 15px; padding-right: 15px;background-color: #fff;} #wp .wp { width: auto;}
+/* 通用容器，定义页面宽度 */ .wp { margin: 0 auto; width: 1170px; padding-left: 15px; padding-right: 15px;} #wp .wp { width: auto;}
 
 /* 页头 */
 	#toptb { min-width: 960px; border-bottom: 1px solid {COMMONBORDER}; background: {COMMONBG}; line-height: 28px; }
@@ -593,7 +593,7 @@ a.bailink:hover { color:#f30; }
 		#toptb a.hover { background-color: #FFF; }
 		#toptb .pipe { float: left; display: none; }
 
-	#hd { border-bottom: {HEADERBORDER} solid {SPECIALBORDER}; {HEADERBGCODE} ;margin-bottom: 30px;}
+	#hd { border-bottom: {HEADERBORDER} solid {SPECIALBORDER}; {HEADERBGCODE} ;width: 1170px; margin: 0 auto; height: 42px;padding-left:15px; padding-right: 45px;}
 		#hd .wp { padding: 0; background-color: #f3f3f3;}
 
 			.hdc { min-height: 70px; }
@@ -831,9 +831,9 @@ a.bailink:hover { color:#f30; }
 		.bml	Lite		头部无背景填充
 		.bmn	Notice		整体带有彩色背景，常用于提示信息
 	*/
-	.bm, .bn { margin-bottom: 10px; }
-		.bm { border: 1px solid {COMMONBORDER}; background: {WRAPBG}; }
-			.bm_c { padding: 10px; }
+	.bm, .bn { margin-bottom: 0px; }
+		.bm { }
+			.bm_c { padding: 10px 0;background-color:#f3f3f3;margin: 10px 0;}
 		.drag {}
 		.bm_h .o { float: right; width: 30px; }
 			.bm_h .o img { float: right; margin-top: 8px; cursor: pointer; }
@@ -841,15 +841,41 @@ a.bailink:hover { color:#f30; }
 		.bm_h .pn { margin-top: 4px; }
 		.bm_h { padding: 0 10px; height: 31px; border-top: 1px solid #FFF; border-bottom: 1px solid {CONTENTSEPARATE}; background: {COMMONBG}; line-height: 31px; white-space: nowrap; overflow: hidden; }
 		.bmw { border: 1px solid {COMMONBORDER}; }
-			.bmw .bm_h { border-top-color: {WRAPBG}; border-right: 1px solid {WRAPBG}; border-bottom-color: {CONTENTSEPARATE}; border-left: 1px solid {WRAPBG}; background: {SPECIALBG}; }
+			.bmw .bm_h { border-top-color: #f3f3f3; border-right: 1px solid {WRAPBG}; border-bottom-color: {CONTENTSEPARATE}; border-left: 1px solid {WRAPBG}; background-color:#f3f3f3; }
 				.bmw .bm_h a { color: {HIGHLIGHTLINK}; }
 		.bml .bm_h { padding-top: 5px; border: none; background: transparent; }
 		.bml .bm_c { padding-top: 0; }
 		.bmn { padding: 7px 10px; border-color: {SPECIALBORDER}; background: {SPECIALBG}; }
 
-		.fl { border: 1px solid {COMMONBORDER}; border-top: none; background: {WRAPBG}; }
+		.fl {border-top: none;}
 			.fl .bm { margin-bottom: 0; border: none; }
-				.fl .bm_h { border-width: 1px 0; border-color: {SPECIALBORDER}; {TITLEBGCODE}; }
+				.fl .bm_h {border-bottom-color: #B9B4B4;border-bottom-style: solid;border-bottom-width: 4px;height: 50px;overflow:visible;padding:0px;}
+.fl .bm_h h2::before {
+ 	background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #fff;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    bottom: -5px;
+    content: "";
+    height: 5px;
+    right: 0;
+    width: 4px;
+}
+.fl .bm_h h2{border-bottom-color: #e13a3b;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    float: left;
+    font-size: 24px;
+    font-weight: normal;
+    height: 50px;
+    line-height: 50px;
+    width: 160px;
+	padding-left: 10px;
+}
 		.fl .bm_c, #online .bm_c, .lk .bm_c { padding-top: 0; padding-bottom: 0; }
 	.bm2 .bm2_b { float: left; width: 49%; border: 1px solid {COMMONBORDER}; }
 		.bm2 .bm2_b_y { float: right; }
@@ -864,7 +890,7 @@ a.bailink:hover { color:#f30; }
 	Explain:		面包屑导航
 	Last Modify:	lushnis
 */
-	#pt { margin: 2px 0; height: 29px; border:none; background: transparent; line-height: 29px; }
+	#pt { margin: 2px 15px; height: 29px; border:none; background: transparent; line-height: 29px; }
 		#pt .z { padding-right: 10px; }
 		#pt .z a, #pt .z em, #pt .z span { float: left; height: 29px; }
 		#pt .z em { width: 20px; background: url({IMGDIR}/pt_item.png) no-repeat 3px 10px; line-height: 200px; overflow: hidden; }

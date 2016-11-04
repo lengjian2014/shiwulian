@@ -91,13 +91,13 @@ if(isUndefined(sliderun)) {
 						zr = s.imgLoad[i].width / s.imgLoad[i].height;
 						if(zr > 1) {
 							s.imgLoad[i].height = s.size[1];
-							s.imgLoad[i].width = s.size[1] * zr;
+							s.imgLoad[i].width = 638;
 						} else {
 							s.imgLoad[i].width = s.size[0];
 							s.imgLoad[i].height = s.size[0] / zr;
 							if(s.imgLoad[i].height > s.size[1]) {
 								s.imgLoad[i].height = s.size[1];
-								s.imgLoad[i].width = s.size[1] * zr;
+								s.imgLoad[i].width = 638;
 							}
 						}
 					}

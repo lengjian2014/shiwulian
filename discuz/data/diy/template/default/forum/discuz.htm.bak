@@ -54,15 +54,15 @@
 				<div id="category_grid" class="bm_c" >
 					<table cellspacing="0" cellpadding="0"><tr>
 					<!--{if !$_G['setting']['grid']['gridtype']}-->
-						<td valign="top" class="category_l1">
+						<td valign="top" class="category_l1" style="width: 56%;">
 							<div class="newimgbox">
-								<h4><span class="tit_newimg"></span>{lang latest_images}</h4>
-								<div class="module cl slidebox_grid" style="width:218px">
+								
+								<div class="module cl slidebox_grid" style="width:100%;margin:0px;">
 									<script type="text/javascript">
 									var slideSpeed = 5000;
-									var slideImgsize = [218,200];
-									var slideBorderColor = '{$_G['style']['specialborder']}';
-									var slideBgColor = '{$_G['style']['commonbg']}';
+									var slideImgsize = [638, 360];
+									var slideBorderColor = '#fff';
+									var slideBgColor = '#fff';
 									var slideImgs = new Array();
 									var slideImgLinks = new Array();
 									var slideImgTexts = new Array();
@@ -82,9 +82,9 @@
 							</div>
 						</td>
 					<!--{/if}-->
-					<td valign="top" class="category_l2">
+					<td valign="top" class="category_l2" style="width: 22%;">
 						<div class="subjectbox">
-							<h4><span class="tit_subject"></span>{lang collection_lastthread}</h4>
+							
 					        <ul class="category_newlist">
 					        	<!--{loop $grids['newthread'] $thread}-->
 					        	<!--{if !$thread['forumstick'] && $thread['closed'] > 1 && ($thread['isgroup'] == 1 || $thread['fid'] != $_G['fid'])}-->
@@ -95,7 +95,7 @@
 					         </ul>
 				         </div>
 					</td>
-					<td valign="top" class="category_l3">
+					<td valign="top" class="category_l3" style="width: 0%;">
 						<div class="replaybox">
 							<h4><span class="tit_replay"></span>{lang show_newthreads}</h4>
 					        <ul class="category_newlist">
@@ -108,9 +108,8 @@
 					         </ul>
 				         </div>
 					</td>
-					<td valign="top" class="category_l3">
+					<td valign="top" class="category_l3" style="width: 22%;">
 						<div class="hottiebox">
-							<h4><span class="tit_hottie"></span>{lang hot_thread}</h4>
 					        <ul class="category_newlist">
 					        	<!--{loop $grids['hot'] $thread}-->
 					        	<!--{if !$thread['forumstick'] && $thread['closed'] > 1 && ($thread['isgroup'] == 1 || $thread['fid'] != $_G['fid'])}-->
@@ -168,7 +167,7 @@
 		<!--{/if}-->
 
 		<!--{hook/index_catlist_top}-->
-		<div class="fl bm">
+		<div class="fl bm" style="padding-bottom: 50px;">
 			<!--{if !empty($collectiondata['follows'])}-->
 
 			<!--{eval $forumscount = count($collectiondata['follows']);}-->
@@ -337,9 +336,7 @@
 			<!--{hook/index_catlist $cat[fid]}-->
 			<div class="bm bmw {if $cat['forumcolumns']} flg{/if} cl">
 				<div class="bm_h cl">
-					<span class="o">
-						<img id="category_$cat[fid]_img" src="{IMGDIR}/$cat[collapseimg]" title="{lang spread}" alt="{lang spread}" onclick="toggle_collapse('category_$cat[fid]');" />
-					</span>
+
 					<!--{if $cat['moderators']}--><span class="y">{lang forum_category_modedby}: $cat[moderators]</span><!--{/if}-->
 					<!--{eval $caturl = !empty($cat['domain']) && !empty($_G['setting']['domain']['root']['forum']) ? 'http://'.$cat['domain'].'.'.$_G['setting']['domain']['root']['forum'] : '';}-->
 					<h2><a href="{if !empty($caturl)}$caturl{else}forum.php?gid=$cat[fid]{/if}" style="{if $cat[extra][namecolor]}color: {$cat[extra][namecolor]};{/if}">$cat[name]</a></h2>
@@ -358,11 +355,12 @@
 								<!--{/if}-->
 							<!--{/if}-->
 							<td class="fl_g" width="$cat[forumcolwidth]">
+								<div style="background-color: #fff;padding: 40px 20px;margin: 5px;">
 								<div class="fl_icn_g"{if !empty($forum[extra][iconwidth]) && !empty($forum[icon])} style="width: {$forum[extra][iconwidth]}px;"{/if}>
 								<!--{if $forum[icon]}-->
 									$forum[icon]
 								<!--{else}-->
-									<a href="$forumurl"{if $forum[redirect]} target="_blank"{/if}><img src="{IMGDIR}/forum{if $forum[folder]}_new{/if}.gif" alt="$forum[name]" /></a>
+									<a href="$forumurl"{if $forum[redirect]} target="_blank"{/if}><img src="{IMGDIR}/forum{if $forum[folder]}_new{/if}.gif" alt="$forum[name]" width="60" height="60"/></a>
 								<!--{/if}-->
 								</div>
 								<dl{if !empty($forum[extra][iconwidth]) && !empty($forum[icon])} style="margin-left: {$forum[extra][iconwidth]}px;"{/if}>
@@ -387,6 +385,7 @@
 									</dd>
 									<!--{hook/index_forum_extra $forum[fid]}-->
 								</dl>
+								</div>
 							</td>
 						<!--{else}-->
 							<td class="fl_icn" {if !empty($forum[extra][iconwidth]) && !empty($forum[icon])} style="width: {$forum[extra][iconwidth]}px;"{/if}>

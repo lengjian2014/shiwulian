@@ -49,15 +49,15 @@
 <div id="category_grid" class="bm_c" >
 <table cellspacing="0" cellpadding="0"><tr>
 <?php if(!$_G['setting']['grid']['gridtype']) { ?>
-<td valign="top" class="category_l1">
+<td valign="top" class="category_l1" style="width: 56%;">
 <div class="newimgbox">
-<h4><span class="tit_newimg"></span>最新图片</h4>
-<div class="module cl slidebox_grid" style="width:218px">
+
+<div class="module cl slidebox_grid" style="width:100%;margin:0px;">
 <script type="text/javascript">
 var slideSpeed = 5000;
-var slideImgsize = [218,200];
-var slideBorderColor = '<?php echo $_G['style']['specialborder'];?>';
-var slideBgColor = '<?php echo $_G['style']['commonbg'];?>';
+var slideImgsize = [638, 360];
+var slideBorderColor = '#fff';
+var slideBgColor = '#fff';
 var slideImgs = new Array();
 var slideImgLinks = new Array();
 var slideImgTexts = new Array();
@@ -72,9 +72,9 @@ slideImgTexts[<?php echo $k; ?>] = '<?php echo $svalue['subject'];?>';<?php $k++
 </div>
 </td>
 <?php } ?>
-<td valign="top" class="category_l2">
+<td valign="top" class="category_l2" style="width: 22%;">
 <div class="subjectbox">
-<h4><span class="tit_subject"></span>最新主题</h4>
+
         <ul class="category_newlist">
         <?php if(is_array($grids['newthread'])) foreach($grids['newthread'] as $thread) { ?>        	<?php if(!$thread['forumstick'] && $thread['closed'] > 1 && ($thread['isgroup'] == 1 || $thread['fid'] != $_G['fid'])) { $thread[tid]=$thread[closed];?><?php } ?>
 <li><a href="forum.php?mod=viewthread&amp;tid=<?php echo $thread['tid'];?>&amp;extra=<?php echo $extra;?>"<?php if($thread['highlight']) { ?> <?php echo $thread['highlight'];?><?php } if($_G['setting']['grid']['showtips']) { ?> tip="标题: <strong><?php echo $thread['oldsubject'];?></strong><br/>作者: <?php echo $thread['author'];?> (<?php echo $thread['dateline'];?>)<br/>查看/回复: <?php echo $thread['views'];?>/<?php echo $thread['replies'];?>" onmouseover="showTip(this)"<?php } else { ?> title="<?php echo $thread['oldsubject'];?>"<?php } if($_G['setting']['grid']['targetblank']) { ?> target="_blank"<?php } ?>><?php echo $thread['subject'];?></a></li>
@@ -82,7 +82,7 @@ slideImgTexts[<?php echo $k; ?>] = '<?php echo $svalue['subject'];?>';<?php $k++
          </ul>
          </div>
 </td>
-<td valign="top" class="category_l3">
+<td valign="top" class="category_l3" style="width: 0%;">
 <div class="replaybox">
 <h4><span class="tit_replay"></span>最新回复</h4>
         <ul class="category_newlist">
@@ -92,9 +92,8 @@ slideImgTexts[<?php echo $k; ?>] = '<?php echo $svalue['subject'];?>';<?php $k++
          </ul>
          </div>
 </td>
-<td valign="top" class="category_l3">
+<td valign="top" class="category_l3" style="width: 22%;">
 <div class="hottiebox">
-<h4><span class="tit_hottie"></span>热帖</h4>
         <ul class="category_newlist">
         <?php if(is_array($grids['hot'])) foreach($grids['hot'] as $thread) { ?>        	<?php if(!$thread['forumstick'] && $thread['closed'] > 1 && ($thread['isgroup'] == 1 || $thread['fid'] != $_G['fid'])) { $thread[tid]=$thread[closed];?><?php } ?>
 <li><a href="forum.php?mod=viewthread&amp;tid=<?php echo $thread['tid'];?>&amp;extra=<?php echo $extra;?>"<?php if($thread['highlight']) { ?> <?php echo $thread['highlight'];?><?php } if($_G['setting']['grid']['showtips']) { ?> tip="标题: <strong><?php echo $thread['oldsubject'];?></strong><br/>作者: <?php echo $thread['author'];?> (<?php echo $thread['dateline'];?>)<br/>查看/回复: <?php echo $thread['views'];?>/<?php echo $thread['replies'];?>" onmouseover="showTip(this)"<?php } else { ?> title="<?php echo $thread['oldsubject'];?>"<?php } if($_G['setting']['grid']['targetblank']) { ?> target="_blank"<?php } ?>><?php echo $thread['subject'];?></a></li>
@@ -141,7 +140,7 @@ slideImgTexts[<?php echo $k; ?>] = '<?php echo $svalue['subject'];?>';<?php $k++
 <?php } ?>
 
 <?php if(!empty($_G['setting']['pluginhooks']['index_catlist_top'])) echo $_G['setting']['pluginhooks']['index_catlist_top'];?>
-<div class="fl bm">
+<div class="fl bm" style="padding-bottom: 50px;">
 <?php if(!empty($collectiondata['follows'])) { $forumscount = count($collectiondata['follows']);?><?php $forumcolumns = 4;?><?php $forumcolwidth = (floor(100 / $forumcolumns) - 0.1).'%';?><div class="bm bmw <?php if($forumcolumns) { ?> flg<?php } ?> cl">
 <div class="bm_h cl">
 <span class="o">
@@ -261,9 +260,7 @@ slideImgTexts[<?php echo $k; ?>] = '<?php echo $svalue['subject'];?>';<?php $k++
 </div><?php echo adshow("intercat/bm a_c/-1");?><?php } if(is_array($catlist)) foreach($catlist as $key => $cat) { ?><?php if(!empty($_G['setting']['pluginhooks']['index_catlist'][$cat[fid]])) echo $_G['setting']['pluginhooks']['index_catlist'][$cat[fid]];?>
 <div class="bm bmw <?php if($cat['forumcolumns']) { ?> flg<?php } ?> cl">
 <div class="bm_h cl">
-<span class="o">
-<img id="category_<?php echo $cat['fid'];?>_img" src="<?php echo IMGDIR;?>/<?php echo $cat['collapseimg'];?>" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_<?php echo $cat['fid'];?>');" />
-</span>
+
 <?php if($cat['moderators']) { ?><span class="y">分区版主: <?php echo $cat['moderators'];?></span><?php } $caturl = !empty($cat['domain']) && !empty($_G['setting']['domain']['root']['forum']) ? 'http://'.$cat['domain'].'.'.$_G['setting']['domain']['root']['forum'] : '';?><h2><a href="<?php if(!empty($caturl)) { ?><?php echo $caturl;?><?php } else { ?>forum.php?gid=<?php echo $cat['fid'];?><?php } ?>" style="<?php if($cat['extra']['namecolor']) { ?>color: <?php echo $cat['extra']['namecolor'];?>;<?php } ?>"><?php echo $cat['name'];?></a></h2>
 </div>
 <div id="category_<?php echo $cat['fid'];?>" class="bm_c" style="<?php echo $collapse['category_'.$cat['fid']]; ?>">
@@ -274,11 +271,12 @@ slideImgTexts[<?php echo $k; ?>] = '<?php echo $svalue['subject'];?>';<?php $k++
 <tr class="fl_row">
 <?php } } ?>
 <td class="fl_g" width="<?php echo $cat['forumcolwidth'];?>">
+<div style="background-color: #fff;padding: 40px 20px;margin: 5px;">
 <div class="fl_icn_g"<?php if(!empty($forum['extra']['iconwidth']) && !empty($forum['icon'])) { ?> style="width: <?php echo $forum['extra']['iconwidth'];?>px;"<?php } ?>>
 <?php if($forum['icon']) { ?>
 <?php echo $forum['icon'];?>
 <?php } else { ?>
-<a href="<?php echo $forumurl;?>"<?php if($forum['redirect']) { ?> target="_blank"<?php } ?>><img src="<?php echo IMGDIR;?>/forum<?php if($forum['folder']) { ?>_new<?php } ?>.gif" alt="<?php echo $forum['name'];?>" /></a>
+<a href="<?php echo $forumurl;?>"<?php if($forum['redirect']) { ?> target="_blank"<?php } ?>><img src="<?php echo IMGDIR;?>/forum<?php if($forum['folder']) { ?>_new<?php } ?>.gif" alt="<?php echo $forum['name'];?>" width="60" height="60"/></a>
 <?php } ?>
 </div>
 <dl<?php if(!empty($forum['extra']['iconwidth']) && !empty($forum['icon'])) { ?> style="margin-left: <?php echo $forum['extra']['iconwidth'];?>px;"<?php } ?>>
@@ -299,6 +297,7 @@ slideImgTexts[<?php echo $k; ?>] = '<?php echo $svalue['subject'];?>';<?php $k++
 </dd>
 <?php if(!empty($_G['setting']['pluginhooks']['index_forum_extra'][$forum[fid]])) echo $_G['setting']['pluginhooks']['index_forum_extra'][$forum[fid]];?>
 </dl>
+</div>
 </td>
 <?php } else { ?>
 <td class="fl_icn" <?php if(!empty($forum['extra']['iconwidth']) && !empty($forum['icon'])) { ?> style="width: <?php echo $forum['extra']['iconwidth'];?>px;"<?php } ?>>

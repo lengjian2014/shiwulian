@@ -45,7 +45,6 @@ return [
             	'/' => 'index',
             ],
         ],
-        
     ],
     'params' => $params,
 ];

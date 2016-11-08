@@ -204,6 +204,62 @@ a.desc:after {
 .daodu li { float:left; font:normal 15px/40px "微软雅黑"; color:#666; padding:0 30px; border:1px solid #ddd; background-color:#f9f9f9; margin:10px 10px 0 0; cursor:pointer; }
 .daodu li.on { background-color:#fff;  border-bottom:1px solid #fff; margin-top:0; line-height:45px; padding-top:5px; color:#ff8b00; font-size:18px; border-top:1px solid #ff8b00;}
 
+
+/***************/
+.main-news .navbar {
+	height: 43px;
+}
+
+.main-news .navbar-brand {
+    float: left;
+	font-size: 18px;
+    height: 43px;
+    line-height: 43px;
+    padding: 0px 15px;
+}
+
+.main-news .navbar-nav > li > a{
+	line-height: 43px;
+}
+
+.main-news .navbar-inverse .navbar-left > li > a{
+	color:#fff; 
+	font:normal 14px/37px Microsoft YaHei,Verdana,Arial; 
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.main-news .navbar-inverse .navbar-left > li >  a:hover { 
+	background-color:#3b3b3b; 
+	color:#21e151; 
+	display:block; 
+	border-bottom:2px solid #21e151;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.main-news .navbar-inverse .navbar-left > .active > a{
+	background-color:#3b3b3b; 
+	color:#21e151; 
+	display:block; 
+	border-bottom:2px solid #21e151;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.main-news .navbar-collapse{
+	background-color: #222;
+}
+
+.main-news .navbar-header button{
+	margin-top: 15px;
+}
+
+.main-news .jumbotron {
+    padding-bottom: 0px;
+    padding-top: 100px;
+}
+
 /***新闻资讯列表***/
 .inbrowse{
 	border-top-color: #bbbbbb;

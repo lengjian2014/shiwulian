@@ -34,20 +34,24 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-    ];
+    $menuItems[] = ['label' => 'Home', 'url' => ['/site/index']];
+    
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link']
-            )
-            . Html::endForm()
-            . '</li>';
+		$menuItems = [
+			['label' => '网站首页', 'url' => ['/index']],
+			['label' => '资讯管理', 'url' => ['/news/index']],
+			['label' => '标签管理', 'url' => ['/tags/index']],
+			['label' => '城市级联', 'url' => ['/areas/index']],
+			['label' => '内容分类', 'url' => ['/classify/index']],
+		];
+
+        $menuItems[] = [
+            'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+            'url' => ['/site/logout'],
+            'linkOptions' => ['data-method' => 'post']
+        ];
     }
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],

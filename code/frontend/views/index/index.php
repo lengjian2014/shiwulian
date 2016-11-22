@@ -2,44 +2,43 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = '涉农网 - 全行业最全的资讯网';
 ?>
 	<div class="row main-attention" style="height: 340px;margin-bottom: 50px;">
-		<div class="col-md-4" style="padding-right: 0px;height: 340px;">
+		<div class="col-md-5 main-attention-list">
+			<div class="main-attention-title">
 				<dl>
-					<dt><a style="color: red;font-size: 24px;line-height: 30px;" href="">农地“三权分置”要有利于现代化 完善</a></dt>
+					<dt><a class="main-title" href="">农地“三权分置”要有利于现代化 完善</a></dt>
 					<dd>完善“三权分置”，无论是实践探索还是理论创新</dd>
 					<dt><a href="">农业供给侧结构性改革提速 中央全面深化</a></dt>
-					<dd>中央全面深化改革领导小组近日召开会议 </dd>
 					<dt><a href="">少数新型农业经营主体亏损 农业部部长</a></dt>
-					<dd>农业部部长韩长赋表示，以引导土地规范</dd>
 					<dt><a href="">中共中央办公厅国务院办公厅</a></dt>
-					<dd>女士们、先生们，上午好！欢迎大家出席</dd>
 					<dt><a href="">学者的疑问：谁来种地、如何种地 农村</a></dt>
-					<dd>农村廉价劳动力源源不断地流向城市</dd>
 					<dt><a href="">学者的疑问：谁来种地、如何种地</a></dt>
-					<dd>农村廉价劳动力源源不断地流向城市</dd>
+					<dt><a href="">学者的疑问：谁来种地、如何种地</a></dt>
+					<dt><a href="">学者的疑问：谁来种地、如何种地</a></dt>
 				</dl>
+			</div>	
 		</div>
-		<div class="col-md-5 col-xs-8" style="padding-right: 1px;padding-left: 1px;">
+		<div class="col-md-7 col-xs-8">
 			<img alt="900x500" width="100%" height="340px" data-src="holder.js/900x500/auto/#777:#777" src="http://cms-bucket.nosdn.127.net/4474fd95e08243cfb300789a4edbae5320161103102203.jpeg" data-holder-rendered="true">
 		</div>
-		<div class="col-md-3 col-xs-4" style="padding-left: 1px">
+<!--		<div class="col-md-3 col-xs-4" style="padding-left: 1px">
 			<div class="img-showcase" style="margin-bottom: 2px;">
-				<a href=""><img alt="900x500" width="100%" height="169px" data-src="holder.js/900x500/auto/#777:#777" src="http://cms-bucket.nosdn.127.net/b494e7f9485740e29279e307fc434de520161104091904.jpeg" data-holder-rendered="true">
-					<span class="img-mask"></span>
-					<span class="img-bg"></span>
-					<span class="img-title">Jeep新国产SUV形似大切</span>
-				</a>
-			</div>
+ 				<a href=""><img alt="900x500" width="100%" height="169px" data-src="holder.js/900x500/auto/#777:#777" src="http://cms-bucket.nosdn.127.net/b494e7f9485740e29279e307fc434de520161104091904.jpeg" data-holder-rendered="true"> -->
+<!-- 					<span class="img-mask"></span> -->
+<!-- 					<span class="img-bg"></span> -->
+<!-- 					<span class="img-title">Jeep新国产SUV形似大切</span> -->
+<!-- 				</a> -->
+<!-- 			</div>
 			<div class="img-showcase" style="margin-top: 1px;">
-				<a><img alt="900x500" width="100%" height="169px" data-src="holder.js/900x500/auto/#777:#777" src="http://cms-bucket.nosdn.127.net/1c8474e7d34a40bf8d6aa63da79c9b5920161104084354.jpeg" data-holder-rendered="true">
-					<span class="img-mask"></span>
-					<span class="img-bg"></span>
-					<span class="img-title">新丰田Fortuner搭分时四驱</span>
-				</a>
-			</div>
-		</div>
+<!-- 				<a><img alt="900x500" width="100%" height="169px" data-src="holder.js/900x500/auto/#777:#777" src="http://cms-bucket.nosdn.127.net/1c8474e7d34a40bf8d6aa63da79c9b5920161104084354.jpeg" data-holder-rendered="true"> -->
+<!-- 					<span class="img-mask"></span> -->
+<!-- 					<span class="img-bg"></span> -->
+<!-- 					<span class="img-title">新丰田Fortuner搭分时四驱</span> -->
+<!-- 				</a> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 	</div>
       <div class="row main-agricultural-information">
             <div class="col-md-9">

@@ -8,7 +8,6 @@ use backend\models\ClassifySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use common\components\phpQuery;
 use common\widgets\AdjacencyList\FullTreeDataAction;
 use common\widgets\AdjacencyList\TreeNodesReorderAction;
 use common\widgets\AdjacencyList\TreeNodeMoveAction;
@@ -54,8 +53,6 @@ class ClassifyController extends Controller
      */
     public function actionIndex()
     {
-    	//phpQuery::newDocumentFile('http://www.csc.edu.cn/laihua/universityprograms.aspx?collegeId=12');
-    	//$nei_box = pq(".nei_box .content_C");
         $searchModel = new ClassifySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 

@@ -6,9 +6,11 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use frontend\assets\LayoutAsset;
+use yii\widgets\Breadcrumbs;
+use frontend\assets\AppAsset;
+use common\widgets\Alert;
 
-LayoutAsset::register($this);
+AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -23,17 +25,17 @@ LayoutAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap main-news">
+<div class="wrap">
     <?php
     NavBar::begin([
-        //'brandLabel' => '<img height="70" src="/images/logo.png">',
-        //'brandUrl' => Yii::$app->homeUrl,
+        'brandLabel' => '涉农网',
+        'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse ',//navbar-fixed-top
         ],
     ]);
     $menuItems = [
-        ['label' => '网站首页', 'url' => ['/index']],
+        ['label' => '首页', 'url' => ['/site/index']],
         ['label' => '广场', 'url' => ['/site/about']],
         ['label' => '行业资讯', 'url' => ['/news/index']],
         ['label' => '技术交流', 'url' => ['/forum/index']],
@@ -63,43 +65,23 @@ LayoutAsset::register($this);
     NavBar::end();
     ?>
     
-    <div class="jumbotron">
-      <div class="container">
-        	<div class="row">
-         		<div class="col-xs-12 col-md-6">
-        			<img src="/images/logo.png" class="pull-left" height="80px">
-        			<span class="pull-left" style="line-height: 80px;font-size: 28px;line-height: 100px;"><i class="nav-point"></i>资讯</span>
-        		</div>
-        		<div class="col-xs-12 col-md-6">
-	        		<div class="input-group" style="line-height: 80px;">
-				      <input type="text" class="sint" placeholder="请输入查询的关键字……">
-				      <span class="input-group-btn"><button class="ssub" type="button">点击搜索</button></span>
-				    </div>
-			    </div>
-        	</div>
-      </div>
-      <div class="container">
-	      <nav class="navbar navbar-inverse navbar-static-top" style="min-height: 40px;">
-			<div class="container">
-				<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">首页</a></li>
-					<li><a href="#about">最新资讯</a></li>
-					<li><a href="#about">市场行情</a></li>
-					<li><a href="#about">国际资讯</a></li>
-					<li><a href="#about">地方资讯</a></li>
-					<li><a href="#about">气象<i class="plate-point"></i>灾害</a></li>
-					<li><a href="#about">食品安全</a></li>
-					<li><a href="#about">科技<i class="plate-point"></i>机械</a></li>
-				</ul>
-				</div>
-			</div>
-		</nav>
-      </div>
-    </div>
-    
+<!--     <div class="jumbotron"> -->
+<!--       <div class="container"> -->
+<!--         	<div class="row"> -->
+<!--         		<div class="col-xs-12 col-md-6 breadcrumbs-bar">
+        			<div style="float: left;padding-top: 8px;color:#a3a3a3;">当前位置：</div><?//= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],]) ?>
+<!--         		</div> -->
+<!--         		<div class="col-xs-12 col-md-6"> -->
+<!-- 	        		<div class="input-group"> -->
+<!-- 				      <input type="text" class="sint" placeholder="请输入查询的关键字……"> -->
+<!-- 				      <span class="input-group-btn"><button class="ssub" type="button">Go!</button></span> -->
+<!-- 				    </div> -->
+<!-- 			    </div> -->
+<!--         	</div> -->
+<!--       </div> -->
+<!--     </div> -->
+    <div class="bome"></div>
     <div class="container">
-    	
         <?//= Alert::widget() ?>
         <?= $content ?>
     </div>

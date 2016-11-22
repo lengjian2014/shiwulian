@@ -18,7 +18,7 @@ use frontend\models\ContactForm;
  */
 class IndexController extends Controller
 {
-	
+	public $layout = 'layout';
     /**
      * Displays homepage.
      *

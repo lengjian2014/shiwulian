@@ -1,9 +1,8 @@
 <?php
 /* @var $this yii\web\View */
-
+$this->title = '行业资讯';
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', '行业资讯'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = '最新资讯';
-
 ?>
 <div class="news-list">
 	<div class="row">
